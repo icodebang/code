@@ -1,0 +1,12 @@
+java -jar sfnttool.jar  -s '这是一段测试文字' msyh.ttf msyh_simplify.ttf  
+
+java -jar sfnttool.jar -h  
+subset [-?|-h|-help] [-b] [-s string] fontfile outfile  
+prototype font subsetter  
+        -?,-help        print this help information  
+        -s,-string       string to subset  
+        -b,-bench        benchmark (run 10000 iterations)  
+        -h,-hints        strip hints  
+        -w,-woff         output woff format  
+        -e,-eot  output eot format  
+        -x,-mtx  enable microtype express compression for eot format 

@@ -1,0 +1,73 @@
+.icb-user-setting .tab-content{padding:0 40px;}
+.icb-user-setting .icb-mod .mod-footer{margin-bottom: 30px;}
+.icb-user-setting .icb-mod .icb-mod{padding:30px 0;border-top: 1px solid #e6e6e6;}
+.icb-user-setting .icb-mod .icb-mod:first-child{border-top: none;}
+.icb-user-setting .icb-mod .form-group{margin:15px 0;line-height: 30px;}
+/* 用户设置页面 */
+.icb-user-setting h3{font-size: 16px;color: #333;}
+.icb-user-setting .form-horizontal .control-group{position: relative;}
+.icb-user-setting .form-horizontal p{margin: 0;}
+.icb-user-setting .form-horizontal p span{margin-left: 10px;}
+.icb-user-setting .upload-attach{position:absolute; left:0; top:7px;width: 70px; height:25px; font-size:100px; opacity:0; filter:alpha(opacity=0);cursor:pointer;}
+/* 基本资料 */
+.icb-user-setting .mod-base{position: relative;}
+.icb-user-setting .mod-base dl{height:auto;line-height: 25px;overflow:hidden;margin:0;padding-bottom: 15px;}
+.icb-user-setting .mod-base dl dt, .icb-user-setting .mod-base dl dd{float: left;line-height: 30px;}
+.icb-user-setting .mod-base dl dt{width: 80px;text-align: right;font-weight: normal;}
+.icb-user-setting .mod-base .introduce input{width: 250px;}
+.icb-user-setting .mod-base dl dd label{min-width: 50px;}
+.icb-user-setting .mod-base dl dd select{width:110px;margin:0;}
+.icb-user-setting .mod-base .time{width: 380px !important;}
+.icb-user-setting .mod-base .side-bar{position: absolute;right: 0;top: 70px;}
+.icb-user-setting .mod-base .side-bar dt{width: 100px;height: 100px;}
+.icb-user-setting .mod-base .side-bar dd{width: 210px;}
+.icb-user-setting .mod-base .side-bar span {margin-left:10px;}
+.icb-user-setting .mod-base .side-bar span .icb-loading{position:relative;top:4px;margin-right: 5px;}
+.icb-user-setting .mod-base .side-bar form{position:relative;opacity: 0;filter:alpha(opacity=0);width: 0;height: 0;}
+.icb-user-setting .mod-base .side-bar form .file-input{position: absolute;left: 0;top: 0;}
+/* 联系方式 */
+.icb-user-setting .mod-contact li{margin-top:20px;min-height: 32px;}
+.icb-user-setting .mod-contact li:first-child{margin-top: 0;}
+.icb-user-setting .mod-contact li input{display:inline;width: 280px;}
+.icb-user-setting .mod-contact label{width: 70px;text-align: right;}
+/* 教育经历, 工作 */
+.icb-user-educate table, .icb-user-work table{border:1px solid #e6e6e6;}
+.icb-user-educate table thead, .icb-user-work table thead{background-color: #fafafa;}
+.icb-user-educate table thead th, .icb-user-work table thead th{border-bottom: 1px solid #e6e6e6;text-align: center;}
+.icb-user-educate table td, .icb-user-work table td{padding:10px !important;border-top: 1px solid #e6e6e6 !important;text-align: center;}
+.icb-user-educate input, .icb-user-work input{width:80%;margin:0 auto;}
+.icb-user-educate select, .icb-user-work select{width: 70px;margin:0;}
+/* 隐私,提醒 */
+.icb-user-setting .mod-setting-privacy .icb-mod dl dt{float: left;width: 180px;font-weight: normal;}
+.icb-user-setting .mod-setting-privacy .icb-mod dl dd{padding-left: 180px;}
+.icb-user-setting .mod-setting-privacy .icb-mod dl dd label{margin:0 30px 20px 0;}
+/* 账号绑定 */
+.icb-user-setting .mod-setting-bind{padding:80px 0 !important;}
+.icb-user-setting .mod-setting-bind ul{text-align: center;}
+.icb-user-setting .mod-setting-bind ul li{display: inline-block;margin:0 25px;}
+.icb-user-setting .mod-setting-bind ul li i{display:block;width:50px;height:50px;margin:0 auto;line-height:50px;border-radius:4px;font-size: 32px;color: #fff;text-align: center;}
+.icb-user-setting .mod-setting-bind ul li p{height: 20px;margin-top: 5px;}
+.icb-user-setting .mod-setting-bind ul li a{margin-top: 15px;}
+.icb-user-setting .mod-setting-bind .icon-weibo{background-color: #ff6161;}
+.icb-user-setting .mod-setting-bind .icon-qq{background-color: #3c88e5;}
+.icb-user-setting .mod-setting-bind .icon-wechat{background-color: #73db42;}
+.icb-user-setting .mod-setting-bind .icon-google{background-color: #e25d4a;}
+.icb-user-setting .mod-setting-bind .icon-facebook{background-color: #3a5799;}
+.icb-user-setting .mod-setting-bind .icon-twitter{background-color: #1eb5ee;}
+/* 我的积分 */
+.icb-user-setting-points table{margin:20px 0;font-size:13px;color: #666;}
+.icb-user-setting-points table .info th{background-color: #f5fafe !important;border-top: none;font-weight: normal;}
+.icb-user-setting-points .table th, .icb-user-setting-points .table td{border-top: 1px solid #dcedfa;}
+/*响应式*/
+@media (max-width: 640px) {
+	.icb-nav-tabs h2 {position: static;}
+	.icb-user-setting .mod-base .side-bar {position: relative;top: 0;}
+	.icb-user-setting .mod-contact li input ,.icb-user-setting .mod-base .time,.icb-user-setting .mod-base .introduce input{width: 100%!important;}
+}
+@media (max-width: 321px) {
+	.icb-nav-tabs h2 {position: static;}
+	.icb-user-setting .mod-base dl dt {width: auto;}
+	.icb-user-setting .mod-base dl dd select,.icb-user-setting .mod-base .introduce input,.icb-user-setting .mod-base .time,.icb-user-setting .mod-contact li input {width: 100%!important;}
+	.icb-user-setting .mod-base .side-bar {position: relative;top: 0;}
+	.icb-user-setting .mod-body {padding: 30px;}
+}

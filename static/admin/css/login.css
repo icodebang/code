@@ -1,0 +1,16 @@
+/* Wecenter 后台登陆界面 */
+body{background:#eff0f4;}
+.icb-login .mod{width:350px;margin-top:70px;}
+.icb-login .mod h1 img{display:block;-webkit-animation:fadeInDown 1s .2s ease both;-moz-animation:fadeInDown 1s .2s ease both;margin:0 auto;}
+@-webkit-keyframes fadeInDown{0%{opacity: 0; -webkit-transform: translateY(-20px);} 100%{opacity: 1; -webkit-transform: translateY(0);}}
+@-moz-keyframes fadeInDown{0%{opacity: 0; -moz-transform: translateY(-20px);} 100%{opacity: 1; -moz-transform: translateY(0);}}
+.icb-login .mod form{margin-top:10px;border:1px solid #ddd;border-radius:4px;box-shadow:0 1px 3px rgba(0,0,0,0.1);padding:40px;background:#fff;}
+.icb-login .mod form button{margin-top:10px;width:100%;}
+.icb-login .mod .form-group{position:relative;}
+.icb-login .mod form input{padding-left:30px;}
+.icb-login .mod form label{color:#666;}
+.icb-login .mod form .icon{position:absolute;left:10px;top:34px;color:#d5d5d5;font-size:18px;}
+.icb-login .mod h2{margin-top:30px;font-size:14px;}
+.icb-login img.verification{width:100px;height:34px;border:none;}
+
+@media only screen and (max-width: 320px){.icb-login .mod{margin-top: 40px; width: 310px;}}

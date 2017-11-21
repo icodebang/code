@@ -1,0 +1,43 @@
+body, button, input, select, textarea, option{color:#333;font-size:13px;line-height:150%;}
+input[type="text"], input[type="password"]{
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+input[type="text"]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.icb-install{width: 960px;height:auto;overflow: hidden;margin:100px auto 0;padding:1px;border: 1px solid #ccc;border-radius: 10px;color: #333;}
+.icb-install .icb-mod-head{height: 50px;background: #397EAD;border-radius: 10px 10px 0 0;}
+.icb-install .icb-mod-head img{margin:5px 0 0 40px;}
+.icb-install .icb-mod-body{padding: 20px 60px 50px;}
+.icb-install dl{margin:0;padding-top:10px;border-top: 1px dotted #ccc;}
+.icb-install dl:first-child{border-top: none;}
+.icb-install dl dt{font-size: 16px;font-weight: normal;}
+.icb-install dl dd{padding: 10px 0 20px;}
+.icb-install ul{margin:20px 0 0 0;list-style-type: none;}
+.icb-install ul li{line-height: 30px;margin-bottom: 20px;padding:10px 20px;background: #f7f7f7;text-shadow:0 1px 0 #fff;border-radius: 10px 10px 10px 10px; }
+.icb-install ul li span{margin-left: 20px;color:#999;}
+.icb-install ul li b{display: inline-block; width: 100px;}
+.icb-install .green{color: green !important;}
+.icb-install .red{color: #d40004;}
+.icb-install-footer{width: 960px;margin:10px auto 100px;text-align: right;color: #999;}
+.icb-install-footer a{color: #999;}
+.icb-install .default_text{margin:0 0 0 20px;}
+.icb-install .error{padding:20px 30px;background: #fdeae6;border:1px solid #4d1514;border-radius: 10px;}
+.icb-install .error h2{margin-top:0px;font-size: 14px;color: #d40004;}
+.icb-install .error h2 .i-no{position: relative;top:3px;margin-right: 5px;}
+
