@@ -9,7 +9,7 @@ function FileUploader (bindElement, filesInfoContainer, url, options, callback)
 	this.url = url;
 	if (! options)  options = {};
     this.options = {
-    	'allowedTypes' : '*',
+        'allowedTypes' : '*',
 		'multiple'  : true,
 		'deleteBtn' : true,
 		'insertBtn' : true,
@@ -17,8 +17,8 @@ function FileUploader (bindElement, filesInfoContainer, url, options, callback)
 		'deleteBtnTemplate' : '<a class="delete-file">删除</a>' ,
 		'insertBtnTemplate' : '<a class="insert-file">插入</a>',
 
-    	'fileName'  : 'upload_file',  // 上传的文件参数名称
-    	'uploadingModalSelector' : null, // 显示上传中的modal选择器
+    	    'fileName'  : 'upload_file',  // 上传的文件参数名称
+    	    'uploadingModalSelector' : null, // 显示上传中的modal选择器
 		'isFormInsideMode': false, // 将上传放在绑定元素内部模式 ?
 		'showUploadImage' : false, // 是否将上传后图片展示出来，而不是展示文件信息
 		'fileInfoTemplate': '<li class="__UploadFileInfo__">'+ // 展示上传文件信息
@@ -27,7 +27,9 @@ function FileUploader (bindElement, filesInfoContainer, url, options, callback)
 									'<p class="title"></p>'+
 									'<p class="size"></p>'+
 									'<p class="meta">' +
-									//  '<a class="js-stop-upload">'+_t('取消')+'</a>' +
+									// '<a
+                                    // class="js-stop-upload">'+_t('取消')+'</a>'
+                                    // +
 									'</p>' +
 								'</div>'+
 							'</li>'
@@ -73,9 +75,11 @@ FileUploader.prototype =
 		return this;
 	},
 	/**
-	 *  初始化表单，准备文件展示区域
-	 * @param element 上传绑定的元素
-	 */
+     * 初始化表单，准备文件展示区域
+     * 
+     * @param element
+     *            上传绑定的元素
+     */
 	init : function (element)
 	{
 	    var _this = this;
@@ -104,9 +108,10 @@ FileUploader.prototype =
 	},
 	
 	/**
-	 * 创建上传文件的表单，绑定上传操作
-	 * @returns
-	 */
+     * 创建上传文件的表单，绑定上传操作
+     * 
+     * @returns
+     */
 	buildForm : function ()
 	{
 		var _this = this;
@@ -138,15 +143,15 @@ FileUploader.prototype =
 	
 	_onUploading : function (event, $fileInfo, index, file)
 	{
-    	$fileInfo.find('.js-stop-upload').remove();
+    	    $fileInfo.find('.js-stop-upload').remove();
 		var percent = 0;
-    	if (event.lengthComputable) {
+		if (event.lengthComputable) {
             percent = Math.round(event.loaded / event.total * 100 );
         }
 
-    	var $fileInfo = $(this.container).find('[data-upload-flag="'+$fileInfo.attr('data-upload-flag')+'"]');
-    	$fileInfo.find('.title').html(file.name);
-    	$fileInfo.find('.size').html(percent + '%');
+        	var $fileInfo = $(this.container).find('[data-upload-flag="'+$fileInfo.attr('data-upload-flag')+'"]');
+        	$fileInfo.find('.title').html(file.name);
+        	$fileInfo.find('.size').html(percent + '%');
 	},
 	
 	_onEndUpload : function (result, $fileInfo, index, file)
@@ -155,39 +160,39 @@ FileUploader.prototype =
 			index = 0;
 		}
 		var info;
-    	var $fileInfo = $(this.container).find('[data-upload-flag="'+$fileInfo.attr('data-upload-flag')+'"]');
-    	$fileInfo.find('.js-stop-upload').remove();
-    	if (result.errnum == 0) {
-    		try {
-    			info = eval("(" + result.response + ")");
-    			if (info.err) {
-    			    info.error = info.err;
-    			    delete info.err;
-    			}
-    		} catch (e) {
-    			console && console.info(result);
-    			info = {error : _t('服务器返回错误数据！')};
-    		} 
-    	} else {
-    		info = result;
-    	}
+        	var $fileInfo = $(this.container).find('[data-upload-flag="'+$fileInfo.attr('data-upload-flag')+'"]');
+        	$fileInfo.find('.js-stop-upload').remove();
+        	if (result.errnum == 0) {
+        		try {
+        			info = eval("(" + result.response + ")");
+        			if (info.err) {
+        			    info.error = info.err;
+        			    delete info.err;
+        			}
+        		} catch (e) {
+        			console && console.info(result);
+        			info = {error : _t('服务器返回错误数据！')};
+        		} 
+        	} else {
+        		info = result;
+        	}
 
 		var $container = $(this.container);
 		if (! info.error) {
 			// 将图片直接展示出来
 			if (this.options.showUploadImage === true && info.thumb) {
-	        	if ($container.attr('src')) {
-	        		$container.attr('src', info.thumb + '?' + Math.round(Math.random() * 10000));
-	        	} else {
-	        		$container.css(
-	        		{
-	        			'background-image' : 'url(' + info.thumb + '?' + Math.round(Math.random() * 10000) + ')'
-	        		});
-	        	}
+        	        	if ($container.attr('src')) {
+        	        		$container.attr('src', info.thumb + '?' + Math.round(Math.random() * 10000));
+        	        	} else {
+        	        		$container.css(
+        	        		{
+        	        			'background-image' : 'url(' + info.thumb + '?' + Math.round(Math.random() * 10000) + ')'
+        	        		});
+        	        	}
 
 	            this.oncallback(info);
 	        	
-	        	return;
+	            return;
 	        }
 			
 			switch (info.class_name) {
@@ -216,7 +221,7 @@ FileUploader.prototype =
 	
 					$fileInfo.find('.meta').append(btn);
 				}
-				//if (this.options.insertBtn && !info.class_name) {
+				// if (this.options.insertBtn && !info.class_name) {
 				if (this.options.insertBtn) {
 					btn = this.createInsertBtn(info.attach_id);
 
@@ -247,9 +252,11 @@ FileUploader.prototype =
 	},
 	
 	/**
-	 * 上传文件处理
-	 * @param fileElement fileInput元素
-	 */
+     * 上传文件处理
+     * 
+     * @param fileElement
+     *            fileInput元素
+     */
 	processUpload : function (fileElement)
 	{
 		var files = $(fileElement)[0].files;
@@ -265,11 +272,14 @@ FileUploader.prototype =
 	},
 	
 	/**
-	 * 上传文件
-	 * @param file [option] 从fileInput获取到的file对象
-	 * @param index [option] 当前的file是fileInputh中的第几个
-	 * @returns {Boolean}
-	 */
+     * 上传文件
+     * 
+     * @param file
+     *            [option] 从fileInput获取到的file对象
+     * @param index
+     *            [option] 当前的file是fileInputh中的第几个
+     * @returns {Boolean}
+     */
 	doUpload : function (file, index)
 	{
 		var _this = this;
@@ -352,10 +362,11 @@ FileUploader.prototype =
 	},
 
 	/**
-	 * 检查上传文件扩展名是否允许
-	 * @param name
-	 * @returns {Boolean}
-	 */
+     * 检查上传文件扩展名是否允许
+     * 
+     * @param name
+     * @returns {Boolean}
+     */
 	isFileTypeValid: function (filename)
 	{
 		if(! filename) {
@@ -372,9 +383,9 @@ FileUploader.prototype =
 	},
 
 	/**
-	 * 
-	 * @returns
-	 */
+     * 
+     * @returns
+     */
 	getIframe : function ()
 	{
     	var iframe = $('<iframe/>').attr({
@@ -393,7 +404,7 @@ FileUploader.prototype =
 	},
 
     /**
-     *  创建插入按钮
+     * 创建插入按钮
      */
     createInsertBtn : function (attach_id)
     {
@@ -405,8 +416,8 @@ FileUploader.prototype =
 				if ($imgInfo.attr('data-img')) {
 				    _this.editor.insertHtml('<br/>');
 				    var dom = _this.editor.document.createElement( 'img' );
-                    //name = $.trim(name)=='' ? value : name;
-                    //dom.setHtml(name);
+                    // name = $.trim(name)=='' ? value : name;
+                    // dom.setHtml(name);
 
                     dom.setAttribute( 'src', $imgInfo.attr('data-img') );
                     dom.setAttribute( 'attach-id', attach_id );
@@ -414,9 +425,9 @@ FileUploader.prototype =
                     _this.editor.insertElement(dom);
                     _this.editor.insertHtml('<br/>');
                     
-//				    _this.editor.insertHtml('<br/><img src="'
-//						+ $imgInfo.attr('data-img')
-//						+ '" attach-id="'+ attach_id + '"/><br/>');
+// _this.editor.insertHtml('<br/><img src="'
+// + $imgInfo.attr('data-img')
+// + '" attach-id="'+ attach_id + '"/><br/>');
 				    
 				} else if ($imgInfo.hasClass('audio')) {
                     _this.editor.insertHtml('<br/>');
@@ -429,9 +440,9 @@ FileUploader.prototype =
                     _this.editor.insertElement(dom);
                     _this.editor.insertHtml('<br/>');
                     
-//                    _this.editor.insertHtml('<br/><audio controls src="'
-//                        + $imgInfo.attr('data-url')
-//                        + '" attach-id="'+ attach_id + '"></audio><br/>');
+// _this.editor.insertHtml('<br/><audio controls src="'
+// + $imgInfo.attr('data-url')
+// + '" attach-id="'+ attach_id + '"></audio><br/>');
 				} else {
 					_this.editor.insertText("\n[attach]" + attach_id + "[/attach]\n");
 				}
@@ -444,7 +455,7 @@ FileUploader.prototype =
     },
 
     /**
-     *  创建删除按钮
+     * 创建删除按钮
      */
    	createDeleteBtn : function (attach_id, url)
    	{
@@ -509,10 +520,11 @@ FileUploader.prototype =
    	},
 
 	/**
-	 *  获取iframe响应的json内容
-	 * @param iframe
-	 * @param $fileInfo
-	 */
+     * 获取iframe响应的json内容
+     * 
+     * @param iframe
+     * @param $fileInfo
+     */
 	getIframeContent : function (iframe, $fileInfo)
 	{
 		var doc = iframe.contentDocument ? iframe.contentDocument: iframe.contentWindow.document,
@@ -540,7 +552,7 @@ FileUploader.prototype =
 
            	$('.upload-iframe').detach();
 
-           	//this.oncallback();
+           	// this.oncallback();
 	},
 
 	// ajax完成callback
@@ -587,7 +599,9 @@ FileUploader.prototype =
 
     /**
      * 获取文件大小
-     * @param size 格式化文件大小
+     * 
+     * @param size
+     *            格式化文件大小
      * @returns {String}
      */
     formatFileSize : function (filesize)
@@ -801,7 +815,7 @@ FileUpload.prototype =
 		
 	},
 
-	//上传文件类型判断
+	// 上传文件类型判断
 	allowed_upload_types : function(name)
 	{
 		if(!name)
@@ -834,7 +848,7 @@ FileUpload.prototype =
 			if(!is_allowed)
 			{
 				$(li).find('.meta').html(_t('文件类型错误'));
-				//$('.upload-list').html('');
+				// $('.upload-list').html('');
 				if( typeof(AWS.alert) == 'undefined' )
 				{
 					alert(_t('文件类型不允许上传'));
@@ -872,7 +886,7 @@ FileUpload.prototype =
 		}
         else
         {
-        	//低版本ie上传
+        	// 低版本ie上传
 			var iframe = this.createIframe();
 			
 			var filename = $(this.form).find('.file-input').val();
