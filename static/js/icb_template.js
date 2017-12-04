@@ -98,6 +98,36 @@ ICB.template =
 			'{{/list}}'+
 			'</ul>'+
 		'</div>',
+		
+    homeworkItemBox :
+        '<li data-sort="" data-cursor="pointer">' +
+            '<div class="mod-set-head">' +
+                '<span class="pull-right">' +
+                  '<a href="javascript:;" onclick="ICB.modal.confirm(\''+_t('确认删除?') + '\', function(){$(this).closest("li").remove();}); event ? event.stopPropagation():null;return false;"></a>' +
+                '</span>' +
+                '<h4>'+_t('课后作业习题') + '</h4>' +
+            '</div>' +
+            '<div class="mod-set-body clearfix">' +
+                '<div class="icb-item-info-tag clearfix">' +
+                    '<label class="pull-left">' +
+                    ''+_t('语音')+ '<br />' +
+                    '</label>' +
+                    '<div class="pull-left icb-item-info-img">' +
+                        '<a class="js-upload">' +
+                        '<input name="new_homework[attach_id][]" type="hidden" value=""/>' +
+                        '<img src="' +G_STATIC_URL + '/css/default/img/default_class_imgs.png" alt="" class="js-show"/>' +
+                        '</a>' +
+                    '</div>' +
+                '</div>' +
+
+                '<div class="icb-item-info-descrip">' +
+                    '<label class="pull-left">' +
+                        ''+_t('文字')+ '<br />' +
+                    '</label>' +
+                    '<textarea class="form-control col-sm-12" type="text" name="homework[content][]" ></textarea>' +
+                '</div>' +
+            '</div>' +
+        '</li>',
 	
 	loadingBox:
 		'<div id="icb-loading" class="collapse">'+
