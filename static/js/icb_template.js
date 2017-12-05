@@ -100,10 +100,10 @@ ICB.template =
 		'</div>',
 		
     homeworkItemBox :
-        '<li data-sort="" data-cursor="pointer">' +
+        '<li data-sort="" class="js-new-homework" data-index="{{index}}" data-cursor="pointer">' +
             '<div class="mod-set-head">' +
                 '<span class="pull-right">' +
-                  '<a href="javascript:;" onclick="ICB.modal.confirm(\''+_t('确认删除?') + '\', function(){$(this).closest("li").remove();}); event ? event.stopPropagation():null;return false;"></a>' +
+                  '<a href="javascript:;" onclick="ICB.modal.confirm(\''+_t('确认删除?') + '\', function(){$(event.target).closest(\'li\').remove();}); event?event.stopPropagation():null;return false;">'+_t('删除')+'</a>' +
                 '</span>' +
                 '<h4>'+_t('课后作业习题') + '</h4>' +
             '</div>' +
@@ -114,7 +114,7 @@ ICB.template =
                     '</label>' +
                     '<div class="pull-left icb-item-info-img">' +
                         '<a class="js-upload">' +
-                        '<input name="new_homework[attach_id][]" type="hidden" value=""/>' +
+                        '<input class="js-attach_id" name="attach_id[{{index}}]" type="hidden" value=""/>' +
                         '<img src="' +G_STATIC_URL + '/css/default/img/default_class_imgs.png" alt="" class="js-show"/>' +
                         '</a>' +
                     '</div>' +
@@ -124,7 +124,7 @@ ICB.template =
                     '<label class="pull-left">' +
                         ''+_t('文字')+ '<br />' +
                     '</label>' +
-                    '<textarea class="form-control col-sm-12" type="text" name="homework[content][]" ></textarea>' +
+                    '<textarea class="form-control col-sm-12" type="text" name="content[{{index}}]" ></textarea>' +
                 '</div>' +
             '</div>' +
         '</li>',

@@ -57,7 +57,7 @@ $(function () {
     });
 
     // input 菜单折叠，展开、拖动
-    $('.icb-item-info li .mod-set-head').click( function () {
+    $('.icb-item-info').on('click', 'li .mod-set-head', function () {
         // 菜单拖动中， 不做折叠
         if (ICB.V.dragsortIsRunning == true) {
             return;
