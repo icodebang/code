@@ -547,3 +547,26 @@ right: 10px;
 .jp-state-playing .jp-stop {
 	display:block !important;
 }
+
+
+/*****************************************
+================= Home页面 ===============
+*****************************************/
+.mod-body{
+    position:relative;
+    margin-bottom:.25rem;
+}
+.mod-body .mod-body-box{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    width:5.8rem;
+    height: 1.68rem;
+    font-size:.56rem;
+    color:#fff;
+    letter-spacing:.25rem;
+    text-align: center;
+}
