@@ -550,12 +550,12 @@ right: 10px;
 
 
 /*****************************************
-==============START Home页面 =============
+==============START index页面 =============
 *****************************************/
 html{
     height:100%;
 }
-body{
+.indexBody{
     height:100%;
     background-color: #fff;
     background-image: url("../img/lqImg/Home_bg.png");
@@ -588,7 +588,7 @@ body{
 }
 
 /*****************************************
-==============End Home页面 ==============
+==============End index页面 ==============
 *****************************************/
 
 
@@ -691,7 +691,97 @@ body{
 /*****************************************
 ==========START 我的页面  ================
 *****************************************/
-
+html{
+    height:100%;
+}
+.homeBody{
+    height:100%;
+    background-color: #fff;
+    background-image: url("../img/lqImg/Home_bg.png");
+    background-attachment: fixed;
+    background-position: left bottom;
+    background-size: cover;
+    background-repeat:  no-repeat ;
+}
+.homeBody .container{
+    padding:15px;
+}
+.my-points{
+    width:100%;
+    height:2.5rem;
+    margin-bottom:.3rem;
+}
+.my-points .m-left-points{
+    float:left;
+}
+.my-points .m-right-points{
+    float:right;
+}
+.my-points .m-left-points,
+.my-points .m-right-points{
+    position: relative;
+    width:48%;
+    height:2.5rem;
+    background: url("../img/lqImg/my_1.png") no-repeat;
+    box-shadow: -.02rem .02rem .05rem .02rem #e1e1e1;
+}
+.my-points .points-text{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    width:70%;
+    height:1.2rem;
+    color:#000;
+    text-align:center;
+}
+.points-text p{
+    margin:0;
+}
+/******左边字体********/
+.m-left-points .points-text p:nth-child(1){
+    font-size: .22rem;
+}
+.m-left-points .points-text p:nth-child(2){
+    font-size: .2rem;
+}
+.m-left-points .points-text p:nth-child(3){
+    font-size: .36rem;
+    font-weight: bold;
+}
+/******右边字体********/
+.m-right-points .points-text p:nth-child(1){
+    font-size: .22rem;
+}
+.m-right-points .points-text p:nth-child(2){
+    font-size: .22rem;
+}
+.m-right-points .points-text p:nth-child(3){
+    font-size: .36rem;
+    font-weight: bold;
+}
+/*********** my-option *************/
+.my-option{
+    width:100%;
+    height:2.4rem;
+}
+.my-option ul.option-box{
+    width:100%;
+    height:100%;
+}
+.my-option ul.option-box li{
+    width:100%;
+    height:.59rem;
+    text-align: center;
+    line-height: .85rem;
+    font-size:.26rem;
+    border-bottom:0.01rem solid #595757;
+}
+.my-option ul.option-box li a{
+    color:#343434;
+}
 
 /*****************************************
 ==========END 我的页面  ================
