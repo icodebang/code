@@ -623,6 +623,33 @@ body{
     height:100%;
 }
 
+/* 首页body class */
+.indexBody {
+}
+/* 我的主页 body class */
+.homeBody {
+	
+}
+/* 交作业页面 body class */
+.homeworkBody {
+	
+}
+/* 作业列表页面 body class */
+.homeworksBody {
+	
+}
+/* 学习报告页面 body class */
+.reportBody {
+    
+}
+/* 课程详情页面 body class */
+.showBody {
+    
+}
+/* 课程列表页面 body class */
+.listBody {
+    
+}
 /*****************************************
 =============END 全部课程页面 ============
 *****************************************/
