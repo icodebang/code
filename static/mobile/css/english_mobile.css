@@ -558,7 +558,7 @@ html{
 .indexBody{
     height:100%;
     background-color: #fff;
-    background-image: url("../img/lqImg/Home_bg.png");
+    background-image: url("../img/lqimg/Home_bg.png");
     background-attachment: fixed;
     background-position: left bottom;
     background-size: cover;
@@ -641,20 +641,18 @@ html{
     top:8px;
     left:10px;
 }
-
 .list-content{
     margin-top:15px;
 }
 .list-content li{
     padding:0;
 }
-
 .teacher_icon{
     display:block;
     width:0.8rem;
     height:0.8rem;
     border:1px solid #6f6e6e;
-    background: url("../img/lqImg/listIcon_1.png") no-repeat center/cover;
+    background: url("../img/lqimg/listIcon_1.png") no-repeat center/cover;
 }
 .list-info{
     width:100%;
@@ -683,8 +681,6 @@ html{
 .course_time{
     float:right;
 }
-
-
 /* 首页body class */
 .indexBody {
 }
@@ -726,7 +722,7 @@ html{
 .homeBody{
     height:100%;
     background-color: #fff;
-    background-image: url("../img/lqImg/Home_bg.png");
+    background-image: url("../img/lqimg/Home_bg.png");
     background-attachment: fixed;
     background-position: left bottom;
     background-size: cover;
@@ -811,7 +807,6 @@ html{
 .my-option ul.option-box li a{
     color:#343434;
 }
-
 /*****************************************
 ==========END 我的页面  ================
 *****************************************/
