@@ -486,7 +486,7 @@ footer p{margin:0;}
 
 body
 {
-	background:none;
+    background:none;
 }
 img{max-width:100%;}
 /* 首面 */
@@ -497,12 +497,12 @@ text-indent: -20000px;
 }
 /* 会员介绍页面 */
 .member-intro-img{
-	background: url('../img/member_intro.png') no-repeat center;
+    background: url('../img/member_intro.png') no-repeat center;
 height: 200px;
 text-indent: -20000px;
 }
 .member-intro-text{
-	text-align: center;
+    text-align: center;
 margin: 20px;
 }
 /* 内容展示页面 */
@@ -514,7 +514,7 @@ blockquote, blockquote>p{
 #itemContent{margin-bottom:10px;}
 #itemContent audio {display:none !important;}
 #fix-bottom-right{
-	position: fixed;
+    position: fixed;
 bottom: 60px;
 right: 10px;
 }
@@ -531,11 +531,11 @@ right: 10px;
 .jp-audio .jp-time-holder {top: 15px !important;}
 .jp-volume-controls {display:none !important;}
 .jp-audio {
-	width: 300px !important;
+    width: 300px !important;
     padding: 0 0 0 50px;
     background: url('../../css/default/img/audio_avatar.png') no-repeat;
     background-size: 46px auto;
-	}
+    }
 .jp-current-time,.jp-toggles {display:none !important;}
 .jp-audio .jp-type-single .jp-time-holder {
     left: 80px !important;
@@ -545,7 +545,7 @@ right: 10px;
 .jp-stop {display:none !important;
     margin: 6px !important;}
 .jp-state-playing .jp-stop {
-	display:block !important;
+    display:block !important;
 }
 
 
@@ -558,7 +558,7 @@ html{
 body{
     height:100%;
     background-color: #fff;
-    background-image: url("../img/homeBg/Home_bg.png");
+    background-image: url("../img/lqImg/Home_bg.png");
     background-attachment: fixed;
     background-position: left bottom;
     background-size: cover;
@@ -598,8 +598,8 @@ body{
 .curriculum-box{
     display:block;
     position:relative;
-    width:3rem;
-    height:3rem;
+    width:100%;
+    height:100%;
     color:#fff;
     box-shadow: -0.03rem 0.03rem 0.06rem 0 #dbdad9;
     margin-bottom:.3rem;
@@ -622,21 +622,83 @@ body{
     width:100%;
     height:100%;
 }
+/*****************************************
+=============END 全部课程页面 ============
+*****************************************/
+
+
+/*****************************************
+==========START 全部课程页面 LIST =========
+*****************************************/
+.search_wrap{
+    position: relative;
+}
+.search-query{
+    text-indent:15px;
+}
+.search-icon{
+    position: absolute;
+    top:8px;
+    left:10px;
+}
+
+.list-content{
+    margin-top:15px;
+}
+.list-content li{
+    padding:0;
+}
+
+.teacher_icon{
+    display:block;
+    width:0.8rem;
+    height:0.8rem;
+    border:1px solid #6f6e6e;
+    background: url("../img/lqImg/listIcon_1.png") no-repeat center/cover;
+}
+.list-info{
+    width:100%;
+    height:.9rem;
+    padding-top:0.1rem;
+    color:#6f6e6e;
+}
+.list-info .list-info-left{
+    float:left;
+    width:.85rem;
+}
+.list-info .list-info-right{
+    float:right;
+    width: calc(100% - .95rem);
+    height:.6rem;
+    margin-top:.2rem;
+    font-size: .22rem;
+}
+.teacher_brief{
+    margin:0;
+    font-size: .24rem;
+}
+.course_views{
+    float:left;
+}
+.course_time{
+    float:right;
+}
+
 
 /* 首页body class */
 .indexBody {
 }
 /* 我的主页 body class */
 .homeBody {
-	
+    
 }
 /* 交作业页面 body class */
 .homeworkBody {
-	
+    
 }
 /* 作业列表页面 body class */
 .homeworksBody {
-	
+    
 }
 /* 学习报告页面 body class */
 .reportBody {
@@ -651,5 +713,5 @@ body{
     
 }
 /*****************************************
-=============END 全部课程页面 ============
+==========END 全部课程页面 LIST ===========
 *****************************************/
