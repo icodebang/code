@@ -486,7 +486,7 @@ footer p{margin:0;}
 
 body
 {
-	background:none;
+    background:none;
 }
 img{max-width:100%;}
 /* 首面 */
@@ -497,12 +497,12 @@ text-indent: -20000px;
 }
 /* 会员介绍页面 */
 .member-intro-img{
-	background: url('../img/member_intro.png') no-repeat center;
+    background: url('../img/member_intro.png') no-repeat center;
 height: 200px;
 text-indent: -20000px;
 }
 .member-intro-text{
-	text-align: center;
+    text-align: center;
 margin: 20px;
 }
 /* 内容展示页面 */
@@ -514,7 +514,7 @@ blockquote, blockquote>p{
 #itemContent{margin-bottom:10px;}
 #itemContent audio {display:none !important;}
 #fix-bottom-right{
-	position: fixed;
+    position: fixed;
 bottom: 60px;
 right: 10px;
 }
@@ -531,11 +531,11 @@ right: 10px;
 .jp-audio .jp-time-holder {top: 15px !important;}
 .jp-volume-controls {display:none !important;}
 .jp-audio {
-	width: 300px !important;
+    width: 300px !important;
     padding: 0 0 0 50px;
     background: url('../../css/default/img/audio_avatar.png') no-repeat;
     background-size: 46px auto;
-	}
+    }
 .jp-current-time,.jp-toggles {display:none !important;}
 .jp-audio .jp-type-single .jp-time-holder {
     left: 80px !important;
@@ -545,7 +545,7 @@ right: 10px;
 .jp-stop {display:none !important;
     margin: 6px !important;}
 .jp-state-playing .jp-stop {
-	display:block !important;
+    display:block !important;
 }
 
 
@@ -682,6 +682,35 @@ html{
 }
 .course_time{
     float:right;
+}
+
+
+/* 首页body class */
+.indexBody {
+}
+/* 我的主页 body class */
+.homeBody {
+    
+}
+/* 交作业页面 body class */
+.homeworkBody {
+    
+}
+/* 作业列表页面 body class */
+.homeworksBody {
+    
+}
+/* 学习报告页面 body class */
+.reportBody {
+    
+}
+/* 课程详情页面 body class */
+.showBody {
+    
+}
+/* 课程列表页面 body class */
+.listBody {
+    
 }
 /*****************************************
 ==========END 全部课程页面 LIST ===========
