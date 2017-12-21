@@ -13,7 +13,7 @@ a{outline: none;}
 input[type="text"], input[type="password"], textarea{-webkit-appearance:none;}
 .badge{background-color: #cccccc;font-style: normal;vertical-align: 1px;}
 .badge-tips{background-color: #ff5428;}
-.container{width:100%;padding:0 10px;}
+.container{width:100%;padding:15px;}
 .container.active{background-color: #fff;}
 .color-999{color: #999999;}
 .color-666{color: #666666;}
@@ -495,7 +495,7 @@ img{max-width:100%;}
 height: 200px;
 text-indent: -20000px;
 }
-/* 会员介绍页面 */
+/* 会员介绍页面
 .member-intro-img{
     background: url('../img/member_intro.png') no-repeat center;
 height: 200px;
@@ -504,7 +504,7 @@ text-indent: -20000px;
 .member-intro-text{
     text-align: center;
 margin: 20px;
-}
+} */
 /* 内容展示页面 */
 blockquote, blockquote>p{
     padding: 0 !important;
@@ -548,7 +548,33 @@ right: 10px;
     display:block !important;
 }
 
+/* 首页body class */
+.indexBody {
+}
+/* 我的主页 body class */
+.homeBody {
 
+}
+/* 交作业页面 body class */
+.homeworkBody {
+
+}
+/* 作业列表页面 body class */
+.homeworksBody {
+
+}
+/* 学习报告页面 body class */
+.reportBody {
+
+}
+/* 课程详情页面 body class */
+.showBody {
+
+}
+/* 课程列表页面 body class */
+.listBody {
+
+}
 /*****************************************
 ==============START index页面 =============
 *****************************************/
@@ -564,9 +590,6 @@ html{
     background-size: cover;
     background-repeat:  no-repeat ;
 }
-.container{
-    padding-top:.15rem;
-}
 .mod-body{
     position:relative;
     margin-bottom:.25rem;
@@ -579,22 +602,23 @@ html{
     left:0;
     right:0;
     margin:auto;
-    width:5.8rem;
-    height: 1.68rem;
+    width:80%;
+    height:50%;
     font-size:.56rem;
     color:#fff;
     letter-spacing:.25rem;
     text-align: center;
 }
-
 /*****************************************
 ==============End index页面 ==============
 *****************************************/
 
-
 /*****************************************
 =============START 全部课程页面 ==========
 *****************************************/
+ul.curriculum li{
+    padding:10px;
+}
 .curriculum-box{
     display:block;
     position:relative;
@@ -602,7 +626,6 @@ html{
     height:100%;
     color:#fff;
     box-shadow: -0.03rem 0.03rem 0.06rem 0 #dbdad9;
-    margin-bottom:.3rem;
 }
 .curriculum-box:hover{
     color:#fff;
@@ -626,10 +649,10 @@ html{
 =============END 全部课程页面 ============
 *****************************************/
 
-
 /*****************************************
 ==========START 全部课程页面 LIST =========
 *****************************************/
+
 .search_wrap{
     position: relative;
 }
@@ -646,6 +669,25 @@ html{
 }
 .list-content li{
     padding:0;
+    margin-bottom:.3rem;
+}
+.list-box{
+    position:relative;
+    display:block;
+}
+.list-box .list-box-text{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    width:80%;
+    height: 50%;
+    font-size:.56rem;
+    color:#fff;
+    letter-spacing:.25rem;
+    text-align: center;
 }
 .teacher_icon{
     display:block;
@@ -673,7 +715,7 @@ html{
 }
 .teacher_brief{
     margin:0;
-    font-size: .24rem;
+    font-size: .22rem;
 }
 .course_views{
     float:left;
@@ -681,37 +723,9 @@ html{
 .course_time{
     float:right;
 }
-/* 首页body class */
-.indexBody {
-}
-/* 我的主页 body class */
-.homeBody {
-    
-}
-/* 交作业页面 body class */
-.homeworkBody {
-    
-}
-/* 作业列表页面 body class */
-.homeworksBody {
-    
-}
-/* 学习报告页面 body class */
-.reportBody {
-    
-}
-/* 课程详情页面 body class */
-.showBody {
-    
-}
-/* 课程列表页面 body class */
-.listBody {
-    
-}
 /*****************************************
 ==========END 全部课程页面 LIST ===========
 *****************************************/
-
 
 /*****************************************
 ==========START 我的页面  ================
@@ -722,14 +736,11 @@ html{
 .homeBody{
     height:100%;
     background-color: #fff;
-    background-image: url("../img/lqimg/Home_bg.png");
+    background-image: url("../img/lqimg/my_bg.png");
     background-attachment: fixed;
     background-position: left bottom;
     background-size: cover;
     background-repeat:  no-repeat ;
-}
-.homeBody .container{
-    padding:15px;
 }
 .my-points{
     width:100%;
@@ -808,5 +819,234 @@ html{
     color:#343434;
 }
 /*****************************************
-==========END 我的页面  ================
+=========== END 我的页面  ================
+*****************************************/
+
+/*****************************************
+=========== START 会员介绍页面  ===========
+*****************************************/
+.member-intro-img{
+    position:relative;
+    width:100%;
+    height:3rem;
+    background: url('../img/lqimg/home_01.png') no-repeat center/cover;
+}
+.member-intro-img .member-text{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    width:80%;
+    height: 1.68rem;
+    text-align: center;
+}
+.member-text p{
+    margin:0;
+    font-size:.6rem;
+    color:#fff;
+}
+.member-text p.top{
+    letter-spacing:.6rem;
+}
+.member-text p.bom{
+    letter-spacing:.4rem;
+}
+.member-intro-text{
+    margin: .2rem;
+}
+.member-intro-text h2{
+    font-size:.36rem;
+    color:#6f6e6e;
+}
+.member-intro-text h2 span{
+    font-size:.22rem;
+    margin-left:.1rem;
+}
+h2 span b{
+    font-size:.3rem;
+}
+ul.member-info li{
+    width:100%;
+    height:.5rem;
+    line-height: .5rem;
+    font-size:.26rem;
+    color:#6f6e6e;
+}
+ul.member-info li .member i{
+    color:#6f6e6e;
+    margin-right:.1rem;
+}
+/****************************************
+=========== END 会员介绍页面  =============
+*****************************************/
+
+
+/****************************************
+=========== START 作业列表 ================
+*****************************************/
+
+.homework-box{
+    width:100%;
+    height:2.4rem;
+    margin-bottom:.3rem;
+}
+.homework-box-bg{
+    position: relative;
+    width:100%;
+    height:2rem;
+    box-shadow: 2rem 2rem  rgba(0,0,0,.4) inset;
+    background: url("../img/lqimg/homework_1.png") no-repeat;
+}
+.homework-text{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+    width:70%;
+    height:60%;
+}
+.homework-text p{
+    margin:0;
+    color:#fff;
+    text-align: center;
+}
+.homework-text p.text-top{
+    font-size:.24rem;
+    letter-spacing: .18rem;
+}
+.homework-text p.text-cen{
+    font-size:.3rem;
+    font-weight:bold;
+    letter-spacing: .2rem;
+}
+.homework-text p.text-bom{
+    font-size:.24rem;
+    letter-spacing: .48rem;
+}
+.homework-status{
+    width:100%;
+    height:.3rem;
+    font-size: .22rem;
+    margin-top:.1rem;
+}
+.left-status{
+    float:left;
+    background: #f60;
+    padding:0 .08rem;
+    color:#fff;
+}
+.right-time{
+    float:right;
+}
+/****************************************
+============ END 作业列表 ================
+*****************************************/
+
+/*****************************************
+==============START 今日作业页面 ===========
+*****************************************/
+/* 学习报告页面 body class */
+.reportBody {
+
+}
+.report-title{
+    width:100%;
+    text-align: center;
+    height:.26rem;
+    line-height: .26rem;
+    font-size: .22rem;
+    margin-bottom:.2rem;
+}
+.report-title span{
+    display: inline-block;
+    width:.26rem;
+    height:.26rem;
+    background: #ff7c5b;
+    color:#fff;
+    margin:0 .01rem;
+    text-align: center;
+    line-height: .26rem;
+}
+.report-question{
+    width:100%;
+    padding:.3rem 0;
+}
+.report-question ul.report-box{
+    width:100%;
+}
+.report-question ul.report-box li{
+    width:100%;
+    margin-bottom:.2rem;
+    color:#6f6e6e;
+}
+/*****li下 div.report-item *****/
+.report-question ul.report-box li .report-item{
+    width:100%;
+}
+ul.report-box li .q-tit{
+    font-size: .36rem;
+}
+ul.report-box li .q-tit span{
+    font-size:0.22rem;
+    margin-left:.15rem;
+}
+ul.report-box li .q-tit i{
+    font-style: normal;
+    font-weight: bold;
+    font-size:.28rem;
+}
+/********li 2 语音*********/
+ul.report-box li .q-sound .s-left-img{
+    float:left;
+    width:.6rem;
+    height:.6rem;
+    border: 0.01rem solid #858484;
+    background-image: url("../img/lqimg/listIcon_1.png") ;
+    background-repeat: no-repeat ;
+    background-size: .6rem .6rem;
+    background-position: center;
+}
+.s-right{
+    float:left;
+    width:2.9rem;
+    height:.6rem;
+    line-height: .6rem;
+    border: 0.01rem solid #858484;
+    background: #ffe93d;
+    margin-left:.15rem;
+}
+/***********li 3 内容**********/
+ul.report-box li .q-text .q-text-l{
+    float:left;
+    width:.6rem;
+    height:.6rem;
+    line-height: .6rem;
+    border-radius: .03rem;
+    background: #ff7c5b;
+    color:#fff;
+    text-align: center;
+    font-size: .4rem;
+}
+ul.report-box li .q-text .q-text-r{
+    float:left;
+    width:calc( 100% - .75rem);
+    margin-left: .15rem;
+    font-size: 0.22rem;
+}
+/************* li4 *************/
+.q-answer p{
+    float:right;
+    width:1.6rem;
+    height:.4rem;
+    border:0.01rem solid #858484;
+    background: #ffe93d;
+    line-height: .4rem;
+    font-size: .246rem;
+}
+/****************************************
+============== END 今日作业页面 ===========
 *****************************************/
