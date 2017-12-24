@@ -530,13 +530,30 @@ right: 10px;
 .jp-audio .jp-progress {display:none !important;}
 .jp-audio .jp-time-holder {top: 15px !important;}
 .jp-volume-controls {display:none !important;}
+
 .jp-audio {
+	width:100% !important;
+	/*
     width: 300px !important;
     padding: 0 0 0 50px;
     background: url('../../css/default/img/audio_avatar.png') no-repeat;
     background-size: 46px auto;
+    */
     }
+ .jp-play {
+    width: 40px !important;
+    height: .6rem !important;
+    background: url(../image/jplayer.blue.monday.jpg) no-repeat !important;
+} 
+#itemContent .jp-audio, #itemContent .jp-audio-stream, #itemContent .jp-video,
+#itemContent .jp-interface 
+{
+    border: 0  !important;
+    background: none  !important;
+}
+
 .jp-current-time,.jp-toggles {display:none !important;}
+.jp-duration {display:none !important;}
 .jp-audio .jp-type-single .jp-time-holder {
     left: 80px !important;
     width: auto !important;
