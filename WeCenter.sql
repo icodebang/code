@@ -4248,6 +4248,37 @@ ALTER TABLE `wait_del_icb_tag_category_relation`
 --
 ALTER TABLE `wait_del_icb_tag_nav_menu`
   MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=28;
+  
+  
+  
+ 
+CREATE TABLE IF NOT EXISTS `icb_course_homework_record` (
+  `id` int(11) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `latest_course_id` int(11) NOT NULL,
+  `latest_date` date NOT NULL COMMENT '最近交作业日期',
+  `keep_days` smallint(4) NOT NULL DEFAULT '1' COMMENT '连续多少天交作业'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='交作业纪录表';
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `icb_course_homework_record`
+--
+ALTER TABLE `icb_course_homework_record`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `icb_course_homework_record`
+--
+ALTER TABLE `icb_course_homework_record`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT; 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
