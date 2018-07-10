@@ -514,7 +514,7 @@ blockquote {margin: 0 40px;padding: 0 15px;font-size: 14px;color: #777;border-le
 .icb-question-tags:hover{background-color:#ddd;color: #fff;}
 
 /* 文章列表 */
-.icb-article-list .icb-item{position: relative;margin-top:20px;padding:0 5px 5px;border-bottom:1px solid #e1e1e1;}
+.icb-article-list .icb-item{position: relative;margin: 20px 16px 0;border-bottom:1px solid #e1e1e1;}
 .icb-article-list .icb-item:last-child{border-bottom:0;}
 .icb-article-list .icb-item .icb-article-title-box{margin:0;}
 .icb-article-list .icb-item .icb-user-name{position: absolute;left: 20px;top: 0;}
