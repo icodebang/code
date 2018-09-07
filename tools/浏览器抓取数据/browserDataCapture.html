@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基于浏览器的数据抓取</title>
+    <style>
+        #dataCaptureButton{
+            padding:5px;
+            font-size:18px;
+            line-height: 18px;
+        }
+    </style>
+</head>
+<body>
+
+ <a  id="dataCaptureButton" href="javascript:(function(){var script='//localhost/tools/DataCapture/dataCapture.js';try{var x=document.createElement('SCRIPT');x.type='text/javascript';x.src=script + '?' + (new Date().getTime()/100000);x.charset='utf-8';document.getElementsByTagName('head')[0].appendChild(x);} catch(e){alert(e);}})()">数据抓取</a>
+</body>
+</html>
