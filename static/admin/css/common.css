@@ -189,7 +189,7 @@ textarea{resize:none;}
 .icb-content-wrap .icb-item-info .mod-set-head h4{margin: 0;height:40px;font-weight:400;line-height:40px;}
 .icb-content-wrap .icb-item-info .mod-set-head span{color:#999;}
 .icb-content-wrap .icb-item-info .mod-set-body{display:none;padding: 10px 25px;}
-.icb-content-wrap .icb-item-info .icb-item-info-tag .icb-item-info-img{margin:5px 0 0 15px;width:52px;height:52px;border:1px dashed #999;}
+.icb-content-wrap .icb-item-info .icb-item-info-tag .icb-item-info-img{overflow: hidden;margin:5px 0 0 15px;min-width:52px;min-height:52px;border:1px dashed #999;}
 .icb-content-wrap .icb-item-info .icb-item-info-tag .icb-item-info-img form{position: relative;opacity: 0;filter:alpha(opacity=0);width: 0;height: 0;}
 .icb-content-wrap .icb-item-info .icb-item-info-tag .icb-item-info-img form .file-input{position: absolute;left: 0;top: 0;width: 50px;height: 50px;}
 .icb-content-wrap .icb-item-info .icb-item-info-descrip input{width:390px;}
