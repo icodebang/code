@@ -604,6 +604,7 @@ a.icb-get-more {
 }
 .icb-container {
     margin-top: 30px;
+    position: relative;
 }
 
 
@@ -947,9 +948,14 @@ a.icb-get-more {
     height:60px;
 }
 .icb-content-nav-top-menu{
-    background-color: #17344A;
+    /*background-color: #17344A;*/
     position: absolute;
     z-index: 10;
+    /*background-color: rgba(35, 35, 35, 0.6);*/
+    position: absolute;
+    z-index: 10;
+    border-bottom: 1px solid #fff;
+    background: url(img/background/navbg.png) repeat scroll center center;
 }
 .icb-content-nav-menu:hover .icb-content-nav-top-menu{
     background-color: #2b77a8;
@@ -992,7 +998,7 @@ a.icb-get-more {
     top: 0;
     left: 25%;
     height: 100%;
-    background-color: #444;
+    /*background-color: #444;*/
     margin: 0 -15px;
     z-index: 999;
 }
@@ -1354,6 +1360,8 @@ a.icb-get-more {
 
 .category {
     margin-bottom: 20px;
+    position: absolute;
+    top: 0;
 }
 
 .category dl,
