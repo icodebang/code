@@ -1360,7 +1360,7 @@ a.icb-get-more {
 
 .category {
     margin-bottom: 20px;
-    position: absolute;
+    position: relative;
     top: 0;
 }
 

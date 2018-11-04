@@ -11,8 +11,8 @@
  */
 define('WEB_ROOT_DIR', __DIR__ . DIRECTORY_SEPARATOR);
 // 配置文件路径
-//define('CONF_PATH', realpath(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'config') . DIRECTORY_SEPARATOR);
-define('CONF_PATH', realpath(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'system/config') . DIRECTORY_SEPARATOR);
+define('CONF_PATH', realpath(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'config') . DIRECTORY_SEPARATOR);
+//define('CONF_PATH', realpath(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'system/config') . DIRECTORY_SEPARATOR);
 
 if (! file_exists(CONF_PATH . 'database.php') AND ! file_exists(CONF_PATH . 'install.lock.php')) {
     header('Location: ./install/');
