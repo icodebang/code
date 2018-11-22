@@ -330,8 +330,8 @@ textarea{resize:none;}
 .icb-dropdown .icb-dropdown-list li{position:relative;height:35px;line-height:35px;padding:0 10px !important;border-top: 1px solid #f0f0f0;cursor: pointer;text-align: left;font-size: 14px;}
 .icb-dropdown .icb-dropdown-list li:first-child{border-top: none;}
 .icb-dropdown .icb-dropdown-list li:hover, .icb-dropdown .icb-dropdown-list li.active{background-color: #f0f0f0;}
-.icb-dropdown .icb-dropdown-list li a{display:block;color: #666;line-height:35px;}
-..icb-dropdown .icb-dropdown-list li.topic{line-height:24px;padding:5px 10px;}
+.icb-dropdown .icb-dropdown-list li a{display:block;color: #666;line-height:35px; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.icb-dropdown .icb-dropdown-list li.topic{line-height:24px;padding:5px 10px;}
 .icb-dropdown .icb-dropdown-list li.question{line-height:32px;padding:0 10px;}
 .icb-dropdown .icb-dropdown-list li.question a{display: block;line-height: 32px;font-size: 13px;}
 .icb-dropdown .icb-dropdown-list li.question b{line-height: 30px;}
