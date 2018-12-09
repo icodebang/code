@@ -149,6 +149,7 @@ textarea{resize:none;}
 .icb-content-wrap .mod-body,.icb-content-wrap .mod-content{padding:20px;border:1px solid #e2e1e1;border-top:none;background:#fff;}
 .icb-content-wrap h2 i{position:relative;top:0;}
 .mod-body table thead th,.mod-body table tbody td{vertical-align:middle;text-align:center;}
+.mod-body table thead th.text-left,.mod-body table tbody td.text-left{text-align:left;}
 .mod-content table thead th,.mod-content table tbody td{text-align:left;}
 #search{margin-top:25px;}
 .icb-content-wrap .icon-date{position:absolute;top:5px;left:20px;background:#2780bb!important;}
