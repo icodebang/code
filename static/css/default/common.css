@@ -991,7 +991,7 @@ a.icb-get-more {
     border-radius: 0;
 }
 .icb-loop-play-pic{
-    margin-top: -2px;
+   /* margin-top: -2px;*/
 }
 .icb-loop-play-pic .scroll-pic{
     position: absolute;
