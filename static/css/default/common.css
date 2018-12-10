@@ -588,25 +588,31 @@ a.icb-get-more {
     width: 100%;
     min-height: 50px;
     box-shadow: 0 3px 16px 0 rgba(24, 53, 74, 0.5);
-    background-color: rgba(60, 61, 66, 0.9);/* IE9、标准浏览器、IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂 */
+    background-color: rgba(60, 61, 66, 0.9);
+    /* IE9、标准浏览器、IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂 */
 }
 
-@media \0screen\,screen\9 {/* 只支持IE6、7、8 */
-    .icb-top-menu-wrap{
-        background-color:#3c3d42;
-        filter:Alpha(opacity=90);
-        position:static; /* IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
-        *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
+@media \0screen\,
+screen\9 {
+    /* 只支持IE6、7、8 */
+    .icb-top-menu-wrap {
+        background-color: #3c3d42;
+        filter: Alpha(opacity=90);
+        position: static;
+        /* IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
+        *zoom: 1;
+        /* 激活IE6、7的haslayout属性，让它读懂Alpha */
     }
-    .icb-top-menu-wrap .container{
-        position: relative;/* 设置子元素为相对定位，可让子元素不继承Alpha值 */
+    .icb-top-menu-wrap .container {
+        position: relative;
+        /* 设置子元素为相对定位，可让子元素不继承Alpha值 */
     }
 }
+
 .icb-container {
     margin-top: 30px;
     position: relative;
 }
-
 
 .icb-logo,
 .icb-search-box,
@@ -941,13 +947,16 @@ a.icb-get-more {
 .nav-block-row {
     background-color: #eee;
 }
-.content-nav-menu{
+
+.content-nav-menu {
     position: relative;
 }
-.icb-content-nav-menu{
-    height:60px;
+
+.icb-content-nav-menu {
+    height: 60px;
 }
-.icb-content-nav-top-menu{
+
+.icb-content-nav-top-menu {
     /*background-color: #17344A;*/
     position: absolute;
     z-index: 10;
@@ -956,44 +965,60 @@ a.icb-get-more {
     z-index: 10;
     border-bottom: 1px solid #fff;
     background: url(img/background/navbg.png) repeat scroll center center;
+    padding: 0 0 0 15px;
 }
-.icb-content-nav-menu:hover .icb-content-nav-top-menu{
+
+.icb-content-nav-top-menu .title {
+    padding: 0 5px 0 10px;
+}
+
+.icb-content-nav-menu:hover .icb-content-nav-top-menu {
     background-color: #2b77a8;
 }
-.icb-content-nav-top-menu>span, .icb-content-nav-top-menu>a img{
+
+.icb-content-nav-top-menu>span,
+.icb-content-nav-top-menu>a img {
     display: none;
 }
-.icb-content-nav-top-menu>a{
+
+.icb-content-nav-top-menu>a {
     line-height: 60px;
-    color:#fff;
+    color: #fff;
 }
-.icb-content-nav-menu .icb-content-nav-top-menu a .title::after{
-    content:">";
-    float:right;
+
+.icb-content-nav-menu .icb-content-nav-top-menu a .title::after {
+    content: ">";
+    float: right;
     margin-right: 10px;
-    color:#ccc;
+    color: #ccc;
 }
-.icb-content-nav-menu .icb-content-nav-sub-menu{
+
+.icb-content-nav-menu .icb-content-nav-sub-menu {
     position: absolute;
-    left:25%;
-    top:0;
+    left: 16.6666667%;
+    top: 0;
     display: none;
     height: 100%;
     background-color: #fff;
-    margin: 0 -15px;
+    margin: 0 15px;
+    width: 81%;
 }
-.icb-content-nav-menu:hover .icb-content-nav-sub-menu{
+
+.icb-content-nav-menu:hover .icb-content-nav-sub-menu {
     display: block;
     z-index: 1000;
 }
+
 .icb-content-nav-menu .icb-content-wrap {
-    border:0;
+    border: 0;
     border-radius: 0;
 }
-.icb-loop-play-pic{
-   /* margin-top: -2px;*/
+
+.icb-loop-play-pic {
+    /* margin-top: -2px;*/
 }
-.icb-loop-play-pic .scroll-pic{
+
+.icb-loop-play-pic .scroll-pic {
     position: absolute;
     top: 0;
     left: 25%;
@@ -1002,6 +1027,7 @@ a.icb-get-more {
     margin: 0 -15px;
     z-index: 999;
 }
+
 
 /* 分类小标签 */
 
