@@ -1021,10 +1021,10 @@ screen\9 {
 .icb-loop-play-pic .scroll-pic {
     position: absolute;
     top: 0;
-    left: 25%;
+    left: 16.67%;
     height: 100%;
     /*background-color: #444;*/
-    margin: 0 -15px;
+    margin: 0 15px;
     z-index: 999;
 }
 
