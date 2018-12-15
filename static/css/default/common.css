@@ -953,7 +953,7 @@ screen\9 {
 }
 
 .icb-content-nav-menu {
-    height: 60px;
+    height: 55px;
 }
 
 .icb-content-nav-top-menu {
@@ -965,11 +965,11 @@ screen\9 {
     z-index: 10;
     border-bottom: 1px solid #fff;
     background: url(img/background/navbg.png) repeat scroll center center;
-    padding: 0 0 0 15px;
+    padding: 0 0 0 9px;
 }
 
 .icb-content-nav-top-menu .title {
-    padding: 0 5px 0 10px;
+    padding: 0 5px 0 0;
 }
 
 .icb-content-nav-menu:hover .icb-content-nav-top-menu {
@@ -982,14 +982,14 @@ screen\9 {
 }
 
 .icb-content-nav-top-menu>a {
-    line-height: 60px;
+    line-height: 55px;
     color: #fff;
 }
 
 .icb-content-nav-menu .icb-content-nav-top-menu a .title::after {
     content: ">";
     float: right;
-    margin-right: 10px;
+    margin-right: 1px;
     color: #ccc;
 }
 
