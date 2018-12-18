@@ -2837,9 +2837,7 @@ blockquote {
     padding-right: 0;
 }
 
-.icb-rank .votes,
-.icb-rank .answers,
-.icb-rank .views {
+.icb-rank .stat-info {
     border-radius: 1px;
     display: inline-block;
     height: 40px;
@@ -2848,6 +2846,15 @@ blockquote {
     width: 100%;
     font-size: 14px;
 }
+
+.icb-rank .stat-info>* {
+    text-indent: -3000px;
+    display: inline-block;
+}
+
+.icb-rank .votes,
+.icb-rank .answers,
+.icb-rank .views {}
 
 .icb-rank em {
     font-size: 12px;
