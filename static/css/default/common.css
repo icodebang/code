@@ -1083,6 +1083,7 @@ screen\9 {
     font-size: 12px;
     color: #fff;
     border-radius: 4px;
+    margin: 0 0 0 10px;
 }
 
 .article-tag .text:hover,
@@ -2842,22 +2843,14 @@ blockquote {
     display: inline-block;
     height: 40px;
     padding-top: 3px;
-    text-align: center;
+    text-align: left;
     width: 100%;
     font-size: 14px;
 }
 
-.icb-rank .stat-info>* {
+.icb-rank .stat-info em {
     text-indent: -3000px;
-    display: inline-block;
-}
-
-.icb-rank .votes,
-.icb-rank .answers,
-.icb-rank .views {}
-
-.icb-rank em {
-    font-size: 12px;
+    display: none;
 }
 
 
