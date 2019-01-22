@@ -5,7 +5,7 @@
  * 3. 读取分类目录下的文章文件， 进行解析
  * 4. 根据映射关系， 将解析后的数据存入数据库
  */
-$listDir = '';
+$listDir = '/Users/zhoumingxia/git/sites/www.w3cschool.cn';
 $articleDir = '';
 $dirCategoryMap = array(
     'html' => 'html',
@@ -36,10 +36,16 @@ while (false!==($filename=$dir->read())) {
         $fileContent = file_get_contents($articleFilepath);
         $startPos = strpos($fileContent, '<div class="sidebar-tree-content">');
         $endPos = strpos($fileContent, '<!--  sidebar-tree-content end  -->');
+
+        if (! $startPos || ! $endPos) continue;
+
         $content = substr($fileContent, $startPos, $endPos - $startPos);
+        // <a   title="章节 名称">章节 名称</a>
+        // <a  href="course.html" title="文章 题目">文章 题目</a>
+        preg_match_all('/<a  (.*)title="(.*)">.*<\/a>/i', $content, $matchList);
 
-        preg_match_all('/<dt>*<\/dt>/ig', $fileContent, $matchList);
-
+        var_dump($matchList);
+        break;
     }
 }
 
