@@ -9,6 +9,31 @@ $listDir = '/Users/zhoumingxia/git/sites/www.w3cschool.cn';
 $articleDir = '';
 $dirCategoryMap = array(
     'html' => 'html',
+    'html5' => 'html5',
+    'css' => 'css',
+    'jquery' => 'jquery',
+    'bootstrap' => 'bootstrap',
+    'css3' => 'css3',
+    'json' => 'json',
+    'ajax' => 'ajax',
+    'angularjs' => 'angularjs',
+    'react' => 'react',
+    'vuejs' => 'vue',
+    'less'  => 'less',
+    'nodejs' => 'nodejs',
+    'angular2' => 'angular2',
+    'xml' => 'xml',
+    'sass' =>'sass',
+    'php' => 'php',
+    'mysql' => 'mysql',
+    'redis' => 'redis',
+    'phpwmpsql' => 'php',
+    'linux' => 'linux',
+    'json' => 'json',
+    'java' => 'java',
+    'sql'  => 'sql',
+    'sqlite' => 'sqlite'
+
 );
 $dir = dir($listDir);
 // 遍历目录
