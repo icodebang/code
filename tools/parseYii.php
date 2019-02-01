@@ -43,8 +43,8 @@ while (false!==($filename=$dir->read())) {
         if (! is_file($articleFilepath)) continue; // 不是文件， 无需处理
 
         $fileContent = file_get_contents($articleFilepath);
-        $startPos = strpos($fileContent, '<div class="sidebar-tree-content">');
-        $endPos = strpos($fileContent, '<!--  sidebar-tree-content end  -->');
+        $startPos = strpos($fileContent, '<div class="pagemenus">');
+        $endPos = strpos($fileContent, '<div class="content" id="navs">') - 1;
 
         if (! $startPos || ! $endPos) continue;
 
