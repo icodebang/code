@@ -1,6 +1,6 @@
 <?php
 $listDir = '/Users/wangzaixin/git/jb51.data/list';
-$articleDir = '';
+$articleDir = '/Users/wangzaixin/git/jb51.data/article';
 $dir = dir($listDir);
 $listFiles = array();
 $articleFiles = array();
@@ -24,11 +24,60 @@ while (false!==($filename=$dir->read())) {
 // 对每一个 list 文件处理
 foreach ($listFiles as $_listFilename) {
 
-    $fileContent = file_get_contents($filepath);
+    $fileContent = file_get_contents($listDir . '/' . $_listFilename);
     // 文章列表 <DT><span>日期:2018-12-26</span><a href="./article/1111111.htm" title="文章标题" target="_blank">文章标题</a></DT>
-    preg_match_all('/<dt>*<\/dt>/ig', $fileContent, $matchList);
+    $fileContent = mb_convert_encoding($fileContent, 'utf-8', 'gb2312');
+    preg_match_all('/<dt>.*<\/dt>/i', $fileContent, $matchList);
+if($_listFilename == 'list_97_1.html') {
 
+//    var_dump($_listFilename, $matchList, $fileContent);exit;
+}
+
+    if (! $matchList[0]) { // 没有匹配的文章列表
+        //echo $listDir . '/' . $_listFilename . " has no article link found! \rq\n";
+        continue;
+    }
+
+    // 对每个文章链接进行处理。 如果本地已经有文章，直接解析。 如果没有链接， 从网上获取文章内容；
     $articleFileList = array();
+    foreach ($matchList[0] as $_linkString) {
+        // 匹配文章链接地址
+        preg_match_all('/<span>.*<\/span><a href="(.*)" title=".*" target="_blank">.*<\/a>/i', $_linkString, $matchArticleList);
+        //var_dump($_listFilename, $matchArticleList[1]);exit;
+        if (! $matchArticleList[1]) { // 没有文章匹配
+            continue;
+        }
+
+
+        foreach ($matchArticleList[1] as $_linkFile) {
+            $_fileInfo = explode('/', $_linkFile);
+            $_filename = array_pop($_fileInfo);
+            $_filename = rtrim($_filename, 'lL') . 'l';
+            $_filepath = $articleDir . '/' . $_filename;
+            $_content = '';
+            if (! is_file($_filepath)) {
+                if (strtolower($_fileInfo[0]) == 'http:' || strtolower($_fileInfo[0]) == 'https:' ) { // 网站链接
+                    $_content = file_get_contents($_linkFile);
+                }
+            } else {
+                $_content = file_get_contents($_filepath);
+            }
+
+            if (! $_content) {
+                continue;
+            }
+            $_content = mb_convert_encoding($_content, 'utf-8', 'gb2312');
+            preg_match_all('/<div class="title">.*<\/div>/iU', str_replace("\r\n", '', $_content), $matchContent);
+
+            if (empty($matchContent[0]) || empty($matchContent[0][0]) ) { // 没找到标题和更新时间
+                continue;
+            }
+
+            $_title = substr($matchContent[0][0], strpos($matchContent[0][0], '<h1 class="YaHei">'), strpos($matchContent[0][0], '</h1>') - strpos($matchContent[0][0], '<h1 class="YaHei">'));
+
+            var_dump(strpos($matchContent[0][0], '<h1 class="YaHei">'), strpos($matchContent[0][0], '</h1>') - strpos($matchContent[0][0], '<h1 class="YaHei">'), $_title, $_filepath, $matchContent);exit;
+        }
+    }
 
     // 按照时间排序文章， 将文章存入数据库
 
