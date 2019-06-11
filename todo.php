@@ -3,6 +3,11 @@
 exit();
 
 ?>
+提交链接给搜索引擎：
+https://ziyuan.baidu.com/linksubmit/url
+http://info.so.com/site_submit.html
+https://www.douban.com/note/499459902/?type=like
+百度搜索 网站收录
 
 1. icodebang.com
     文件注释替换。 注释转换成icodebang.com
