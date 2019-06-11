@@ -1,4 +1,6 @@
 <?php
+set_time_limit(0);
+
 $listDir = '/Users/wangzaixin/git/jb51.data/list';
 $articleDir = '/Users/wangzaixin/git/jb51.data/article';
 $dir = dir($listDir);
@@ -20,6 +22,8 @@ while (false!==($filename=$dir->read())) {
     $listFiles[] = $filename;
     //continue;
 }
+
+//var_dump($listFiles);exit;
 
 // 对每一个 list 文件处理
 foreach ($listFiles as $_listFilename) {
@@ -72,10 +76,56 @@ if($_listFilename == 'list_97_1.html') {
             if (empty($matchContent[0]) || empty($matchContent[0][0]) ) { // 没找到标题和更新时间
                 continue;
             }
+            // title
+            $_title = substr($matchContent[0][0],
+                             strpos($matchContent[0][0], '<h1 class="YaHei">') + strlen('<h1 class="YaHei">'),
+                             strpos($matchContent[0][0], '</h1>') - strpos($matchContent[0][0], '<h1 class="YaHei">')- strlen('<h1 class="YaHei">') );
+            // 发布日期
+            $_date = substr($matchContent[0][0],
+                            strpos($matchContent[0][0], '20'),
+                            17 );
+            $_date = str_replace(array('年','月', '日', ' '), '', $_date);
+            // 导航匹配
+            // <div class="box mb15 mt10"><i class="icon"></i>您的位置：<a href='/'>首页</a> → <a href="/list/index_1.htm" title="一级分类">一级分类</a> → <a href="/list/list_3_1.htm" title="二级分类">二级分类</a> → <a href="/list/list_23_1.htm" title="三级分类">三级分类</a> → <a href="/list/list_269_1.htm" title="四级分类">四级分类</a> → 正文内容 文章标题</div>
+            preg_match_all('/<div class="box mb15 mt10">(.*)<\/div>/iU', str_replace("\r\n", '', $_content), $matchContent);
+            // 匹配文章来源 var ourl="http://url  https://url";
+            preg_match_all('/var ourl="(.*)"/iU', str_replace("\r\n", '', $_content), $matchContent);
+            $_refUrl = (empty($matchContent[1]) || empty($matchContent[1][0])) ? '' : $matchContent[1][0];
 
-            $_title = substr($matchContent[0][0], strpos($matchContent[0][0], '<h1 class="YaHei">'), strpos($matchContent[0][0], '</h1>') - strpos($matchContent[0][0], '<h1 class="YaHei">'));
+            $_content = substr($_content,
+                               strpos($_content, '<div id="content">') + strlen('<div id="content">'),
+                               strpos($_content, '<div class="art_xg">') - strpos($_content, '<div id="content">') - strlen('<div id="content">'));
+            $_content = trim($_content);
+            //内容替换
+            // <div class="jb51code">
+            //  <pre class="brush:bash;">
+            $_content = str_replace('<div class="jb51code">', '<pre>', $_content);
+            $_content = str_replace("</pre>\r\n</div>", '</code></pre>', $_content);
+            $_content = preg_replace('/<pre class="brush:(.*);">/i', '<code class="language-$1"', $_content);
+            // 图片获取  <img alt="" src="http://domain/file_images/article/201811/201811190902567.png" />
+            preg_match_all('/<img[^>]*src="(.*)".*\/>/i',$_content, $matchContent);
+            if (!empty($matchContent[1])) {
+                // 保存图片，生成url
+                foreach ($matchContent[1] as $_imgUrl) {
+                    //$_imgContent = @file_get_contents($_imgUrl);
+                    //if(! strlen($_imgContent)) {
+                    //    continue;
+                    //}
+                    $_imgPath = $_date .'/' . uniqid(). substr($_imgUrl, strrpos($_imgUrl,'.'));
+                    //@file_put_contents($_imgPath, $_imgContent);
+                    //if (! is_file($_imgPath)) {
+                    //    continue;
+                    //}
+                    $_newImgUrl = "/static/upload/" . $_imgPath;
 
-            var_dump(strpos($matchContent[0][0], '<h1 class="YaHei">'), strpos($matchContent[0][0], '</h1>') - strpos($matchContent[0][0], '<h1 class="YaHei">'), $_title, $_filepath, $matchContent);exit;
+                    $_content = str_replace($_imgUrl, $_newImgUrl, $_content);
+                }
+            }
+            // 其他内容 找 domain
+
+            if($_refUrl) {
+            var_dump($_content, $_date, $_title, $_filepath, $_refUrl, $_listFilename);exit;
+            }
         }
     }
 
