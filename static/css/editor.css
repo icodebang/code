@@ -53,7 +53,7 @@ a.cke_button{padding:8px 10px !important;cursor: pointer !important;border-radiu
 .cke_combo__fontsize a{margin: 0 !important;}
 .cke_combo__fontsize .cke_combo_text {width: 40px !important;}
 .cke_combopanel{height: 78px !important;}
-.cke_button_icon{margin:3px !important;font-family: 'icomoon' !important;speak: none;font-style: normal;font-weight: normal;font-variant: normal;text-transform: none;line-height: 1;background-image: none !important;font-size: 16px !important;background: none !important;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+.cke_button_icon{margin:3px !important;font-family: 'icomoon' !important;speak: none;font-style: normal;font-weight: normal;font-variant: normal;text-transform: none;line-height: 1;font-size: 16px !important;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
 .cke_button__undo_icon:before {content: "\e965";}
 .cke_button__redo_icon:before {content: "\e966";}
 .cke_button__bold_icon:before {content: "\e63a";}
@@ -62,7 +62,7 @@ a.cke_button{padding:8px 10px !important;cursor: pointer !important;border-radiu
 .cke_button__underline_icon:before {content: "\e63c";}
 .cke_button__numberedlist_icon:before {content: "\e63e";}
 .cke_button__bulletedlist_icon:before {content: "\e63d";}
-.cke_button__blockquote_icon:before {content: "\e641";}
+/*.cke_button__blockquote_icon:before {content: "\e641";}*/
 .cke_button__pbckcode_icon:before {content: "\e642";}
 .cke_button__icodebangimage_icon:before {content: "\e63f";}
 .cke_button__icodebangimage_icon{margin-top: 4px\0 !important;}
