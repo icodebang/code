@@ -128,12 +128,13 @@
 						if ( highlighted ) {
 							callback( highlighted.value );
 
-								//this.hljs.initHighlightingOnLoad();
 						}
 					}
 				} );
 
-				this.setHighlighter( hljsHighlighter );
+                this.setHighlighter( hljsHighlighter );
+
+
 			}
 		}
 	} );
@@ -402,7 +403,7 @@
 
 				// Remove config#codeSnippet_codeClass.
 				code.removeClass( codeClass );
-
+                console.info(this.data.code);
 				// Set raw text inside <code>...</code>.
 				code.add( new CKEDITOR.htmlParser.text( CKEDITOR.tools.htmlEncode( this.data.code ) ) );
 
