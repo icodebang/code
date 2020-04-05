@@ -365,7 +365,7 @@ class ParseMetal
         if ($configInfo) {
             $this->configInfo = $configInfo;
         } else {
-            $this->configInfo = require('../../config/parseConfig.php');
+            $this->configInfo = require(dirname(__FILE__) . '/../../config/parseConfig.php');
         }
         $this->_allUrls = [$rootUrl];
 
