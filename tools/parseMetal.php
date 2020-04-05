@@ -129,14 +129,15 @@ class ParseMetal
                     continue;
                 }
                 $name = $elements[0]->getAttribute('title');
+                $nameMore = trim($elements[0]->textContent);
                 //var_dump($subCategoryName,$name,$i, '<hr/>');//exit;
-                if ($name=='升贴水') {
+                if ($name=='升贴水' || $nameMore=='美元折算价') {
                     continue;
                 }
                 $elements = $dom->getElementsByTagName('div');
 
                 $remark = '';
-                if ($elements->length > 1) {
+                if ($elements->length > 0) {
                     //continue;
                     $remark = $elements[$elements->length - 1]->nodeValue;
                 }
