@@ -353,7 +353,7 @@ class ParseMetal
 
     public function loadDb ()
     {
-        require_once('../../system/init.php');
+        require_once(ROOT_PATH . 'system/init.php');
 
         loadClass('core_config');
         $this->db = loadClass('core_db');
