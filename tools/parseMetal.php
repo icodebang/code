@@ -501,7 +501,9 @@ if ($parseMetalModel->hasError()) {
     $debugInfos = $parseMetalModel->getDebugInfo();
     $mailContent = '';
     foreach ($debugInfos as $_debugInfo) {
-        echo $mailContent .= $_debugInfo;
+        $mailContent .= $_debugInfo;
+
+        echo $_debugInfo;
     }
     Application::mail()->send('wangkilin@126.com', '失败 - 金属价格数据获取失败', nl2br($mailContent), get_setting('site_name'), '爱码帮');
 }
