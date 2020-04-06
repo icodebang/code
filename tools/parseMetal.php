@@ -120,6 +120,7 @@ class ParseMetal
 
             //var_dump($matchPriceList[1],$matchPriceList[2],$matchPriceList[3]);//exit;
             $length = count($matchPriceList[1]);
+            $tmpPreviousName = ''; // 上一个处理的名称， 防止重复数据
             for($i=1; $i<$length; $i++) { // 每隔一行， 数据有效
                 //var_dump($matchPriceList[1][$i], __LINE__);
                 $dom = new DOMDocument;
@@ -131,7 +132,7 @@ class ParseMetal
                 $name = $elements[0]->getAttribute('title');
                 $nameMore = trim($elements[0]->textContent);
                 //var_dump($subCategoryName,$name,$i, '<hr/>');//exit;
-                if ($name=='升贴水' || $nameMore=='美元折算价') {
+                if ($name=='升贴水' || $nameMore=='美元折算价' || $tmpPreviousName==$name) {
                     continue;
                 }
                 $elements = $dom->getElementsByTagName('div');
@@ -180,7 +181,7 @@ class ParseMetal
                     'remark'         => $remark,
                     'is_missing'     => $isMissing
                  ));exit; //*/
-                 $priceInfo = array(
+                $priceInfo = array(
                     'name'            => $name,
                     'category_id'     => $categoryId,
                     'sub_category_id' => $subCategoryId,
@@ -196,8 +197,10 @@ class ParseMetal
                     'remark'         => $remark,
                     'is_missing'     => $isMissing
                  );
-                 $this->debugInfos[] = sprintf(" %s \r\n", strval(var_export($priceInfo, true)));
+                $this->debugInfos[] = sprintf(" %s \r\n", strval(var_export($priceInfo, true)));
                 $this->metalPriceModel->insert('',$priceInfo);
+
+                $tmpPreviousName = $name;// 处理完后， 当前的名字就成为上一个处理的
             }
             $this->debugInfos[] = sprintf("%s SUB END: %s %s\r\n", str_repeat('-', 20), $subCategoryName, str_repeat('-', 20));
         }
