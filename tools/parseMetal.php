@@ -100,6 +100,7 @@ class ParseMetal
             $this->hasError = true;
             $this->debugInfos[] = "!!!!!!! 未找到相关子类数据 !!!!!!! \r\n";
         }
+        $syncDate = date('Y-m-d');
         // 解析每个子分类中的数据， 对应每个详细的价格数据
         foreach ($matchList2[3] as $_key=>$_priceListString) {
             // <td class="product-name">名称</td>
@@ -195,7 +196,8 @@ class ParseMetal
                     'belong_year'    => $belongYear,
                     'unit'           => $unit,
                     'remark'         => $remark,
-                    'is_missing'     => $isMissing
+                    'is_missing'     => $isMissing,
+                    'sync_date'      => $syncDate,
                  );
                 $this->debugInfos[] = sprintf(" %s \r\n", strval(var_export($priceInfo, true)));
                 $this->metalPriceModel->insert('',$priceInfo);
