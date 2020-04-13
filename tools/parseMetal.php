@@ -67,9 +67,19 @@ class ParseMetal
     /**
      * 解析铜
      */
+    protected function copperParser ($categoryId)
+    {
+        $pricePattern = '/<div class="singleList[^"]*">(.*)<div class="floor-first-right">/isu';
+
+        return $this->_commonParser($categoryId, array('all'=>$pricePattern));
+    }
+
+    /**
+     * 解析铜
+     */
     protected function tongParser ($categoryId)
     {
-        return $this->_commonParser($categoryId);
+        return $this->copperParser($categoryId);
     }
 
     /**
@@ -83,8 +93,11 @@ class ParseMetal
         $pricePattern = isset($patternList['all']) ? $patternList['all'] : '/<div class="singleList[^"]*">(.*)<div class="main" id="layout_main">/isu';
         preg_match_all($pricePattern, $this->_content, $matchList);
         if (! isset($matchList[1][0])) {
-            $this->hasError = true;
-            $this->debugInfos[] = "!!!!!!! 未找到相关数据 !!!!!!! \r\n";
+            preg_match_all('/<div class="singleList[^"]*">(.*)<div class="floor-first-right">/isu', $this->_content, $matchList);
+            if (! isset($matchList[1][0])) {
+                $this->hasError = true;
+                $this->debugInfos[] = "!!!!!!! 未找到相关数据 !!!!!!! \r\n";
+            }
         }
         //var_dump($matchList[1]);exit;
         // 获取每个子分类内容
@@ -401,6 +414,7 @@ class ParseMetal
                 //var_dump($this->_content);exit;
 
                 if (! $this->_content) {
+                    //var_dump($this->_content);exit;
                     return;
                 }
 
@@ -421,6 +435,7 @@ class ParseMetal
                 $_method = $_url . 'Parser';
                 //var_dump($_method, method_exists($this, $_method));//exit;
                 if (method_exists($this, $_method)) {
+
                     $_result = $this->$_method($_categoryIdsList[$_url]);
 
                     if (! $_result) {
@@ -447,8 +462,8 @@ class ParseMetal
             return false;
         }
         // 获取全部分类的html
-        if (! preg_match('/<div class="matal-category layout"\s?>(.*)?<\/header>/su', $this->_content, $matchCategoryString) ) {
-            //var_dump($this->_content);
+        if (! preg_match('/<div class="matal-category layout"[^>]*>(.*)?<\/header>/su', $this->_content, $matchCategoryString) ) {
+            echo 'Match category failed::' . __LINE__;
             return false;
         }
         //var_dump($matchCategoryString[1]);exit;
@@ -495,7 +510,7 @@ class ParseMetal
 }
 // 设置运行时间不限制
 @set_time_limit(0);
-$parseMetalModel = new ParseMetal('tong');
+$parseMetalModel = new ParseMetal('copper');
 
 $parseMetalModel->parse();
 
