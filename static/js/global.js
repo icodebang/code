@@ -48,7 +48,7 @@ ICB.ajax._onError = function (error) {
 }
 /**
  * 发起ajax通知请求
- * 
+ *
  * @param url
  * @param params
  * @param successCallback
@@ -72,7 +72,7 @@ ICB.ajax.sendNotice = function (url, params) {
 };
 /**
  * 发起ajax请求， 获取json数据
- * 
+ *
  * @param url
  * @param params
  * @param successCallback
@@ -283,7 +283,7 @@ ICB.ajax.processer = function (type, response) {
 ICB.modal = {};
 /**
  * 警报弹框
- * 
+ *
  * @param text
  *            弹出的警报信息
  */
@@ -374,7 +374,7 @@ ICB.modal.loading = function (isVisible) {
 ICB.dropdown = {};
 /**
  * 默认的下拉列表获取后的回调函数
- * 
+ *
  * @param string
  *            name 要设置的回调名称
  * @param function
@@ -406,7 +406,7 @@ ICB.dropdown.ajaxCallback = {
 };
 /**
  * ajax请求加载下拉菜单数据 . 元素需要的属性： data-dropdown-url
- * 
+ *
  * @param selector
  * @param callback
  *            回调函数，或者是可识别的字符串
@@ -470,7 +470,7 @@ ICB.dropdown.ajaxLoad = function (selector, callback) {
 };
 /**
  * 下拉菜单功能绑定 。 元素需要的属性： data-dropdown-type （tip/list）
- * 
+ *
  * @param selector
  * @param ajaxCallback
  */
@@ -544,7 +544,7 @@ ICB.dropdown.bind = function (selector, ajaxCallback) {
 
 /**
  * 设置下拉列表数据内容
- * 
+ *
  * @param selector
  * @param data
  * @param selected
@@ -571,7 +571,7 @@ ICB.dropdown.setList = function (selector, data, selected) {
 ICB.domEvents = {};
         /**
          * 删除提示
-         * 
+         *
          * @param showMessage
          * @param onYesCallback
          * @param onShowCallback
@@ -788,7 +788,7 @@ ICB.domEvents.init_article_comment_box = function (selector) {
 
 /**
  * 点击添加按钮（文章发布时的标签搜索框中的），将标签填入到标签队列显示区域
- * 
+ *
  * @param selector
  */
 ICB.domEvents.addTagInArticleButtonClick = function (selector) {
@@ -1006,7 +1006,7 @@ ICB.domEvents.addTagInArticleButtonClick = function (selector) {
 };
 /**
  * 点击文章发布表单中的 标签编辑按钮， 呈现出标签输入提示，点击标签后和文章关联上
- * 
+ *
  * @param selector
  */
 ICB.domEvents.editArticleTagButtonClick = function (selector) {
@@ -1056,7 +1056,7 @@ ICB.domEvents.toggleActiveClick = function (selector) {
 }
 /**
  * 点击 升级，降级 按钮， 实现条目（如菜单）的父级子级关系
- * 
+ *
  * @param selector
  */
 ICB.domEvents.changeUpDownLevelClick = function (selector) {
@@ -1076,7 +1076,7 @@ ICB.domEvents.changeUpDownLevelClick = function (selector) {
 ICB.utils = {};
 /**
  * ajax请求附件内容， 用fileuploader构建附件列表显示
- * 
+ *
  * @param url
  *            请求的URL
  * @param postParams
@@ -4409,6 +4409,7 @@ function _t(string, replace) {
 
     return string;
 };
+
 
 // jQuery扩展
 (function ($) {
