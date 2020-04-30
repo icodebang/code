@@ -259,7 +259,7 @@ If you are interested in purchasing this domain, please contact us. Email: icode
 <div id="text_style_02_1490783125869" class="view style_02 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
 
 <div class="view_contents">
-CopyRight &copy; <?php echo $domain?>
+CopyRight &copy; <?php echo $domain?> 备案号：<a href="http://www.beian.miit.gov.cn" target="blank">京ICP备10215645号</a>
 </div>
 </div>
 </div>
