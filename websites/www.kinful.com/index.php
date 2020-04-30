@@ -257,7 +257,14 @@ If you are interested in purchasing this domain, please contact us. Email: icode
 <div id="layout_1490783107217" class="layout  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1" style="">
 <div class="view_contents">
 <div id="text_style_02_1490783125869" class="view style_02 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
-
+<div class="view_contents">
+友情链接 &nbsp; (
+                        <a data-localize-url="no" href="https://www.icodebang.com">爱码帮</a> |
+                        <a data-localize-url="no" href="https://www.mysqlworkbench.cn/">MySQLWorkbench.CN</a> |
+                        <a data-localize-url="no" href="https://www.sequelpro.cn">SequelPro.CN</a>                    |
+                        <a data-localize-url="no" href="https://www.heidisql.cn">HeidiSql.CN</a>
+                         )
+</div>
 <div class="view_contents">
 CopyRight &copy; <?php echo $domain?> 备案号：<a href="http://www.beian.miit.gov.cn" target="blank">京ICP备10215645号</a>
 </div>
