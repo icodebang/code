@@ -4,8 +4,7 @@ $domains = array(
 );
 $domain = array_shift($domains);
 foreach ($domains as $_domain) {
-    if ( (isset($_SERVER['HTTP_HOST']) && stripos($_SERVER['HTTP_HOST'], $domain)!==false)
-     || (isset($_SERVER['SERVER_NAME']) && stripos($_SERVER['SERVER_NAME'], $domain)!==false) ) {
+    if ( (isset($_SERVER['HTTP_HOST']) && stripos($_SERVER['HTTP_HOST'], $_domain)!==false)) {
          $domain = $_domain;
          break;
     }
