@@ -25,13 +25,13 @@ foreach ($domains as $_domain) {
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="full-screen" content="yes">
     <meta name="applicable-device" content="pc,mobile">
-    <link href="./home_files/font-awesome.min_1.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./home_files/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="./home_files/style.css">
-    <script type="text/javascript" src="./home_files/jquery.min.js"></script>
-    <script type="text/javascript" src="./home_files/jquery.lazyload.min.js"></script>
-    <script type="text/javascript" src="./home_files/jquery.nicescroll.min.js"></script>
-    <script type="text/javascript" src="./home_files/wow.js" charset="utf-8"></script>
+    <link href="/home_files/font-awesome.min_1.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/home_files/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/home_files/style.css">
+    <script type="text/javascript" src="/home_files/jquery.min.js"></script>
+    <script type="text/javascript" src="/home_files/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="/home_files/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="/home_files/wow.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -45,7 +45,7 @@ foreach ($domains as $_domain) {
             <div id="image_style_01_1490781599927" class="view style_01 image  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
                 <div class="view_contents">
                     <div class="imgStyle CompatibleImg">
-                        <img class="picSet link-type-" src="./home_files/haibao.jpg" title="" alt="描述" id="imageModeShow" style="">
+                        <img class="picSet link-type-" src="/home_files/haibao.jpg" title="" alt="描述" id="imageModeShow" style="">
                         <canvas id="J_dotLine" style="background-color: transparent;width: 100%;position: absolute;height: 500px;top:0;"></canvas>
                     </div>
                 </div>
@@ -55,24 +55,7 @@ foreach ($domains as $_domain) {
                     <div id="text_default_1490781600104" class="view default text  none wow bounceIn animated" data-wow-duration="1s" data-wow-delay="0.25s" data-wow-offset="0" data-wow-iteration="1" style="visibility: visible; animation-duration: 1s; animation-delay: 0.25s; animation-iteration-count: 1; animation-name: bounceIn;">
                         <div class="view_contents diyCurTab">
                             <div class="diyStyle" style="text-align:center;">
-                                <span style="font-size:72px;"><b><span style="color:#ffffff;font-family:&quot;Microsoft YaHei&quot;;"><?php echo $domain ?></span></b></span> </div>
-                            <div class="diyStyle">
-                            </div>
-                            <div class="diyStyle">
-                            </div>
-                            <div class="diyStyle">
-                            </div>
-                        </div>
-                    </div>
-                    <div id="text_default_1490781600110" class="view default text  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
-                        <div class="view_contents">
-                            <div class="diyStyle" style="text-align:center;">
-                                <span><span style="color:#ffffff;font-family:&quot;microsoftyahei&quot;;font-size:45px;"><?php echo $domain ?></span></span> </div>
-                            <div class="diyStyle">
-                            </div>
-                            <div class="diyStyle">
-                            </div>
-                            <div class="diyStyle">
+                                <span style="font-size:72px;"><b><span style="color:#ffffff;font-family:&quot;Microsoft YaHei&quot;;"><?php echo $domain ?></span></b></span>
                             </div>
                         </div>
                     </div>
@@ -93,30 +76,9 @@ foreach ($domains as $_domain) {
                     </div>
                     <div id="text_style_02_1490781600119" class="view style_02 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
                         <div class="view_contents">
-                            This domain is for sale or rent or coorperate!<script>
-                                window.resizeTimeouttext_style_02_1490781600119 = setTimeout(function() {
-                                    window.resizeTimeouttext_style_02_1490781600119 = null;
-                                }, 350);
-                                $(window).resize(function() {
-                                    if (window.resizeTimeouttext_style_02_1490781600119) window.clearTimeout(window.resizeTimeouttext_style_02_1490781600119);
-                                    window.resizeTimeouttext_style_02_1490781600119 = setTimeout(function() {
-                                        window.resizeTimeouttext_style_02_1490781600119 = null;
-                                    }, 350);
-                                });
-                            </script>
+                            This domain is for sale or rent or coorperate!
                         </div>
                     </div>
-                    <script>
-                        window.resizeTimeoutdiv_includeBlock_1490781599933 = setTimeout(function() {
-                            window.resizeTimeoutdiv_includeBlock_1490781599933 = null;
-                        }, 350);
-                        $(window).resize(function() {
-                            if (window.resizeTimeoutdiv_includeBlock_1490781599933) window.clearTimeout(window.resizeTimeoutdiv_includeBlock_1490781599933);
-                            window.resizeTimeoutdiv_includeBlock_1490781599933 = setTimeout(function() {
-                                window.resizeTimeoutdiv_includeBlock_1490781599933 = null;
-                            }, 350);
-                        });
-                    </script>
                 </div>
             </div>
         </div>
@@ -125,136 +87,66 @@ foreach ($domains as $_domain) {
         <div class="view_contents">
             <div id="text_style_02_1490781661380" class="view style_02 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
                 <div class="view_contents">
-                    关于<?php echo $domain ?><script>
-                        window.resizeTimeouttext_style_02_1490781661380 = setTimeout(function() {
-                            window.resizeTimeouttext_style_02_1490781661380 = null;
-                        }, 350);
-                        $(window).resize(function() {
-                            if (window.resizeTimeouttext_style_02_1490781661380) window.clearTimeout(window.resizeTimeouttext_style_02_1490781661380);
-                            window.resizeTimeouttext_style_02_1490781661380 = setTimeout(function() {
-                                window.resizeTimeouttext_style_02_1490781661380 = null;
-                            }, 350);
-                        });
-                    </script>
+                    关于<?php echo $domain ?>
                 </div>
             </div>
             <div id="image_style_01_1490782199914" class="view style_01 image  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
                 <div class="view_contents">
                     <div class="imgStyle CompatibleImg">
-                        <img class="picSet link-type-" src="./home_files/04.png" title="" alt="描述" id="imageModeShow">
+                        <img class="picSet link-type-" src="/home_files/04.png" title="" alt="描述" id="imageModeShow">
                     </div>
                 </div>
             </div>
             <div id="text_style_02_1490782298573" class="view style_02 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
                 <div class="view_contents">
-                    好域名是帮助您商业成功的最佳工具！<script>
-                        window.resizeTimeouttext_style_02_1490782298573 = setTimeout(function() {
-                            window.resizeTimeouttext_style_02_1490782298573 = null;
-                        }, 350);
-                        $(window).resize(function() {
-                            if (window.resizeTimeouttext_style_02_1490782298573) window.clearTimeout(window.resizeTimeouttext_style_02_1490782298573);
-                            window.resizeTimeouttext_style_02_1490782298573 = setTimeout(function() {
-                                window.resizeTimeouttext_style_02_1490782298573 = null;
-                            }, 350);
-                        });
-                    </script>
+                    好域名是帮助您商业成功的最佳工具！
                 </div>
             </div>
             <div id="text_style_02_1490782352063" class="view style_02 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
                 <div class="view_contents">
                     The good domain is the best tool to make your business successful
-                    compare with anyone else.<script>
-                        window.resizeTimeouttext_style_02_1490782352063 = setTimeout(function() {
-                            window.resizeTimeouttext_style_02_1490782352063 = null;
-                        }, 350);
-                        $(window).resize(function() {
-                            if (window.resizeTimeouttext_style_02_1490782352063) window.clearTimeout(window.resizeTimeouttext_style_02_1490782352063);
-                            window.resizeTimeouttext_style_02_1490782352063 = setTimeout(function() {
-                                window.resizeTimeouttext_style_02_1490782352063 = null;
-                            }, 350);
-                        });
-                    </script>
+                    compare with anyone else.
                 </div>
             </div>
             <div id="image_style_01_1490782521822" class="view style_01 image  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
                 <div class="view_contents">
                     <div class="imgStyle CompatibleImg">
-                        <img class="picSet link-type-" src="./home_files/05.png" title="" alt="描述" id="imageModeShow">
+                        <img class="picSet link-type-" src="/home_files/05.png" title="" alt="描述" id="imageModeShow">
                     </div>
                 </div>
             </div>
             <div id="text_style_02_1490782570004" class="view style_02 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
                 <div class="view_contents">
-                    如果您现在犹豫不决，您可能将失去拥有此域名的机会！<script>
-                        window.resizeTimeouttext_style_02_1490782570004 = setTimeout(function() {
-                            window.resizeTimeouttext_style_02_1490782570004 = null;
-                        }, 350);
-                        $(window).resize(function() {
-                            if (window.resizeTimeouttext_style_02_1490782570004) window.clearTimeout(window.resizeTimeouttext_style_02_1490782570004);
-                            window.resizeTimeouttext_style_02_1490782570004 = setTimeout(function() {
-                                window.resizeTimeouttext_style_02_1490782570004 = null;
-                            }, 350);
-                        });
-                    </script>
+                    如果您现在犹豫不决，您可能将失去拥有此域名的机会！
                 </div>
             </div>
             <div id="text_style_02_1490782582711" class="view style_02 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
                 <div class="view_contents">
                     If you do not decide at this time, you may lose the best chance
-                    to own the good domain.<script>
-                        window.resizeTimeouttext_style_02_1490782582711 = setTimeout(function() {
-                            window.resizeTimeouttext_style_02_1490782582711 = null;
-                        }, 350);
-                        $(window).resize(function() {
-                            if (window.resizeTimeouttext_style_02_1490782582711) window.clearTimeout(window.resizeTimeouttext_style_02_1490782582711);
-                            window.resizeTimeouttext_style_02_1490782582711 = setTimeout(function() {
-                                window.resizeTimeouttext_style_02_1490782582711 = null;
-                            }, 350);
-                        });
-                    </script>
+                    to own the good domain.
                 </div>
             </div>
             <div id="image_style_01_1490782738149" class="view style_01 image  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
                 <div class="view_contents">
                     <div class="imgStyle CompatibleImg">
-                        <img class="picSet link-type-" src="./home_files/06.png" title="" alt="描述" id="imageModeShow">
+                        <img class="picSet link-type-" src="/home_files/06.png" title="" alt="描述" id="imageModeShow">
                     </div>
                 </div>
             </div>
             <div id="text_style_02_1490782765011" class="view style_02 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
                 <div class="view_contents">
-                    如果对域名感兴趣，请联系邮件： icodebang#126.com (#->@)<script>
-                        window.resizeTimeouttext_style_02_1490782765011 = setTimeout(function() {
-                            window.resizeTimeouttext_style_02_1490782765011 = null;
-                        }, 350);
-                        $(window).resize(function() {
-                            if (window.resizeTimeouttext_style_02_1490782765011) window.clearTimeout(window.resizeTimeouttext_style_02_1490782765011);
-                            window.resizeTimeouttext_style_02_1490782765011 = setTimeout(function() {
-                                window.resizeTimeouttext_style_02_1490782765011 = null;
-                            }, 350);
-                        });
-                    </script>
+                    如果对域名感兴趣，请联系邮件： icodebang#126.com (#->@)
                 </div>
             </div>
             <div id="text_style_02_1490782776756" class="view style_02 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
                 <div class="view_contents">
-                    If you are interested in purchasing this domain, please contact us. Email: icodebang#126.com (#->@)<script>
-                        window.resizeTimeouttext_style_02_1490782776756 = setTimeout(function() {
-                            window.resizeTimeouttext_style_02_1490782776756 = null;
-                        }, 350);
-                        $(window).resize(function() {
-                            if (window.resizeTimeouttext_style_02_1490782776756) window.clearTimeout(window.resizeTimeouttext_style_02_1490782776756);
-                            window.resizeTimeouttext_style_02_1490782776756 = setTimeout(function() {
-                                window.resizeTimeouttext_style_02_1490782776756 = null;
-                            }, 350);
-                        });
-                    </script>
+                    If you are interested in purchasing this domain, please contact us. Email: icodebang#126.com (#->@)
                 </div>
             </div>
             <div id="image_style_01_1490782885573" class="view style_01 image  none wow lightSpeedIn animated" data-wow-duration="1s" data-wow-delay="0.25s" data-wow-offset="0" data-wow-iteration="1" style="visibility: visible; animation-duration: 1s; animation-delay: 0.25s; animation-iteration-count: 1; animation-name: lightSpeedIn;">
                 <div class="view_contents">
                     <div class="imgStyle CompatibleImg">
-                        <img class="picSet link-type-" src="./home_files/03.jpg" title="" alt="描述" id="imageModeShow">
+                        <img class="picSet link-type-" src="/home_files/03.jpg" title="" alt="描述" id="imageModeShow">
                     </div>
                 </div>
             </div>
@@ -266,9 +158,10 @@ foreach ($domains as $_domain) {
                 <div class="view_contents">
                     友情链接 &nbsp; (
                     <a data-localize-url="no" href="https://www.icodebang.com">爱码帮</a> |
-                    <a data-localize-url="no" href="https://www.mysqlworkbench.cn/">MySQLWorkbench.CN</a> |
-                    <a data-localize-url="no" href="https://www.sequelpro.cn">SequelPro.CN</a> |
-                    <a data-localize-url="no" href="https://www.heidisql.cn">HeidiSql.CN</a>
+                    <a data-localize-url="no" href="https://www.mysqlworkbench.cn/">MySQLWorkbench</a> |
+                    <a data-localize-url="no" href="https://www.sequelpro.cn">SequelPro</a> |
+                    <a data-localize-url="no" href="https://www.heidisql.cn">HeidiSql</a>
+                    <a data-localize-url="no" href="https://www.devboy.cn">开发者</a> |
                     )
                 </div>
                 <div class="view_contents">
