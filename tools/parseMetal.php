@@ -101,7 +101,7 @@ class ParseMetal
         }
         //var_dump($matchList[1]);exit;
         // 获取每个子分类内容
-        preg_match_all('/<div class="table-list" data-spot-index="([^"]*)"\s+data-spot-value="\d+">(.*?)<table>(.*?)<\/table>/isu', $matchList[1][0], $matchList2);
+        preg_match_all('/<div class="[^"]*table-list[^"]*" data-spot-index="([^"]*)"\s+data-spot-value="\d+">(.*?)<table>(.*?)<\/table>/isu', $matchList[1][0], $matchList2);
         //var_dump(__FUNCTION__, $matchList2);exit;
 
         $oldCategoryList = $this->subCategoryModel->getByCategoryId($categoryId);
