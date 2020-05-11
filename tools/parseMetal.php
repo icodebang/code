@@ -232,6 +232,13 @@ class ParseMetal
         return $this->_commonParser($categoryId);
     }
     /**
+     * 解析铝
+     */
+    protected function aluminumParser ($categoryId)
+    {
+        return $this->lvParser($categoryId);
+    }
+    /**
      * 解析铅
      */
     protected function leadParser ($categoryId)
@@ -255,6 +262,13 @@ class ParseMetal
         return $this->_commonParser($categoryId);
     }
     /**
+     * 解析锌
+     */
+    protected function zincParser ($categoryId)
+    {
+        return $this->xinParser($categoryId);
+    }
+    /**
      * 解析锡
      */
     protected function xiParser ($categoryId)
@@ -262,11 +276,25 @@ class ParseMetal
         return $this->_commonParser($categoryId);
     }
     /**
+     * 解析锡
+     */
+    protected function tinParser ($categoryId)
+    {
+        return $this->xiParser($categoryId);
+    }
+    /**
      * 解析镍
      */
     protected function nieParser ($categoryId)
     {
         return $this->_commonParser($categoryId);
+    }
+    /**
+     * 解析镍
+     */
+    protected function nickelParser ($categoryId)
+    {
+        return $this->nieParser($categoryId);
     }
     /**
      * 解析不锈钢
@@ -283,11 +311,25 @@ class ParseMetal
         return $this->_commonParser($categoryId);
     }
     /**
+     * 解析锰
+     */
+    protected function manganeseParser ($categoryId)
+    {
+        return $this->mengParser($categoryId);
+    }
+    /**
      * 解析硅
      */
     protected function guiParser ($categoryId)
     {
         return $this->_commonParser($categoryId);
+    }
+    /**
+     * 解析硅
+     */
+    protected function siliconParser ($categoryId)
+    {
+        return $this->guiParser($categoryId);
     }
     /**
      * 解析 钴锂
@@ -433,6 +475,8 @@ class ParseMetal
                 }
 
                 $_method = $_url . 'Parser';
+                $_url == 'stainless-steel' AND $_method = 'bxgParser'; // 不锈钢
+                $_url == 'new-energy' AND $_method = 'glParser'; // 钴锂
                 //var_dump($_method, method_exists($this, $_method));//exit;
                 if (method_exists($this, $_method)) {
 

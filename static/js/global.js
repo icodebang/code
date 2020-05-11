@@ -202,12 +202,19 @@ ICB.ajax.processer = function (type, response) {
         }
 
         if (response.rsm && response.rsm.url) {
-            // 判断返回url跟当前url是否相同
-            if (window.location.href == response.rsm.url) {
-                window.location.reload();
-            } else {
-                window.location = decodeURIComponent(response.rsm.url);
+            var time = 1;
+            if (response.err) {
+                time = 3000;
+                $('.error_message').html(response.err);
             }
+            setTimeout(function () {
+                // 判断返回url跟当前url是否相同
+                if (window.location.href == response.rsm.url) {
+                    window.location.reload();
+                } else {
+                    window.location = decodeURIComponent(response.rsm.url);
+                }
+            }, time);
         } else {
             switch (type) {
             case 'default':
@@ -305,11 +312,11 @@ ICB.modal.alert = function (msg, callbackOptions) {
     }
 };
 ICB.modal.confirm = function (message, onYesCallback, onshowCallback) {
-    var showHtml = Hogan.compile(ICB.template.confirmBox).render({
+    var message = Hogan.compile(ICB.template.confirmBox).render({
         'message' : message
     });
 
-    ICB.modal.dialog(showHtml, onshowCallback);
+    ICB.modal.dialog(message, onshowCallback);
     $('.icb-confirm-box .yes').click(function () {
 
         $(".icb-alert-box").modal('hide');
@@ -578,10 +585,10 @@ ICB.domEvents = {};
          */
         ICB.domEvents.deleteShowConfirmModal = function (showMessage,
                 onYesCallback, onShowCallback) {
-            var template = Hogan.compile(ICB.template.confirmBox).render({
-                'message' : showMessage
-            });
-            ICB.modal.confirm(template, onYesCallback, onShowCallback);
+            // var showMessage = Hogan.compile(ICB.template.confirmBox).render({
+            //     'message' : showMessage
+            // });
+            ICB.modal.confirm(showMessage, onYesCallback, onShowCallback);
         },
         // 初始化问题评论框
         ICB.domEvents.init_comment_box = function (selector) {

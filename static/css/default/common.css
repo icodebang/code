@@ -952,6 +952,7 @@ screen\9 {
     position: relative;
 }
 
+/* 页面banner 语言分类导航*/
 .icb-content-nav-menu {
     height: 55px;
 }
@@ -992,16 +993,24 @@ screen\9 {
     margin-right: 1px;
     color: #ccc;
 }
-
+/* 页面banner 语言分类导航*/
 .icb-content-nav-menu .icb-content-nav-sub-menu {
     position: absolute;
     left: 16.6666667%;
     top: 0;
     display: none;
     height: 100%;
-    background-color: #fff;
+    background-color: rgba(240,240,240, 0.7);
     margin: 0 15px;
     width: 81%;
+    /*background: url(img/background/navbg.png) repeat scroll center center;*/
+    /*background-color: rgb(43, 119, 168, 0.2);*/
+}
+.icb-content-nav-menu .icb-content-nav-sub-menu a img{
+    max-width: 48px;
+    max-height: 48px;
+    border-radius: 4px;
+    background-color: #eee;
 }
 
 .icb-content-nav-menu:hover .icb-content-nav-sub-menu {
@@ -2987,12 +2996,16 @@ blockquote {
 }
 .icb-article-content pre .code_tools a{
     display:none;
-    height:20px;
-    width: 20px;
-    font-size: 18px;
+    height: 20px;
+    width: 32px;
+    font-size: 14px;
     float: left;
-    color: #ccc;
-    margin: 3px;
+    color: #666;
+    margin: 2px;
+    background-color: #fff;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 2px;
 }
 .icb-article-content pre:hover .code_tools a{
     display:block;
@@ -3008,16 +3021,16 @@ blockquote {
 }
 
 .content .codetitle {
-    border: 1px solid #ccc;
     border-width: 1px 1px 0;
-    padding: 5px;
+    padding: 10px 5px 0;
     font-weight: bold;
 }
 
 .content .codebody {
     border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #cde2f7;
+    margin: 0 5px;
+    background-color: #f1f3f5;
+    padding: 0 10px;
 }
 .content .htmlarea textarea {
     width: 100%;
