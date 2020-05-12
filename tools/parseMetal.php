@@ -478,18 +478,19 @@ class ParseMetal
                 $_url == 'stainless-steel' AND $_method = 'bxgParser'; // 不锈钢
                 $_url == 'new-energy' AND $_method = 'glParser'; // 钴锂
                 //var_dump($_method, method_exists($this, $_method));//exit;
-                if (method_exists($this, $_method)) {
-
-                    $_result = $this->$_method($_categoryIdsList[$_url]);
-
-                    if (! $_result) {
-                        return self::ERROR_PARSE_CONTENT;
-
-                    }
-
-                    $this->_loadedUrls[] = $_url;
-                } else {
+                if (! method_exists($this, $_method)) {
+                    $_method = '_commonParser';
                 }
+
+                $_result = $this->$_method($_categoryIdsList[$_url]);
+
+                if (! $_result) {
+                    return self::ERROR_PARSE_CONTENT;
+
+                }
+
+                $this->_loadedUrls[] = $_url;
+
                 unset($this->_allUrls[$_key]);
             }
 
