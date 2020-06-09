@@ -179,15 +179,15 @@ textarea{resize:none;}
 .icb-content-wrap .mod-wechat-sava input{margin-right:10px;}
 .email-protocol{margin-top: 7px}
 /*nav-menu 页面 左侧菜单区域*/
-.icb-content-wrap .mod-set-head a{margin:9px;}
+.icb-content-wrap .mod-set-head a{margin:0px;}
 .icb-content-wrap .mod-set-head h3{margin:0;height:40px;background:#F4F4F4;color:#333;text-indent:10px;font-weight:400;font-size:14px;line-height:40px;}
 .icb-content-wrap .mod-width .col-sm-10 label{margin-bottom:10px;width:200px;}
 .icb-content-wrap .mod-set-body > p{height:40px;line-height:40px;}
 .icb-content-wrap .mod-set-body > p select{margin-top:7px;width:240px;}
 .icb-content-wrap .icb-item-info li{margin-top:10px;border:1px solid #D6E6F6;}
-.icb-content-wrap .icb-item-info .mod-set-head{background:#F1F6F6;padding:0 10px;height:40px;font-size:12px;line-height:40px;cursor:s-resize;}
+.icb-content-wrap .icb-item-info .mod-set-head{background:#F1F6F6;padding:0 10px;height:30px;font-size:12px;line-height:30px;cursor:s-resize;}
 .icb-content-wrap .icb-item-info .icb-course-chapter .mod-set-head{background:#e1f3e0;}
-.icb-content-wrap .icb-item-info .mod-set-head h4{margin: 0;height:40px;font-weight:400;line-height:40px;}
+.icb-content-wrap .icb-item-info .mod-set-head h4{margin: 0;height:30px;font-weight:300;line-height:30px;}
 .icb-content-wrap .icb-item-info .mod-set-head span{color:#999;}
 .icb-content-wrap .icb-item-info .mod-set-body{display:none;padding: 10px 25px;}
 .icb-content-wrap .icb-item-info .icb-item-info-tag .icb-item-info-img{overflow: hidden;margin:5px 0 0 15px;min-width:52px;min-height:52px;border:1px dashed #999;}

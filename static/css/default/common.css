@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url(../editor.css);
+@import url(../icomoon/style.css);
 
 /* 重载bootstrap部分 */
 
@@ -348,10 +349,29 @@ select {
     border-right: 1px solid #e6e6e6;
 }
 
+.icb-middle-main-content {
+    padding: 0 0 20px;
+    border-right: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+}
+
+.icb-right-main-content {
+    padding: 0 0 20px;
+    border-left: 0;
+    border-right: 0;
+}
+
 .icb-side-bar {
     margin-left: -1px;
     padding: 20px;
     border-left: 1px solid #e6e6e6;
+}
+.icb-left-side-bar {
+    margin-right: -1px;
+    padding: 0 10px;
+    border-right: 1px solid #e6e6e6;
+    border-left: 0;
+    font-size: 13px;
 }
 
 .icb-mod .mod-head h4,
@@ -588,7 +608,8 @@ a.icb-get-more {
     width: 100%;
     min-height: 50px;
     box-shadow: 0 3px 16px 0 rgba(24, 53, 74, 0.5);
-    background-color: rgba(60, 61, 66, 0.9);
+    /*background-color: rgba(60, 61, 66, 0.9);*/
+    background-color: rgb(37, 68, 93)
     /* IE9、标准浏览器、IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂 */
 }
 
@@ -974,7 +995,8 @@ screen\9 {
 }
 
 .icb-content-nav-menu:hover .icb-content-nav-top-menu {
-    background-color: #2b77a8;
+    color:#000;
+    background: rgba(240,240,240, 0.7);
 }
 
 .icb-content-nav-top-menu>span,
@@ -986,12 +1008,19 @@ screen\9 {
     line-height: 55px;
     color: #fff;
 }
+.icb-content-nav-top-menu:hover>a {
+    color: #000;
+}
 
 .icb-content-nav-menu .icb-content-nav-top-menu a .title::after {
     content: ">";
     float: right;
     margin-right: 1px;
     color: #ccc;
+    transform: scale(0.8,1.5);
+}
+.icb-content-nav-menu .icb-content-nav-top-menu:hover a .title::after {
+    color: #000;
 }
 /* 页面banner 语言分类导航*/
 .icb-content-nav-menu .icb-content-nav-sub-menu {
@@ -1000,7 +1029,7 @@ screen\9 {
     top: 0;
     display: none;
     height: 100%;
-    background-color: rgba(240,240,240, 0.7);
+    background-color: rgba(240,240,240, 1);
     margin: 0 15px;
     width: 81%;
     /*background: url(img/background/navbg.png) repeat scroll center center;*/
@@ -1059,6 +1088,9 @@ screen\9 {
 
 .icb-article-title-box {
     margin: 20px 20px 0;
+}
+.icb-article-title-box. {
+    margin: 5px 20px 0;
 }
 
 .icb-article-title-box .close {
@@ -1800,7 +1832,6 @@ screen\9 {
 
 
 /* 侧边栏公共部分 */
-
 .icb-side-bar .icb-mod {
     padding: 20px 0;
     border-top: 1px solid #e2e2e2;
@@ -1873,7 +1904,48 @@ screen\9 {
     margin: 0;
 }
 
+/* 侧边栏教程部分 */
+.icb-left-side-bar.course {
+    padding: 0;
+    border-radius: 4px 0 0;
+    border-top: 1px solid #e6e6e6;
+}
+.icb-left-side-bar .icb-mod ul li.chapter {
+    height: 26px;
+    font-size: 14px;
+    background-color: #5eb7ff;
+    color: #fff;
+    line-height: 20px;
+    padding-left: 5px;
+}
+.icb-side-bar .icb-mod .course-title {
+    background: #2874af;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    padding-left: 3px;
+    font-size: 14px;
+}
+.icb-side-bar .icb-mod ul li.course a, .icb-side-bar .icb-mod ul li.link a{
+    padding-left: 3px;
+    color: #1d4f82;
+}
+.icb-side-bar .icb-mod ul li.chapter{
+    padding-left: 3px;
+}
+.icb-side-bar .icb-mod ul li.course:hover, .icb-side-bar .icb-mod ul li.link:hover{
+    background-color: #ffdd4e;
+}
 
+.icb-side-bar .icb-mod ul li.course.on {
+    background-color: #ffe887;
+    border-right: 2px solid #1d4f82;
+}
+.course .sub-level:before  {
+    content:"|--";
+    font-size: 10px;
+    margin-left:5px;
+}
 /* 导航条 */
 
 .icb-mod.side-nav ul li a {
@@ -2002,6 +2074,80 @@ screen\9 {
 .icb-mod.icb-topic-recommend-list .mod-footer a {
     margin-top: 10px;
     font-size: 12px;
+}
+
+/* 内容页面 */
+.mod-body h1, .mod-body h2, .mod-body h3, .mod-body h4, .mod-body h5, .mod-body h6 {
+    margin: 15px auto 0;
+}
+.mod-body table {
+    width:100%;
+    margin:0 5px;
+}
+.mod-body table.table-content td {
+    border: 1px solid #DDD;
+    padding: 7px 5px;
+    vertical-align: top;
+    font-size: 14px;
+}
+.mod-body table.table-content tr:nth-child(2n) {
+    background-color: #FFF;
+}
+.mod-body table.table-content tr:nth-child(2n+1) {
+    background-color: #EFEFEF;
+}
+.mod-body pre code table.hljs-ln td {
+    border: 0;
+}
+.mod-body pre code table.hljs-ln td.hljs-ln-numbers {
+    border-right: 1px solid #CCC;
+}
+.mod-body pre code table.hljs-ln tr:nth-child(2n) {
+    background: none;
+}
+.mod-body pre code table.hljs-ln tr:nth-child(2n+1) {
+    background: none;
+}
+.mod-body div.code {
+    width: 98%;
+    border: 0px solid #d4d4d4;
+    background-color: #EFEFEF;
+    color: #444;
+    padding: 5px;
+    margin:0 5px;
+}
+.mod-body table.table-content th {
+    background-color: #555;
+    border: 1px solid #bdbdbd;
+    border-bottom: none;
+    color: #FFF;
+    font-size: 14px;
+    padding: 3px;
+    vertical-align: top;
+    text-align: left;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+.mod-body table.table-content th.bsChrome{
+    background-image: url(../../common/browser_chrome.gif);
+    height: 36px;
+}
+.mod-body table.table-content th.bsEdge{
+    background-image: url(../../common/browser_ie.gif);
+    height: 36px;
+}
+.mod-body table.table-content th.bsFirefox{
+    background-image: url(../../common/browser_firefox.gif);
+    height: 36px;
+}
+.mod-body table.table-content th.bsSafari{
+    background-image: url(../../common/browser_safari.gif);
+    height: 36px;
+}
+.mod-body table.table-content th.bsOpera{
+    background-image: url(../../common/browser_opera.gif);
+    height: 36px;
 }
 
 
@@ -2147,7 +2293,99 @@ screen\9 {
 .icb-question-detail .icb-search-tag-box .icb-dropdown {
     width: 418px;
 }
+/** 教程页面 **/
+/* 上一篇 下一篇 */
+.nav-previous-next .nav-previous-link{
+    float:left;
+    padding: 0;
+}
+.icb-article-title-box .nav-previous-next{
+    padding:0;
+}
+.nav-previous-next .nav-next-link {
+    float:right;
+    text-align: right;
+    padding: 0;
+}
+/* 教程首页 */
+.course-table-list .course-table-name{
 
+}
+.course-table-list li{
+    height: 130px;
+    padding: 10px;
+    margin: 0;
+}
+.course-table-list li a{
+    height: 100%;
+    background: #eff7fd;
+    display: inline-block;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #eff7fd;
+}
+.course-table-list li div{
+    margin: 0;
+    display: inline-block;
+    height: 100%;
+    padding: 5px;
+}
+.course-table-list li div img{
+    margin: 5px 0;
+    max-width: 95%;
+    max-height: 95%;
+}
+.course-table-list .course_info{
+
+}
+.course-table-list .course_info .table-title{
+
+}
+.course-table-list .course_info .table-desc{
+    font-size:13px;
+}
+/* 教程内容 */
+.content span.deprecated {
+    color: #f00;
+}
+.content span.new {
+    float: right;
+    color: #46abff;
+}
+.content span.new:before {
+    font-family: 'icomoon' !important;
+    content: "\e906";
+}
+.content .code-sample {
+    border: 1px solid #d6d4ca;
+    border-radius: 4px;
+    padding: 0 2px;
+}
+.content .code-sample .code-sample,.content .code-sample > h3 {
+    margin: 0;
+    background-color: #edf2f7;
+    border:0;
+    border-radius: 0;
+}
+.sample-code-container{
+    border-radius: 4px;
+    margin: 0 4px;
+}
+.content .code-sample .btn_runcode {
+    display: block;
+    width: 80px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #5eb8fe;
+    color:#fff;
+    margin:0 4px 4px;
+}
+.content .code-sample .btn_runcode:hover {
+    background-color: #1591f1;
+}
 
 /* 回复编辑器 */
 
