@@ -454,6 +454,35 @@ class ParseMetal
                 $this->_content = @ file_get_contents($_realUrl);
 
                 //var_dump($this->_content);exit;
+                if (! $this->_content) {
+                    // https 请求的头信息
+                    $curlHeaders = array(
+                        'Accept'            =>'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+                        //'Accept-Encoding'   => 'gzip, deflate, br',
+                        'Accept-Language'   => 'zh-CN,zh;q=0.9',
+                        'Cache-Control'     => 'max-age=0',
+                        'Connection'        => 'keep-alive',
+                        'Host'              => $this->configInfo['metal']['host'],
+                        'Sec-Fetch-Dest'    => 'document',
+                        'Sec-Fetch-Mode'    => 'navigate',
+                        'Sec-Fetch-Site'    => 'same-origin',
+                        'Sec-Fetch-User'    => '?1',
+                        'Upgrade-Insecure-Requests'   => '1',
+                        'User-Agent'        => 'Mozilla/5.0 (compatible; Baiduspider-render/2.0; +http://www.baidu.com/search/spider.html)'
+                    );
+                    $fileContent = curlRequest($_realUrl, 'GET', $curlHeaders);
+
+                    if (is_array($fileContent)) { // 获取文章内容， http请求错误
+                        if ($fileContent['status']==404) {
+                            echo "''''' Status is 404\r\n";
+                            return;
+                        } else {
+                            $fileContent = '';
+                        }
+                    }
+
+                    $this->_content = $fileContent;
+                }
 
                 if (! $this->_content) {
                     //var_dump($this->_content);exit;
