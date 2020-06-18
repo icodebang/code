@@ -506,6 +506,11 @@ class ParseMetal
                 $_method = $_url . 'Parser';
                 $_url == 'stainless-steel' AND $_method = 'bxgParser'; // 不锈钢
                 $_url == 'new-energy' AND $_method = 'glParser'; // 钴锂
+                $_url == 'minor-metals' AND $_method = 'xjsParser'; // 小金属
+                $_url == 'in-ge-ga' AND $_method = 'yjzParser'; //  铟镓锗
+                $_url == 'bi-se-te' AND $_method = 'xjsParser'; // 铋硒碲
+                $_url == 'rare-earth' AND $_method = 'xtParser'; // 稀土
+                $_url == 'precious-metals' AND $_method = 'gjsParser'; // 贵金属
                 //var_dump($_method, method_exists($this, $_method));//exit;
                 if (! method_exists($this, $_method)) {
                     $_method = '_commonParser';
@@ -584,6 +589,9 @@ class ParseMetal
 }
 // 设置运行时间不限制
 @set_time_limit(0);
+
+sleep(rand(1,1000)); // 随机中断
+
 $parseMetalModel = new ParseMetal('copper');
 
 $parseMetalModel->parse();
