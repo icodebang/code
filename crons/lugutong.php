@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 /**
  * 陆股通 数据抓取
@@ -93,12 +94,15 @@ class Lugutong
         $requestTime > $allowMaxDateTime AND $requestTime = $allowMaxDateTime;
         $date = date('Y/m/d', $requestTime);
         // 先获取当天数据
+        // echo "query SZ data. start:" , time(), "\r\n";
         $response = $webServiceModel->request($url);
+        // echo "query SZ data. End:" , time(), "\r\n";
         $dataInfo = $this->parse($response);
         $dataInfo['dataSZ'] = $dataInfo['data'];
         if ($date == date('Y/m/d', $allowMaxDateTime)) { // 请求当天数据, 直接返回
-
+            // echo "query SH data. start:" , time(), "\r\n";
             $response = $webServiceModel->request($urlSH);
+            // echo "query SH data. start:" , time(), "\r\n";
             $dataInfoSH = $this->parse($response);
             $dataInfo['dataSH'] = $dataInfoSH['data'];
 
@@ -108,6 +112,7 @@ class Lugutong
         // 获取历史数据
         $params = $dataInfo['form'];
         $params['txtShareholdingDate'] = $date;
+        // echo "query SZ history data. start:" , time(), "\r\n";
         $response = $webServiceModel
                         ->setHeaders(array(
                             'Accept'            =>'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
@@ -115,8 +120,10 @@ class Lugutong
                         ))
                         ->setParams($params)
                         ->request($url, WebService::HTTP_CRUD_C);
+        // echo "query SZ history data. start:" , time(), "\r\n";
         $dataInfo = $this->parse($response);$this->parse($response);
         $dataInfo['dataSZ'] = $dataInfo['data'];
+        // echo "query SH history data. start:" , time(), "\r\n";
         $response = $webServiceModel
                         ->setHeaders(array(
                             'Accept'            =>'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
@@ -124,7 +131,7 @@ class Lugutong
                         ))
                         ->setParams($params)
                         ->request($urlSH, WebService::HTTP_CRUD_C);
-
+        // echo "query SH history data. start:" , time(), "\r\n";
         $dataInfoSH = $this->parse($response);
         $dataInfo['dataSH'] = $dataInfoSH['data'];
 
@@ -183,30 +190,46 @@ class Lugutong
         return $dataInfo;
     }
 }
+
 // 设置运行时间不限制
-@set_time_limit(0);
-
+@set_time_limit(50);
+ini_set('date.timezone', 'Asia/Shanghai');
 //sleep(rand(1,1000)); // 随机中断
-
+$startTime = time();
 $lugutongModel = new Lugutong();
+
+error_reporting(0);
 
 $dbModel = Application::model();
 // 获取最后的同步日期， 以此日期为基准 + 1天 作为参数获取数据
 $lastDate = $dbModel->fetch_one('key_value', 'value', 'varname = "stock_lugutong_sync_date"');
 $thisDateTime = strtotime($lastDate) + 24 * 60 *60;
+// echo 'This date:' , date('Y-m-d', $thisDateTime), "\r\n";
 // 最多获取到昨天的数据
 if ($thisDateTime >= strtotime(date('Y-m-d')) ) {
     exit();
 }
 // 获取本次日期数据
 $syncDate = date('Y/m/d', $thisDateTime);
+// echo 'Query start', "\r\n";
 $data = $lugutongModel->requestByDate($syncDate);
-
+if ($data['form']['alertMsg'] != '') { // 有错误信息
+    echo $data['form']['alertMsg'];
+    exit();
+}
+// echo 'Query end', "\r\n";
 if (empty($data['dataSZ']) || empty($data['dataSH']) ) {
 // 数据不完整， 本次数据无效， 退出
+    // echo "No data returned\r\n";
     exit();
 }
 
+if (time() - $startTime > 250) {
+    // echo "It's timeout! \r\n";
+    exit();
+}
+
+// echo "Do store data \r\n";
 // 删除对应日期的旧数据
 $dbModel->delete('stock_lugutong', 'belong_date = "' . $data['form']['txtShareholdingDate'] . '"');
 
