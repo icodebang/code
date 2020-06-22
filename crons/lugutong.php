@@ -86,8 +86,8 @@ class Lugutong
     {
         error_reporting(E_ALL);
         $webServiceModel = new WebService();
-        $url =   'https://sc.hkexnews.hk/TuniS/www.hkexnews.hk/sdw/search/mutualmarket_c.aspx?t=sz';
-        $urlSH = 'https://sc.hkexnews.hk/TuniS/www.hkexnews.hk/sdw/search/mutualmarket_c.aspx?t=sh';
+        $url =   $this->configInfo['lugutong']['lugutong_sz_url'];
+        $urlSH = $this->configInfo['lugutong']['lugutong_sh_url'];
         // 最大允许请求前一天
         $allowMaxDateTime = strtotime(date('Y-m-d')) - 24 * 60 * 60;
         $requestTime = strtotime($date);
