@@ -183,7 +183,7 @@ class Lugutong
                         break;
                 }
             }
-            $dataInfo['data'][] = array('code'=>$_code, 'name'=>$_name, 'share'=>$_share, 'percent'=>$_percent);
+            $dataInfo['data'][] = array('hk_code'=>$_code, 'name'=>$_name, 'share'=>$_share, 'percent'=>$_percent);
             //$this->lugutongModel->insert('stock_lugutong', array('code'=>$_code, 'name'=>$_name, 'share'=>$_share, 'percent'=>$_percent));
         }
 
@@ -214,7 +214,7 @@ $syncDate = date('Y/m/d', $thisDateTime);
 // echo 'Query start', "\r\n";
 $data = $lugutongModel->requestByDate($syncDate);
 if ($data['form']['alertMsg'] != '') { // 有错误信息
-    echo $data['form']['alertMsg'];
+    // echo $data['form']['alertMsg'];
     exit();
 }
 // echo 'Query end', "\r\n";
@@ -233,15 +233,31 @@ if (time() - $startTime > 250) {
 // 删除对应日期的旧数据
 $dbModel->delete('stock_lugutong', 'belong_date = "' . $data['form']['txtShareholdingDate'] . '"');
 
+// 陆股通的代码和沪深股市代码映射关系
+$convertCodeMap = array (
+    '70'=>'000',
+    '71'=>'000',
+    '72'=>'002',
+    '77'=>'300',
+    '90'=>'600',
+    '91'=>'601',
+    '93'=>'603',
+    '98'=>'688'
+);
+
 // 存储数据
 foreach ($data['dataSZ'] as $_info) {
     $_info['belong_date'] = $data['form']['txtShareholdingDate'];
     $_info['sh_or_sz'] = 'sz';
+    $_info['code']     = $convertCodeMap[substr($_info['hk_code'],0,2)]
+                        . substr($_info['hk_code'], 2);
     $dbModel->insert('stock_lugutong', $_info);
 }
 foreach ($data['dataSH'] as $_info) {
     $_info['belong_date'] = $data['form']['txtShareholdingDate'];
     $_info['sh_or_sz'] = 'sh';
+    $_info['code']     = $convertCodeMap[substr($_info['hk_code'],0,2)]
+                        . substr($_info['hk_code'], 2);
     $dbModel->insert('stock_lugutong', $_info);
 }
 // 更新同步时间
