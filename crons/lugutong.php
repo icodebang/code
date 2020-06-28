@@ -236,7 +236,7 @@ $dbModel->delete('stock_lugutong', 'belong_date = "' . $data['form']['txtShareho
 // 陆股通的代码和沪深股市代码映射关系
 $convertCodeMap = array (
     '70'=>'000',
-    '71'=>'000',
+    '71'=>'001',
     '72'=>'002',
     '77'=>'300',
     '90'=>'600',
