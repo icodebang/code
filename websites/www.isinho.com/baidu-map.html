@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"><head>
+        <!-- Meta tag -->
+		<meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="description" content="welcome to codeglim">
+		<meta name='copyright' content='codeglim'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Title Tag -->
+        <title>地图</title>
+
+    <!-- Jquery JS -->
+    <script type="text/javascript" src="./static/jquery.min.js"></script>
+    </head>
+<body>
+    <div id="baidu-map" class="map" style="height: 500px;"></div>
+
+    <!-- Baidu Map JS -->
+    <script type="text/javascript" src="//api.map.baidu.com/getscript?v=2.0&ak=GNMfmaHWOLrt5HMqz4ofS1t1"></script>
+    <script type="text/javascript">
+    /* =====================================
+	+ 移动菜单
+	+ 页面滚动
+	+ 单页导航
+	+ Main Slider
+	+ Team Hover
+	+ Testimonial Carousel
+	+ Portfolio Carousel
+		+ Portfolio Single Slide
+	+ Magnific Popup
+	+ Counter JS
+	+ Clients Carousel
+	+ Progress JS
+	+ Social Hover
+	+ Typed Js
+	+ ScrollUp JS
+	+ Animation JS
+	+ Extra JS
+	+ Google Map
+	+ Background Video
+	+ Preloader JS
+======================================*/
+(function ($) {
+	"use strict";
+    $(document).ready(function(){
+        // 百度地图API功能
+        var baiduMapContent =
+        "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>沈阳新禾文化传媒有限公司</h4>" +
+        "<img style='float:right;margin:4px' id='imgDemo' src='../img/tianAnMen.jpg' width='139' height='104' title='天安门'/>" +
+        "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:1em'>图书出版，新媒体，软件开发，网站建设，影视频后期制作...<a href='//www.icodebang.cn'>查看</a></p>" +
+        "</div>";
+        var map = new BMap.Map("baidu-map");
+        var point = new BMap.Point(123.46033,41.75035);
+        var marker = new BMap.Marker(point);
+        var infoWindow = new BMap.InfoWindow(baiduMapContent);  // 创建信息窗口对象
+        map.centerAndZoom(point, 20);
+        map.addOverlay(marker);
+        marker.addEventListener("click", function(){
+        this.openInfoWindow(infoWindow);
+        //图片加载完毕重绘infowindow
+        document.getElementById('imgDemo').onload = function (){
+            infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+        }
+        });
+        marker.openInfoWindow(infoWindow);
+    });
+
+}) (jQuery);
+
+    </script>
+</body>
+
+</html>
