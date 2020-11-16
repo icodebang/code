@@ -477,9 +477,6 @@
                 <!-- About Image -->
                 <div class="col-md-5 col-sm-12 col-xs-12 wow slideInLeft" style="visibility: visible; animation-name: slideInLeft;">
                     <div class="about-main">
-                        <!-- <div class="about-img">
-                            <img src="./static/about.jpg" alt="">
-                        </div> -->
                         <div id="hexagon-pool">
                             <div class="row hexagon-container odd">
                                 <div class="single-hexagon">
@@ -610,11 +607,6 @@
                                 </div>
                             </div>
                             <div class="row hexagon-container odd">
-                                <div class="single-hexagon">
-                                    <div class="hexagon-child">
-                                        <div class="hexagon-child-child"></div>
-                                    </div>
-                                </div>
                                 <div class="single-hexagon">
                                     <div class="hexagon-child">
                                         <div class="hexagon-child-child"></div>

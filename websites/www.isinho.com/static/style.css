@@ -285,7 +285,7 @@
 .animated_slogan{
     color: #333;
     border: 1px solid #fff;
-    padding: 5px;
+    padding: 5px 8px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.7);
 }

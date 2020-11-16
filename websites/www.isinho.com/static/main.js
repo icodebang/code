@@ -322,6 +322,19 @@
             // Called after the entrance animation is executed.
         }
     });
+	/*======================================
+	// 打字机效果 Typed JS
+	======================================*/
+	// $(".animated_slogan:first").typed({
+	// 	strings: [$(".animated_slogan:first").text()],
+	// 	typeSpeed: 60,
+	// 	loop: true
+	// });
+	// $(".animated_slogan:last").typed({
+	// 	strings: [$(".animated_slogan:last").text()],
+	// 	typeSpeed: 60,
+	// 	loop: true
+	// });
 
 
 	/*======================================
@@ -480,7 +493,7 @@
     ======================================*/
     var imgList = ['logo-baijia.jpeg', 'logo-dayu.jpg', 'logo-gongzhong.jpeg', 'logo-jianshu.jpg',
                     'logo-toutiao.jpeg', 'logo-weibo.jpeg', 'logo-yidian.jpeg', 'logo-zhihu.jpg',
-                    'logo-black-fat.png', 'logo-blue-fat.png'
+                    'logo-black-fat.png'
                   ];
     /**
      * 1. 将图片铺入蜂窝， 记录有图片的蜂窝位置存入数组

@@ -43,8 +43,8 @@
   六角形
 */
 .single-hexagon {
-    width: 66px;
-    height: 76px;
+    width: 66rem;
+    height: 76rem;
     overflow: hidden;
     transform: rotate(120deg);
     margin: 0;
@@ -73,9 +73,9 @@
     top:0;
 }
 .hexagon-container.even{
-    padding-left: 35px;
-    margin-top: -22px;
+    padding-left: 35rem;
+    margin-top: -22rem;
 }
 .hexagon-container.odd:not(:first-child){
-    margin-top: -22px
+    margin-top: -22rem
 }
