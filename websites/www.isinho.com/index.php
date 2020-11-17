@@ -122,7 +122,7 @@
             <div id="lunhuanback">
                 <?php
                 $loopPlayList = array(
-                    '<p style="background-image: url(./static/artisan.png) ; opacity: 1;">
+                    '<p style="background-image: url(./static/artisan.jpg) ; opacity: 1;">
                         <span class="animated_slogan">怀匠心，造精品</span>
                     </p>',
                     '<p style="background-image: url(./static/sun_sea.jpg) ; opacity: 0;">
