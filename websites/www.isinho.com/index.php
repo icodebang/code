@@ -123,10 +123,10 @@
                 <?php
                 $loopPlayList = array(
                     '<p style="background-image: url(./static/artisan.jpg) ; opacity: 1;">
-                        <span class="animated_slogan">怀匠心，造精品</span>
+                        <span class="animated_slogan">怀匠心，造精品</span><span class="lunhuan-fixed-height">&nbsp;</span>
                     </p>',
                     '<p style="background-image: url(./static/sun_sea.jpg) ; opacity: 0;">
-                        <span class="animated_slogan">立诚信，谋共赢</span>
+                        <span class="animated_slogan">立诚信，谋共赢</span><span class="lunhuan-fixed-height">&nbsp;</span>
                     </p>',
                 );
                 for ($i = 0; $i <= count($loopPlayList) - 1; $i++) {
@@ -468,7 +468,6 @@
                         <h2>新媒体</h2>
                         <p>新媒体以数字信息技术为基础，将传统书稿融合互动传播功能，成为具有创新形态的媒体，诸如：网站、电子书、微博、公众号、自媒体等。
                             公司以文字功底深厚的编辑和校对队伍作支撑，为客户提供电子书制作、软文撰写、网站更新、自媒体账号维护服务。
-                            同时，公司拥有经验丰富、技术出色的IT队伍，在网站建设以及软件开发上，为客户提供网站、APP、软件的定制开发服务。
                         </p>
                     </div>
                 </div>
@@ -778,14 +777,14 @@
                 <div class="col-md-12 col-sm-12 col-xs-12  wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
                     <div class="section-title center">
                         <h2>软件开发</h2>
-                        <p>公司依靠先进的技术、创新的意识、创建集成的能力，为用户设计完整的技术解决方案，提供优质的系统支持服务，助力中小企业进行互联网+转型与升级</p>
+                        <p>公司依靠先进的技术、创新的意识、出众的能力，为用户设计完整的技术解决方案，提供优质的系统支持服务，助力中小企业进行互联网+ 转型与升级，提高企业办公效率，赋能企业高效发展</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="blog">
-                        <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                        <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
                             <!-- Single blog -->
                             <div class="single-blog">
                                 <div class="blog-head">
@@ -799,7 +798,7 @@
                             </div>
                             <!--/ End Single blog -->
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
+                        <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInUp" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
                             <!-- Single blog -->
                             <div class="single-blog">
                                 <div class="blog-head">
@@ -813,7 +812,7 @@
                             </div>
                             <!--/ End Single blog -->
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
+                        <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInUp" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
                             <!-- Single blog -->
                             <div class="single-blog">
                                 <div class="blog-head">
@@ -827,7 +826,7 @@
                             </div>
                             <!--/ End Single blog -->
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="1.2s" style="visibility: visible; animation-delay: 1.2s; animation-name: fadeInUp;">
+                        <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInUp" data-wow-delay="1.2s" style="visibility: visible; animation-delay: 1.2s; animation-name: fadeInUp;">
                             <!-- Single blog -->
                             <div class="single-blog">
                                 <div class="blog-head">
