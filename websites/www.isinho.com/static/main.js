@@ -184,7 +184,7 @@
 	======================================*/
 	$("#BookPublish>.container>.slider-container").owlCarousel({
 		loop:true,
-		autoplay:false,
+		autoplay:true,
 		autoplayHoverPause:true,
 		smartSpeed: 1000,
 		autoplayTimeout:4000,
@@ -530,12 +530,14 @@
                     continue;
                 }
                 newImgInfo = {elementIndex:randomNum, img:imgList[0]};
-                $elements.eq(randomNum).html('<img style="max-width:100%;" data-length="'+imgList[0]+'" src="./static/'+imgList[0]+'"/>');
+                $elements.eq(randomNum).html('<img class="wow fadeIn" data-wow-delay="0.6s" style="max-width:100%;visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;" data-length="'+imgList[0]+'" src="./static/'+imgList[0]+'"/>');
                 showingQueue.push(newImgInfo);
                 nextImgList.push(firstImgInfo.img);
                 for (var i=1; i<imgList.length; i++) {
                     nextImgList.push(imgList[i]);
                 }
+
+
                 break;
             }
         } else {

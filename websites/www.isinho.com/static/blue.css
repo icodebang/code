@@ -66,7 +66,7 @@
     height: 100%;
     overflow: hidden;
     transform: rotate(-60deg);
-    background-color: rgba(17, 150, 226, 0.514);
+    background-color: rgba(17, 150, 226, 0.3);
     display: inline-block;
     position: absolute;
     left:0;
@@ -78,4 +78,11 @@
 }
 .hexagon-container.odd:not(:first-child){
     margin-top: -22px
+}
+
+/*=======================
+  样式选择功能按钮
+=========================*/
+.theme-switch{
+    display: none;
 }
