@@ -172,10 +172,8 @@
     left: 0;
     width: 100%;
     opacity: 0;
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment:scroll;
     vertical-align: middle;
     text-align: center;
     line-height: 442px;
@@ -1725,6 +1723,14 @@
 #contact .map {
     height: 386px;
     width:100%;
+    background-image: url(sinho-map.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+#contact .map a {
+    height: 386px;
+    width:100%;
+    display: block;
 }
 /* Icon Wobble Horizontal */
 @-webkit-keyframes hvr-icon-wobble-horizontal {

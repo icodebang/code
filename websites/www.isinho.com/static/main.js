@@ -416,11 +416,12 @@
 	// 	}
     // });
     // 百度地图API功能
+    /*
     var baiduMapContent =
-    "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>沈阳新禾文化传媒有限公司</h4>" +
-    "<img style='float:right;margin:4px' id='imgDemo' src='./static/logo-stamp.png' width='50' title='沈阳新禾文化传媒有限公司'/>" +
-    "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:1em'>图书出版，新媒体，软件开发，网站建设 ..." +
-    "<br/><br/>地址：浑南区营盘北街7-2号招商局大厦A座12层</p>" +
+    "<h4 style='color: #066ca2;letter-spacing: 1px;'>沈阳新禾文化传媒有限公司</h4>" +
+    "<img style='float:right;margin:4px' id='imgDemo' src='./static/logo-stamp.png' width='33' title='沈阳新禾文化传媒有限公司'/>" +
+    "<p style='margin:0;line-height:1.8;font-size:13px;'>业务：图书出版、编辑校对，新媒体运营，软件开发，网站建设" +
+    "<br/>地址：沈阳市浑南区营盘北街7-2号招商局大厦A座12层 &nbsp; <a href='https://map.baidu.com/poi/%E6%B2%88%E9%98%B3%E6%96%B0%E7%A6%BE%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@13743742.585,5094917.03,14z?uid=b388b3dc4329d39649fd3f8a&ugc_type=3&ugc_ver=1&device_ratio=2&compat=1&querytype=detailConInfo&da_src=shareurl'>查看</a></p>" +
     "</div>";
     var baidumap = new BMap.Map("baidu-map");
     var point = new BMap.Point(123.4603,41.7503);
@@ -437,6 +438,7 @@
         }
     });
     marker.openInfoWindow(infoWindow);
+    */
 	/*====================================
 		Background Video
 	======================================*/

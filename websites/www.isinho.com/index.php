@@ -887,7 +887,6 @@
 
     <!-- Contact Us -->
     <section id="contact" class="section">
-        <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
                     <div class="section-title center">
@@ -897,10 +896,9 @@
                 </div>
             </div>
             <!--  Map -->
-            <div class="row map">
-                <div id="baidu-map" class="map col-md-12 col-sm-12 col-xs-12 "></div>
+            <div class="row map wow fadeInUp">
+                <div id="baidu-map" class="map col-md-12 col-sm-12 col-xs-12 "><a target="blank" href="https://map.baidu.com/poi/%E6%B2%88%E9%98%B3%E6%96%B0%E7%A6%BE%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@13743742.585,5094917.03,14z?uid=b388b3dc4329d39649fd3f8a&ugc_type=3&ugc_ver=1&device_ratio=2&compat=1&querytype=detailConInfo&da_src=shareurl"></a></div>
             </div>
-        </div>
     </section>
     <!--/ End Clients Us -->
 
