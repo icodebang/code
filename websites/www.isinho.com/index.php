@@ -1031,6 +1031,8 @@
 
     <a id="scrollUp" href="./#top" style="position: fixed; z-index: 2147483647; display: none;"><i class="fa fa-angle-up"></i></a>
 
+	<!-- 防止手机浏览器在页面后面加入垃圾广告, 放置一个标志性的元素。 所有必须的元素， 都要放到这个标识元素前面  -->
+    <div id="last-one-flag"></div>
 </body>
 
 </html>
