@@ -156,7 +156,6 @@
 }
 
 .lunhuan {
-    position: absolute;
     width: 100%;
     background-color: #555;
 }
@@ -176,7 +175,7 @@
     background-position: center center;
     vertical-align: middle;
     text-align: center;
-    line-height: 442px;
+    line-height: 466px;
     font-size: 33px;
 }
 
@@ -184,7 +183,7 @@
     position: relative;
     margin: 0 auto;
     width: 100%;
-    height: 440px;
+    height: 466px;
 }
 
 #lunbonum {
@@ -272,7 +271,6 @@
 #slider {
 	position: relative;
 	overflow: hidden;
-	height:442px;
 }
 .animated_slogan{
     color: #333;
