@@ -34,7 +34,7 @@ function FileUploader (bindElement, filesInfoContainer, url, options, callback)
 								'</div>'+
 							'</li>'
 	};
-    
+
 	this.startCallback   = this._onStartUpload;
 	if (options.startCallback) {
 		this.startCallback   = options.startCallback;
@@ -60,7 +60,7 @@ function FileUploader (bindElement, filesInfoContainer, url, options, callback)
 	this.callback = callback;
 
 	this.form = this.buildForm();
-	
+
 	if (this.options.isFormInsideMode) {
 		$(this.element).prepend(this.form);
 	} else {
@@ -68,7 +68,7 @@ function FileUploader (bindElement, filesInfoContainer, url, options, callback)
 	}
 }
 
-FileUploader.prototype = 
+FileUploader.prototype =
 {
 	set : function (key, value) {
 		this.options[key] = value;
@@ -76,7 +76,7 @@ FileUploader.prototype =
 	},
 	/**
      * 初始化表单，准备文件展示区域
-     * 
+     *
      * @param element
      *            上传绑定的元素
      */
@@ -85,16 +85,16 @@ FileUploader.prototype =
 	    var _this = this;
 		if(navigator.userAgent.indexOf("MSIE 8.0") > 0) {
 			$(element).prepend(this.form);
-			
+
 		} else {
 			$('body').append(_this.form);
 
 			$(element).click(function () {
-			    
+
 				_this.form.find('.file-input').click();
 			});
 		}
-		
+
 		var $container = $(this.container);
 		$container.each(function () {
 			if ($(this).get(0).tagName != 'IMG' && _this.options.showUploadImage !== true) {
@@ -104,12 +104,12 @@ FileUploader.prototype =
 				}
 			}
 		});
-		
+
 	},
-	
+
 	/**
      * 创建上传文件的表单，绑定上传操作
-     * 
+     *
      * @returns
      */
 	buildForm : function ()
@@ -130,17 +130,17 @@ FileUploader.prototype =
 				'class'  : ''
 			}).append($('<input/>').attr({'type':'submit', 'class':'submit'}))
 		      .append($file);
-		
+
 		return $form;
 	},
-	
+
 	_onStartUpload : function ($fileInfo, index, file)
 	{
 		if (this.options.showUploadImage !== true) {
 		    $(this.container).find('.upload-list').append($fileInfo);
 		}
 	},
-	
+
 	_onUploading : function (event, $fileInfo, index, file)
 	{
     	    $fileInfo.find('.js-stop-upload').remove();
@@ -153,7 +153,7 @@ FileUploader.prototype =
         	$fileInfo.find('.title').html(file.name);
         	$fileInfo.find('.size').html(percent + '%');
 	},
-	
+
 	_onEndUpload : function (result, $fileInfo, index, file)
 	{
 		if (! index) {
@@ -172,7 +172,7 @@ FileUploader.prototype =
         		} catch (e) {
         			console && console.info(result);
         			info = {error : _t('服务器返回错误数据！')};
-        		} 
+        		}
         	} else {
         		info = result;
         	}
@@ -191,15 +191,15 @@ FileUploader.prototype =
         	        	}
 
 	            this.oncallback(info);
-	        	
+
 	            return;
 	        }
-			
+
 			switch (info.class_name) {
 				case 'txt':
 					$fileInfo.find('.img').addClass('file').html('<i class="icon icon-file"></i>');
 				    break;
-				    
+
 		        default:
 		            if (info.thumb) {
 	                    $fileInfo.find('.img').css(
@@ -211,14 +211,14 @@ FileUploader.prototype =
                                  .attr('data-url', info.url)
                                  .html('<i class="icon icon-'+info.class_name+'"></i>');
 		            }
-                    break;        
+                    break;
 			}
 
 			if (info.delete_url) {
 				var btn;
 				if (this.options.deleteBtn) {
 					btn = this.createDeleteBtn(info.attach_id, info.delete_url);
-	
+
 					$fileInfo.find('.meta').append(btn);
 				}
 				// if (this.options.insertBtn && !info.class_name) {
@@ -229,7 +229,7 @@ FileUploader.prototype =
 				}
 			}
 
-			
+
 			$fileInfo.append(this.createHiddenInput(info.attach_id));
 
 			if (file) {
@@ -237,43 +237,43 @@ FileUploader.prototype =
 			}
 
 			this.oncallback(info);
-			
+
 		} else {
 			if ($fileInfo.length){
 				$fileInfo.addClass('error')
 				         .find('.img').addClass('error')
 				         .html('<i class="icon icon-delete"></i>');
-				
+
 				$fileInfo.find('.size').text(info.error);
 		    } else if (typeof ICB == 'object') {
 			    ICB.modal.alert(info.error);
 		    }
 		}
 	},
-	
+
 	/**
      * 上传文件处理
-     * 
+     *
      * @param fileElement
      *            fileInput元素
      */
 	processUpload : function (fileElement)
 	{
 		var files = $(fileElement)[0].files;
-		if (files && this.options.showUploadImage !== true) {
-			
+		if (files) {
+
 			for (i = 0; i < files.length; i++) {
 				this.doUpload(files[i], i);
 			}
-			
+
 		} else {
 			this.doUpload();
 		}
 	},
-	
+
 	/**
      * 上传文件
-     * 
+     *
      * @param file
      *            [option] 从fileInput获取到的file对象
      * @param index
@@ -283,23 +283,23 @@ FileUploader.prototype =
 	doUpload : function (file, index)
 	{
 		var _this = this;
-		
+
 		var $fileInfo = $(this.options.fileInfoTemplate).attr('data-upload-flag', 'upload-'+Math.random());
-		
+
 		if (typeof this.startCallback == 'function') {
 			this.startCallback ($fileInfo, index, file);
 		}
 
 		if (file) { // 通过ajax上传
-			
+
 			if(! this.isFileTypeValid(file.name) ) {
 				if (typeof this.endCallback == 'function') {
 					this.endCallback({errnum:1, error:_t('文件类型错误')}, $fileInfo, index, file);
 				}
-				
+
 				return false;
 			}
-			
+
 			var xhr = new XMLHttpRequest();
 
 	        xhr.upload.onprogress = function(event) {
@@ -311,8 +311,8 @@ FileUploader.prototype =
 					xhr.abort();
 				}
 	        };
-        	
-	        xhr.onreadystatechange = function() {      
+
+	        xhr.onreadystatechange = function() {
 	            _this.onStateChange($fileInfo, index, file, xhr);
 	        };
 
@@ -321,16 +321,16 @@ FileUploader.prototype =
 	        xhr.open("POST", url);
 
 	        xhr.send(file);
-	        
+
 		} else { // 通过iframe上传
-			
+
 			var filename = this.form.find('.file-input').val();
 
 			if(! _this.isFileTypeValid(filename) ) {
 				if (typeof _this.endCallback == 'function') {
 					this.endCallback({errnum:1, error:_t('文件类型错误')}, $fileInfo);
 				}
-				
+
 				return false;
 			}
 
@@ -338,18 +338,18 @@ FileUploader.prototype =
 			if (this.options.uploadingModalSelector) {
 				$(this.options.uploadingModalSelector).show();
 			}
-        	
+
 			// 页面如没有iframe， 自动添加
         	if ($('iframe[name="__PostFileToIframe__"]').length == 0) {
-            	
+
     			var iframe = this.getIframe().get(0);
 	        	if (iframe.addEventListener) {
 			        iframe.addEventListener(
-			        		'load', 
-			        		function() {_this.getIframeContent(iframe, $fileInfo);}, 
+			        		'load',
+			        		function() {_this.getIframeContent(iframe, $fileInfo);},
 			        		false
 			        );
-			        
+
 			    } else if (iframe.attachEvent) {
 			        iframe.attachEvent('onload', function() {_this.getIframeContent(iframe, $fileInfo);});
 		    	}
@@ -363,7 +363,7 @@ FileUploader.prototype =
 
 	/**
      * 检查上传文件扩展名是否允许
-     * 
+     *
      * @param name
      * @returns {Boolean}
      */
@@ -378,12 +378,12 @@ FileUploader.prototype =
 		// 获取扩展名
 		var fileinfo = filename.split('.');
 		var ext = fileinfo.length>1 ? fileinfo.pop().toLowerCase() : '';
-		
+
 		return this.options.allowedTypes.indexOf(ext) >=0;
 	},
 
 	/**
-     * 
+     *
      * @returns
      */
 	getIframe : function ()
@@ -421,14 +421,14 @@ FileUploader.prototype =
 
                     dom.setAttribute( 'src', $imgInfo.attr('data-img') );
                     dom.setAttribute( 'attach-id', attach_id );
-                    
+
                     _this.editor.insertElement(dom);
                     _this.editor.insertHtml('<br/>');
-                    
+
 // _this.editor.insertHtml('<br/><img src="'
 // + $imgInfo.attr('data-img')
 // + '" attach-id="'+ attach_id + '"/><br/>');
-				    
+
 				} else if ($imgInfo.hasClass('audio')) {
                     _this.editor.insertHtml('<br/>');
                     var dom = _this.editor.document.createElement( 'audio' );
@@ -436,10 +436,10 @@ FileUploader.prototype =
                     dom.setAttribute( 'controls', 'controls');
                     dom.setAttribute( 'attach-id', attach_id );
                     dom.setAttribute( 'src', $imgInfo.attr('data-url') );
-                    
+
                     _this.editor.insertElement(dom);
                     _this.editor.insertHtml('<br/>');
-                    
+
 // _this.editor.insertHtml('<br/><audio controls src="'
 // + $imgInfo.attr('data-url')
 // + '" attach-id="'+ attach_id + '"></audio><br/>');
@@ -462,7 +462,7 @@ FileUploader.prototype =
    		var $btn = $(this.options.deleteBtnTemplate);
 
 		var _this = this;
-		
+
    		$btn.click(function() {
 			if (! confirm("确认删除?")) {
 				return;
@@ -471,13 +471,13 @@ FileUploader.prototype =
 			$.get(url, function (result) {
 				if (result.errno == "-1") {
 					ICB.modal.alert(result.err);
-					
+
 					return;
 				}
 
 				if (typeof CKEDITOR != 'undefined') {
 					var content;
-					
+
 					for (var textareaId in CKEDITOR.instances) {
 						content = CKEDITOR.instances[textareaId].getData();
 						if ($imgInfo.attr('data-img')) {
@@ -486,7 +486,7 @@ FileUploader.prototype =
 								if (p1==$imgInfo.attr('data-img')) {
 									return '';
 								}
-								
+
 							    return p0;
 							});
 						} else {
@@ -494,7 +494,7 @@ FileUploader.prototype =
 								if (p1==attach_id) {
 									return '';
 								}
-								
+
 							    return p0;
 							});
 						}
@@ -505,14 +505,14 @@ FileUploader.prototype =
 						if (p1==attach_id) {
 							return '';
 						}
-						
+
 					    return p0;
 					});
 					_this.editor.val(content);
 				}
-				
+
 				$imgInfo.closest('li').remove();
-				
+
 			}, 'json');
 		});
 
@@ -521,7 +521,7 @@ FileUploader.prototype =
 
 	/**
      * 获取iframe响应的json内容
-     * 
+     *
      * @param iframe
      * @param $fileInfo
      */
@@ -536,13 +536,13 @@ FileUploader.prototype =
             	if (typeof this.endCallback == 'function') {
 					this.endCallback(result, $fileInfo);
 				}
-            	
+
 	           	filename = this.getName($('#__UploadFileForm__ .file-input')[0].value);
 
 	           	$fileInfo.find('.title').html(filename);
-	           	
+
             } else  {
-            	
+
             	$(this.options.uploadingModalSelector).hide();
 
             	if (typeof this.endCallback == 'function') {
@@ -561,7 +561,7 @@ FileUploader.prototype =
 		if (! xhr || xhr.readyState != 4) {
 			return null;
 		}
-		
+
         var result;
 		if (xhr.status == 200) {
 			result = {errnum:0, response:xhr.responseText};
@@ -575,11 +575,11 @@ FileUploader.prototype =
 			result = {errnum : xhr.status, error : _t('未知错误')};
 			console && console.info(xhr);
 		}
-		
+
 		if (typeof this.endCallback == 'function') {
 			this.endCallback(result, $fileInfo, index, file);
 		}
-		
+
 		return result;
 	},
 
@@ -599,7 +599,7 @@ FileUploader.prototype =
 
     /**
      * 获取文件大小
-     * 
+     *
      * @param size
      *            格式化文件大小
      * @returns {String}
@@ -611,7 +611,7 @@ FileUploader.prototype =
         } else {
             filesize = (Math.round(filesize / 1024 * 100 ) / 100).toString() + 'KB';
         }
-    	
+
         return filesize;
     },
 
@@ -636,13 +636,13 @@ FileUploader.prototype =
         $template.find('.meta').append(insertBtn);
         $template.find('.meta').append(hiddenInput);
     	$(this.container).find('.upload-list').append($template);
-    	
+
     	if (typeof CKEDITOR == 'undefined') {
     		return;
     	}
 
     	var content;
-		
+
 		for (var textareaId in CKEDITOR.instances) {
 			content = CKEDITOR.instances[textareaId].getData();
 			content = content.replace(/\[attach\](\d+)\[\/attach\]/g, function (p0, p1) {
@@ -651,7 +651,7 @@ FileUploader.prototype =
 						+ json.thumb
 						+ '[/img]';
 					}
-					
+
 				    return p0;
 				});
 			CKEDITOR.instances[textareaId].setData(content);
@@ -703,12 +703,12 @@ function FileUpload (type, bindElement, filesInfoContainer, url, options, callba
 	}
 }
 
-FileUpload.prototype = 
+FileUpload.prototype =
 {
 	// 初始化上传器
 	init : function (element, container)
 	{
-		
+
 		var form  = this.createForm(),
 			input = this.createInput();
 
@@ -723,10 +723,10 @@ FileUpload.prototype =
 			{
 				$('#__UploadFileForm__ .file-input').click();
 			});
-		} 
+		}
 
 		$(container).append('<ul class="upload-list"></ul>');
-		
+
 	},
 
 	// 创建表单
@@ -812,7 +812,7 @@ FileUpload.prototype =
 				this.upload('');
 			}
 		}
-		
+
 	},
 
 	// 上传文件类型判断
@@ -822,20 +822,20 @@ FileUpload.prototype =
 		{
 			return false;
 		}
-		
+
 		var extStart = name.lastIndexOf(".");
-		
+
 	    var ext = (name.substring(extStart+1, name.length).toUpperCase()).toLowerCase();
-	    
+
 	    if(typeof (FILE_TYPES) !='undefined' && FILE_TYPES.indexOf(ext)<0)
 	    {
 	    	return false;
 	    }
-	    
+
 	    return true;
-	    
+
 	},
-	
+
 	// 上传功能
 	upload : function (file, li)
 	{
@@ -844,7 +844,7 @@ FileUpload.prototype =
 		if (file) {
 
 			var is_allowed = this.allowed_upload_types(file.name);
-			
+
 			if(!is_allowed)
 			{
 				$(li).find('.meta').html(_t('文件类型错误'));
@@ -855,12 +855,12 @@ FileUpload.prototype =
 				}else{
 					AWS.alert(_t('文件类型不允许上传'));
 				}
-				
+
 				return false;
 			}
-			
+
 			var xhr = new XMLHttpRequest(), status = false;
-			
+
 	        xhr.upload.onprogress = function(event)
 	        {
 	        	if (event.lengthComputable)
@@ -874,7 +874,7 @@ FileUpload.prototype =
 	        };
 
 	        xhr.onreadystatechange = function()
-	        {      
+	        {
 	            _this.oncomplete(xhr, li, file);
 	        };
 
@@ -888,11 +888,11 @@ FileUpload.prototype =
         {
         	// 低版本ie上传
 			var iframe = this.createIframe();
-			
+
 			var filename = $(this.form).find('.file-input').val();
 
 			var is_allowed = this.allowed_upload_types(filename);
-			
+
 			if(!is_allowed)
 			{
 				if( typeof(AWS.alert) == 'undefined' )
@@ -901,7 +901,7 @@ FileUpload.prototype =
 				}else{
 					AWS.alert(_t('文件类型不允许上传'));
 				}
-				
+
 				return false;
 			}
 
@@ -1055,7 +1055,7 @@ FileUpload.prototype =
 			else
 			{
 				$(element).addClass('error').find('.img').addClass('error').html('<i class="icon icon-delete"></i>');
-				
+
 				$(element).find('.size').text(json.error);
 			}
 		}
@@ -1142,7 +1142,7 @@ FileUpload.prototype =
     setFileList : function (json)
     {
     	var template = '<li>';
-    	
+
     	if (!json.is_image)
 		{
 			template += '<div class="img file"><i class="icon icon-file"></i></div>';
