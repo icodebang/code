@@ -1,0 +1,140 @@
+/* 左侧菜单 */
+.icb-side .mod-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+}
+.icb-side .mod-logo h1 {
+    padding-left: 15px;
+    color: #bbc9cd;
+    font-size: 18px;
+    line-height: 45px;
+    font-weight: 400;
+}
+.icb-side ul li ul li a {
+    text-indent: 15px;
+}
+
+/* 主页面内容，列表 */
+.icb-content-wrap .mod-body.padding5px, .icb-content-wrap .mod-content {
+    padding: 20px 0px;
+}
+.table-striped > tbody > tr:hover > td {
+    background-color: #ddecf7;
+}
+.mod-body .icb-book-infos .row label {
+    width:100%;
+    text-align: right;
+}
+.mod-body .icb-book-infos .row {
+    margin-top:15px;
+}
+.icb-content-wrap .icon.icon-delete {
+    background: #d9534f;
+}
+
+.px10, .px10 *{
+    font-size: 10px !important;
+}
+.no-padding, .no-padding *{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.no-margin, .no-margin *{
+    margin-left:0 !important;
+    margin-right: 0 !important;
+}
+.workload-list tr td{
+    border-right: 1px dotted #ccc;
+    border-left: 1px dotted #ccc;
+}
+.workload-list tr th{
+    border-top: 1px solid #ddd !important;
+    border-right: 1px solid #ddd;
+}
+.no-word-break{
+    word-break: keep-all;
+}
+.red-right-border{
+    border-right-style: dotted !important;
+    border-right-color: #f00 !important;
+}
+.workload-list>thead>tr>th{
+    background-color: #f2dede;
+}
+.workload-list.workload-fill-list > tbody > tr:nth-child(odd) > td {
+    background-color: rgb(248, 250, 241);
+}
+.workload-list > tbody > tr.recording-line:nth-child(odd) > td {
+    background-color: #efffe9;
+}
+.workload-list > tbody > tr.verified-line:nth-child(odd) > td {
+    background-color: #d2e5ef;
+}
+.workload-list > tbody > tr.verifying-line:nth-child(odd) > td {
+    background-color: #fffff7;
+}
+.workload-list > tbody > tr.recording-line > td
+{
+    background-color: #e7ffde;
+}
+.workload-list > tbody > tr.verified-line > td
+{
+    background-color: #dbedf7 ;
+}
+.workload-list > tbody > tr.verifying-line > td
+{
+    background-color: #fffff4;
+}
+
+.workload-list > tbody > tr:hover > td,.workload-list > tbody > tr.verified-line:hover > td {
+    cursor:context-menu;
+    border-top:1px solid #fff !important;
+    border-bottom:1px solid #999 !important;
+}
+.workload-list > tbody > tr.verifying-line:hover > td {
+    background-color: #fafadb;
+}
+.workload-list > tbody > tr.book-line > td
+{
+    background-color: #ececec !important;
+}
+.workload-list > tbody > #workload-edit-form-container > td
+{
+    background-color: #fff;
+}
+
+.workload-list > tbody > tr > td.sinho-red-background{
+    background-color: #f00 !important;
+}
+.workload-list > tbody > tr > td.sinho-compute-item{
+    border: 2px double rgb(9, 255, 0) !important;
+}
+.workload-list > tbody > tr > td a{
+    width:100%;
+    display:block;
+    min-height:12px;
+}
+.tooltip{
+    min-width:50px;
+}
+#workload-edit-form .has-error .form-control {
+    border-color:#f00;
+    -webkit-box-shadow: inset 0 1px 1px rgba(240, 6, 6, 0.075), 0 0 8px rgba(245, 61, 6, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(245, 61, 6, 0.6);
+}
+#workload-edit-form .row label {
+    line-height: 2.5;
+}
+#workload-edit-form .row input {
+    text-indent: 5px;
+}
+.icb-content-wrap .jsSinhoSetBookDate.icon-date {
+    position: relative;
+    left:auto;
+    top:auto;
+}
+.icb-content-wrap .mod-head .nav-tabs li.sinho-stat-total-chars{
+    border:0;
+    padding:0 30px;
+}
