@@ -11,7 +11,7 @@ https://www.douban.com/note/499459902/?type=like
 
 1. icodebang.com
     文件注释替换。 注释转换成icodebang.com
-    logo
+    logo √
     抓取文章js
     首页
     导航管理： 菜单定制化

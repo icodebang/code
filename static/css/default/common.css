@@ -15,9 +15,10 @@ html {
 }
 
 body {
+    top: 0px!important;
     margin: 0;
     height: 100%;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 160%;
     color: #333;
     background: #fafafa;
@@ -332,7 +333,6 @@ select {
 
 
 /* 公共部分 */
-
 .icb-padding10 {
     padding: 10px;
 }
@@ -729,7 +729,7 @@ screen\9 {
 }
 
 .icb-top-nav>nav>ul>li>a {
-    padding: 16px 12px;
+    padding: 16px 11px;
     color: #fff;
 }
 
@@ -2312,7 +2312,7 @@ screen\9 {
 
 }
 .course-table-list li{
-    height: 130px;
+    min-height: 155px;
     padding: 10px;
     margin: 0;
 }
@@ -2331,7 +2331,6 @@ screen\9 {
     padding: 5px;
 }
 .course-table-list li div img{
-    margin: 5px 0;
     max-width: 95%;
     max-height: 95%;
 }
@@ -2343,25 +2342,32 @@ screen\9 {
 }
 .course-table-list .course_info .table-desc{
     font-size:13px;
+    min-height: 70px;
 }
 /* 教程内容 */
-.content span.deprecated {
+.course-content h2 {
+    font-size:18px;
+}
+.course-content h3 {
+    font-size:15px;
+}
+.course-content span.deprecated {
     color: #f00;
 }
-.content span.new {
+.course-content span.new {
     float: right;
     color: #46abff;
 }
-.content span.new:before {
+.course-content span.new:before {
     font-family: 'icomoon' !important;
     content: "\e906";
 }
-.content .code-sample {
+.course-content .code-sample {
     border: 1px solid #d6d4ca;
     border-radius: 4px;
     padding: 0 2px;
 }
-.content .code-sample .code-sample,.content .code-sample > h3 {
+.course-content .code-sample .code-sample,.content .code-sample > h3 {
     margin: 0;
     background-color: #edf2f7;
     border:0;
@@ -2371,7 +2377,7 @@ screen\9 {
     border-radius: 4px;
     margin: 0 4px;
 }
-.content .code-sample .btn_runcode {
+.course-content .code-sample .btn_runcode {
     display: block;
     width: 80px;
     height: 28px;
@@ -2383,7 +2389,7 @@ screen\9 {
     color:#fff;
     margin:0 4px 4px;
 }
-.content .code-sample .btn_runcode:hover {
+.course-content .code-sample .btn_runcode:hover {
     background-color: #1591f1;
 }
 
@@ -3109,6 +3115,15 @@ blockquote {
 
 .icb-article-content .icb-question-detail .mod-body {
     margin-bottom: 20px;
+}
+.icb-article-content .icb-question-detail .mod-body .content strong {
+    font-size: 16px;
+}
+.icb-article-content .icb-question-detail .mod-body .content > table td {
+    border: 1px solid #ececec;
+}
+.icb-article-content .icb-question-detail .mod-body .content > table th {
+    background-color: #f3f3f3;
 }
 
 .icb-article-content .icb-question-detail .mod-body>a {
@@ -5043,7 +5058,60 @@ blockquote {
     margin-left: 0;
     line-height: 32px;
 }
+/* 代码高亮 */
 
+pre code,div.code > div,.sample-code-container{
+    font-family: "Courier New",Courier,-apple-system,BlinkMacSystemFont, '微软雅黑', 'Microsoft YaHei','Helvetica Neue','PingFang SC','Source Han Sans SC','Helvetica Neue', 'STHeiti';
+    border-radius: 4px;
+}
+.hljs-tag .hljs-title, .hljs-rules .hljs-property, .django .hljs-tag .hljs-keyword, .clojure .hljs-title .hljs-built_in {
+    font-weight: normal;
+}
+div.code  {
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    border: none;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+}
+/* for block of numbers */
+.code-has-img{
+    background: none;
+}
+.hljs-ln{
+    width:100%;
+}
+.hljs-ln-numbers {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    text-align: right;
+    color: #ccc;
+    border-right: 1px solid #CCC;
+    vertical-align: top;
+    padding-right: 5px !important;
+    white-space: nowrap;
+    width:20px;
+    /* your custom style here */
+}
+
+/* for block of code */
+.hljs-ln td.hljs-ln-code {
+    padding-left: 10px;
+}
+.hljs-ln-n:before {
+    content: attr(data-line-number);
+    color: #999;
+}
+.hljs-ln tr:nth-child(odd) td {
+    /* background: #444;  /* for rainbow */
+    background: #2b2b2b;  /* for monokai-sublime */
+}
 
 /* noscript 提示 */
 
@@ -5054,6 +5122,11 @@ blockquote {
     height: 100%;
     background-color: #f5f5f5;
     overflow: hidden;
+}
+
+/* 谷歌翻译横条，不展示 */
+.goog-te-banner-frame{
+	display:block;
 }
 
 @media not all,

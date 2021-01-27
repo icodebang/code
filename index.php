@@ -23,4 +23,5 @@ require '../system/init.php';
 
 Application::run();
 
+//var_dump(core_filemanager::getDirContentByPage(WEB_ROOT_DIR . 'static/', 1, 20));
 /* EOF */

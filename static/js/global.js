@@ -205,8 +205,14 @@ ICB.ajax.processer = function (type, response) {
             var time = 1;
             if (response.err) {
                 time = 3000;
-                $('.error_message').html(response.err);
+                if ($('.error_message').length) {
+                    $('.error_message').html(response.err);
+                } else {
+
+                    ICB.modal.alert(response.err);
+                }
             }
+
             setTimeout(function () {
                 // 判断返回url跟当前url是否相同
                 if (window.location.href == response.rsm.url) {

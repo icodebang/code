@@ -160,8 +160,8 @@ foreach ($domains as $_domain) {
                     <a data-localize-url="no" href="https://www.icodebang.com">爱码帮</a> |
                     <a data-localize-url="no" href="https://www.mysqlworkbench.cn/">MySQLWorkbench</a> |
                     <a data-localize-url="no" href="https://www.sequelpro.cn">SequelPro</a> |
-                    <a data-localize-url="no" href="https://www.heidisql.cn">HeidiSql</a>
-                    <a data-localize-url="no" href="https://www.devboy.cn">开发者</a> |
+                    <a data-localize-url="no" href="https://www.heidisql.cn">HeidiSql</a> |
+                    <a data-localize-url="no" href="https://www.devboy.cn">开发者</a>
                     )
                 </div>
                 <div class="view_contents">

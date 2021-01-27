@@ -138,3 +138,9 @@
     border:0;
     padding:0 30px;
 }
+.icon-indent{
+    text-indent: 25px;
+}
+.line-height-25{
+    line-height: 2.5;
+}

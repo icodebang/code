@@ -120,7 +120,7 @@ FileUploader.prototype =
 			  			'class' : 'file-input',
 						'name'  : this.options.fileName,
 						'multiple' : this.options.multiple ? 'multiple' : false
-					}).change(function () { _this.processUpload(this); });
+					}).change(function () { _this.processUpload(this); $(this).val('') });
 		var $form = $('<form/>').attr({
 				'id'     : '__UploadFileForm__',
 				'action' : this.url,

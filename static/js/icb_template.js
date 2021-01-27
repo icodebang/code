@@ -1,5 +1,5 @@
 var ICB = typeof ICB == 'object' ? ICB : {};
-ICB.template = 
+ICB.template =
 {
     // jplayer 页面模板
    jplayer : '<div id="{{jplayer_id}}" class="jp-jplayer"></div>' +
@@ -32,7 +32,7 @@ ICB.template =
                        '</div>' +
                    '</div>' +
                '</div>',
-                   
+
 	confirmBox : // 确认弹出框
 			'<div class="modal fade icb-alert-box icb-confirm-box">'+
 				'<div class="modal-dialog">'+
@@ -84,7 +84,7 @@ ICB.template =
 			'<i class="icon icon-delete close" onclick="$(this).closest(\'.article-tag\').remove();"></i>' +
 			'<input type="hidden" value="{{name}}" name="tag_names[]" />' +
 		'</span>',
-		
+
 	tagToBindArticle :  // 文章要添加的标签
 		'<a class="close"><i class="icon icon-delete"></i></a>',
 	tagCategoryDropdownList : // 标签和分类列表
@@ -98,7 +98,7 @@ ICB.template =
 			'{{/list}}'+
 			'</ul>'+
 		'</div>',
-		
+
     homeworkItemBox :
         '<li data-sort="{{index}}" class="js-homework" data-index="{{index}}" data-cursor="pointer">' +
             '<div class="mod-set-head">' +
@@ -128,7 +128,7 @@ ICB.template =
                 '</div>' +
             '</div>' +
         '</li>',
-	
+
 	loadingBox:
 		'<div id="icb-loading" class="collapse">'+
 			'<div id="icb-loading-box"></div>'+
