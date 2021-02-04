@@ -21,6 +21,7 @@ ICB.template.sinhoBindBookWithEditor = // 绑定书稿和编辑
                     // '{{editor_list}}' +
                     '</select> ' +
                     '<input type="submit" class="btn btn-success" id="js-submit-assign" value="'+_t('分派')+'"/>' +
+                    '<input type="hidden" name="action" value="assign"/>' + 
                 '</form>' +
                 '</div>'+
             '</div>'+
