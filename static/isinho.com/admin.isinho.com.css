@@ -97,6 +97,8 @@
 }
 .workload-list > tbody > tr.book-line > td
 {
+    border-top:1px solid #fff !important;
+    border-bottom:1px solid #999 !important;
     background-color: #ececec !important;
 }
 .workload-list > tbody > #workload-edit-form-container > td
