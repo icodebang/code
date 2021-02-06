@@ -128,7 +128,7 @@ ul,ol{padding:0;list-style:none;}
 .icb-footer p{font-size:12px;}
 
 /*右侧公共部分*/
-.icb-content-wrap .mod-symbol{margin-left:-2px;padding:0;width:2px;text-align:center;font-size:22px;line-height:35px;}
+.icb-content-wrap .mod-symbol{margin-left:-2px;padding:0;width:2px;text-align:center;font-size:22px;line-height:35px;text-indent: -5.5px;}
 #remove_user_form{border-bottom: 1px solid #e5e5e5}
 #remove_user_form .table>tbody>tr>td{border-top: none;}
 /* 右侧公共头部部分 mod-head*/

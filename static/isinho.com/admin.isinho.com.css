@@ -146,3 +146,20 @@
 .line-height-25{
     line-height: 2.5;
 }
+
+.icb-content-wrap .icon-delete.icon-date-delete {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    background: none;
+    color:#666;
+    display:none;
+}
+.icb-content-wrap .icon-date-container:hover .icon-delete.icon-date-delete {
+    display:block;
+    cursor:pointer;
+}
+.icb-content-wrap .icon-date-container input {
+    background:#fff;
+    cursor:default;
+}
