@@ -163,3 +163,11 @@
     background:#fff;
     cursor:default;
 }
+.cell-rotate-separator {
+    border-bottom: 1px solid #aaa;
+    transform: rotate(15deg);
+}
+
+.table-striped > tbody > tr > td.bg-warning {
+    background-color: #fcf8e3;
+}
