@@ -223,3 +223,11 @@
 .ask-leave-single-item .nopadding .icon-date{
     left: 10px !important;
 }
+.icon-sick-leave::before{content: "\e666";}
+.icon-annual-leave::before{content: "\e620";}
+.icon-wedding-leave::before{content: "\e66b";}
+.icon-maternity-leave::before{content: "\e60c";}
+.icon-period-leave::before{content: "\e906";}
+.icon-funeral-leave::before{content: "\e616";}
+.icon-private-leave::before{content: "\e669";}
+.icon-leave::before{content: "\e902";}
