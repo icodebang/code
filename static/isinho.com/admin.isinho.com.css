@@ -171,3 +171,55 @@
 .table-striped > tbody > tr > td.bg-warning {
     background-color: #fcf8e3;
 }
+.table-striped > tbody > tr > td.bg-danger {
+    background-color: #f2dede;
+}
+/* 行政&人事管理 */
+.ask-leave-table td{
+    height:40px;
+    padding:0 !important;
+}
+.ask-leave-table td:nth-child(n+2):not(.weekend):hover{
+    border-color:#999 !important;
+    cursor: pointer;
+}
+.ask-leave-table td .icon{
+    width:16px;
+    height:16px;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 3px;
+    margin:1px
+
+}
+.ask-leave-form .icon-plus, .ask-leave-form .icon-delete{
+    position: absolute;
+    height:15px;
+    width:15px;
+    right:-5px;
+    background-color: none;
+    line-height: 16px;
+    display: none;
+}
+.ask-leave-form .icon-plus{
+    top:-2px;
+}
+.ask-leave-form .icon-delete{
+    bottom:-6px;
+}
+.ask-leave-single-item{
+    padding:0 !important;
+    margin:10px 0 !important;
+}
+.ask-leave-single-item:hover .icon{
+    display: block;
+}
+.ask-leave-single-item:nth-child(1):hover .icon-delete{
+    display: none;
+}
+.ask-leave-single-item .nopadding{
+    padding-left: 5px !important;
+}
+.ask-leave-single-item .nopadding .icon-date{
+    left: 10px !important;
+}

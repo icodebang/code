@@ -34,7 +34,7 @@ ICB.template =
                '</div>',
 
 	confirmBox : // 确认弹出框
-			'<div class="modal fade icb-alert-box icb-confirm-box">'+
+			'<div class="modal fade icb-confirm-box">'+
 				'<div class="modal-dialog">'+
 					'<div class="modal-content">'+
 						'<div class="modal-header">'+

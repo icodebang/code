@@ -23,7 +23,8 @@ ul,ol{padding:0;list-style:none;}
 .middle{line-height:32px;}
 .text-color-999{margin:2px 0 0;color:#999;font-size:11px;}
 .icb-hide-txt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.nopadding{padding:0;}
+.nopadding{padding:0 !important;}
+.nomargin{margin:0 !important;}
 .textwrap{ word-break: break-all;overflow: hidden}
 .icb-content-wrap .icon{display:inline-block;width:25px;height:25px;border-radius:5px;background:#8bbf61;color:#fff;text-align:center;line-height:25px;}
 .icb-content-wrap .icon.disabled{background-color: #c5c5c5;}

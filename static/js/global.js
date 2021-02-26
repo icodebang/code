@@ -325,7 +325,7 @@ ICB.modal.confirm = function (message, onYesCallback, onshowCallback) {
     ICB.modal.dialog(message, onshowCallback);
     $('.icb-confirm-box .yes').click(function () {
 
-        $(".icb-alert-box").modal('hide');
+        $(".icb-confirm-box").modal('hide');
 
         if (typeof onYesCallback == 'function') {
             onYesCallback();
