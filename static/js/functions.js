@@ -188,9 +188,9 @@ function googleTranslateCallback() {
          result = 0.0;
      }
      var result = new Number(result);
-     console.info(result.valueOf());
+     //console.info(result.valueOf());
      result = result.toFixed(decimalNum);
-     console.info(result.valueOf());
+     //console.info(result.valueOf());
 
      return parseFloat(result.valueOf());
  }

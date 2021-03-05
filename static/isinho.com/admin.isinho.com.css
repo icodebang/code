@@ -231,3 +231,64 @@
 .icon-funeral-leave::before{content: "\e616";}
 .icon-private-leave::before{content: "\e669";}
 .icon-leave::before{content: "\e902";}
+
+.calendar-container .calendar-yearmonth-selection{
+    position: relative;
+}
+.calendar-container #dateSelectionDiv {
+    position:absolute;
+    top:20px;
+    left: 40%;
+    display: none;
+    width: 200px;
+    border: 1px solid;
+    border-radius: 3px;
+}
+.calendar-container #dateSelectionDiv > div{
+    display:block;
+    line-height: 200%;
+}
+.calendar-container #yearList > div {
+    display: inline-block;
+}
+.calendar-container tr:nth-child(n+3)  td {
+    cursor: pointer;
+    font-size:22px;
+    font-family: Arial;
+}
+.calendar-container tr:not(:nth-child(2)) td:hover {
+    background-color: #f7f7f9;
+}
+.calendar-container tr:nth-child(2) td.weekend {
+    color:#f00;
+}
+.calendar-container tr:nth-child(n+3) td.weekend {
+    background-color: #dff0d8;
+    color:#f00;
+}
+.calendar-container td.selday.weekend {
+    background: none !important;
+}
+.calendar-container td.selday.weekend:hover {
+    background-color: #f7f7f9 !important;
+}
+.calendar-container td.selday {
+    background-color: #dff0d8 !important;
+}
+.calendar-container td.unover {
+    background-color: #eee !important;
+    cursor:not-allowed !important;
+}
+#yearListContent span{
+    width:25%;
+    display: inline-block;
+    cursor: pointer;
+}
+#yearListContent span.curr,#monthList span.curr{
+    color:#d9534f;
+}
+#monthList span {
+    width:16.6666%;
+    display: inline-block;
+    cursor: pointer;
+}
