@@ -632,7 +632,7 @@
 	//	防止手机浏览器在页面后面加入垃圾广告
 	======================================*/
     $(document).scroll(function () {
-        $("#last-one-flag").nextAll(':not(#scrollUp)').remove();
+        $("#last-one-flag").nextAll(':not(#scrollUp,.datetimepicker)').remove();
     });
 
 })(jQuery);
