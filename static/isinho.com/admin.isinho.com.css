@@ -292,3 +292,10 @@
     display: inline-block;
     cursor: pointer;
 }
+/* 书稿管理 列表页*/
+.book-list.table>tbody>tr.success:nth-child(odd)>td{
+    background-color: #e0f5d8;
+}
+.book-list.table>tbody>tr.success:nth-child(odd):hover>td{
+    background-color: #d0e9c6;
+}
