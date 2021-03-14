@@ -299,3 +299,9 @@
 .book-list.table>tbody>tr.success:nth-child(odd):hover>td{
     background-color: #d0e9c6;
 }
+/* 行政&人事管理页面 */
+.mod-body .icb-book-infos .row .text-left label{
+    text-align: left;
+    padding: auto;
+    margin: auto;
+}
