@@ -68,11 +68,11 @@ ICB.template.sinhoBindBookWithEditor = // 绑定书稿和编辑
                 '<p><span>书名：</span> <span class="text-primary">{{book_name}}</span></p>' +
                 '<p><span>校次：</span> <span class="text-primary">{{proofreading_times}}</span></p>' +
                 '<form onsubmit="return false;" method="post" action="' + G_BASE_URL + '/admin/ajax/books/assign/id-{{book_id}}">'+
-                    '<label for="sinho_editor">'+ _t('责编') + '：</label>' +
+                    '<p><label for="sinho_editor">'+ _t('责编') + '：</label>' +
                     '<select multiple  id="sinho_editor" name="sinho_editor[]" class="hidden js_select_transform">' +
                     // '{{editor_list}}' +
-                    '</select> ' +
-                    '<input type="submit" class="btn btn-success" id="js-submit-assign" value="'+_t('分派')+'"/>' +
+                    '</select> </p>' +
+                    '<p><input type="submit" class="btn btn-success" id="js-submit-assign" value="'+_t('分派')+'"/></p>' +
                     '<input type="hidden" name="action" value="assign"/>' +
                 '</form>' +
                 '</div>'+
