@@ -10,7 +10,6 @@ set_time_limit(0);
 // 记录程序开始时间， 后续统一用这个时间做时间戳转换
 defined('APP_START_TIME') OR define('APP_START_TIME', time());
 $configInfo = require(dirname(__FILE__) . '/../../config/parseConfig.php');
-
 require_once(ROOT_PATH . 'system/init.php');
 
 error_reporting(E_ALL ^ E_WARNING ^ E_NOTICE ^ E_DEPRECATED);
@@ -442,7 +441,7 @@ $contentDomInfo = array(
     'is_list'       => 1,
 );
 $contentHtmlParserModel = new HtmlParser();
-$filecontent  = file_get_contents($config['sf']['tag_list_url']);
+$filecontent  = file_get_contents($configInfo['sf']['tag_list_url']);
 $tagContent =  $contentHtmlParserModel->loadDomHTML($filecontent)->parseContent($contentDomInfo);
 // 解析标签列表， 将每个标签转换成网站对应的id
  $menuDomInfo = array(
@@ -468,6 +467,7 @@ foreach ($categoryLisk as $_key=>$linkInfo) {
     }
 }
 $categoryLisk = array_values($categoryLisk);
+$categoryLisk = array_reverse($categoryLisk);
 //exit;
 // 解析内容页链接地址和作者，存储到数组中，留待解析title，content，image
 $summaryContentDomInfo = array(
@@ -484,6 +484,12 @@ $summaryContentDomInfo = array(
 );
 for ($i=9; $i>=1; $i--) {
     foreach ($categoryLisk as $_categoryInfo) {
+        $syncInfo = $model->fetch_row('key_value', 'varname = "' .$model->quote('segmentfault_sync_time_' . $_categoryInfo['title']).'"');
+        $syncNoteInfo = @json_decode($syncInfo['note'], true);
+        if (is_array($syncNoteInfo) && isset($syncNoteInfo['sync_time']) && (time()-strtotime($syncNoteInfo['sync_time']) < 4*60*60 ) ) {
+            echo $_categoryInfo['title'] . ' was just synced at: ', $syncNoteInfo['sync_time'], "  !!!!!!!!!! \r\n";
+            continue;
+        }
         $categoryId = $categoryMap[$_categoryInfo['title']];
         $url = $_categoryInfo['link'] . '/blogs?page=' . $i;
 
@@ -512,11 +518,11 @@ for ($i=9; $i>=1; $i--) {
                 $htmlParserModelClone->loadDomHTML($html, 'UTF-8');
                 //$htmlParserModelClone->loadDomHTML($html, 'UTF-8');
                 $domTitle  = $htmlParserModelClone->getDom(array('tag'=>'a', 'index'=>0));
-                echo 'title dom loaded' , __LINE__, "\r\n";
+                echo 'title dom loaded. ' , __LINE__, "\r\n";
                 $domAuthor = $htmlParserModelClone->getDom(array('tag'=>'a', 'index'=>2));
-                echo 'author dom loaded' , __LINE__, "\r\n";
+                echo 'author dom loaded. ' , __LINE__, "\r\n";
                 $domLink   = $htmlParserModelClone->getDom(array('tag'=>'a', 'index'=>0));
-                echo 'content page link dom loaded' , __LINE__, "\r\n";
+                echo 'content page link dom loaded. ' , __LINE__, "\r\n";
 
 
                 $link = $domLink->getAttribute('href');
@@ -538,8 +544,15 @@ for ($i=9; $i>=1; $i--) {
             }
         }
         $sleepRand = rand(200, 400);
-        sleep($sleepRand);
         echo 'sleeping :', $sleepRand, " seconds. \r\n";
+        for($sleepIndex=1;$sleepIndex<$sleepRand;$sleepIndex++) {
+            if ($sleepIndex%10 == 1) {
+                echo $sleepIndex;
+            }
+            echo  '. ';
+            sleep(1);
+        }
+        echo "\r\n";
         $pageLinks = array_reverse($pageLinks);
         //var_dump($pageLinks);
         // 解析主页面内容， 获取title，content， image
@@ -559,7 +572,7 @@ for ($i=9; $i>=1; $i--) {
                 'sub_index'     => '',
             );
             //$content = $linkHtmlParseModel->loadDomHTML($filecontent,'utf-8')->parseContent($contentDomInfo);
-            echo $_link, "----------  starting...... \r\n\r\n";
+            echo $_link, " ----------  starting...... ",__LINE__,"\r\n";
 
             $navDomList = $linkHtmlParseModel->loadDomHTML($filecontent,'utf-8')->getDom(array('tag'=>'ol', 'class'=>'breadcrumb', 'index'=>0,'sub_tag'=>'a','sub_index'=>2));
             echo __LINE__, "  loading nav dom \r\n";
@@ -568,8 +581,19 @@ for ($i=9; $i>=1; $i--) {
             $navContent = strtolower($navDomList[0]->textContent);
             $dateTime = date('Y-m-d H:i:s', strtotime($timeDom->getAttribute('datetime')) ); // ！！ 获取属性， 书名名称不区分大小写， 必须小写
             // 比较时间，是否已经数据已经同步过了
-            $syncInfo = $model->fetch_row('key_value', 'varname = "' .$model->quote('segmentfault_sync_time_' . $_categoryInfo['title']).'"');
             if ($syncInfo && strtotime($syncInfo['value']) >= strtotime($dateTime)) {
+
+                $model->update('key_value',
+                            array(
+                                'note' =>json_encode( array(
+                                                            'note'=>'同步分类下的最后一条数据发布的时间',
+                                                            'sync_time'=>date('Y-m-d H:i:s', time() ),
+                                                            ),
+                                                            JSON_UNESCAPED_UNICODE,
+                                                        )
+                                ),
+                                'varname = "' .$model->quote('segmentfault_sync_time_' . $_categoryInfo['title']).'"'
+                            );
                 continue;
             }
 
@@ -618,7 +642,7 @@ for ($i=9; $i>=1; $i--) {
                 echo $navContent, $categoryName;
                 continue;
             }
-            echo $_link, "------------ end   *****\r\n\r\n";
+            echo $_link, " ------------ end   *****\r\n";
             if ($attachAccessKey===false) {
                 continue;
             }
@@ -626,12 +650,36 @@ for ($i=9; $i>=1; $i--) {
             //exit;
             $moreInfo = array('author'=>$_itemInfo['author'], 'source_url'=>$_link);
             // 存储数据， 生成文章
-            echo 'adding new article... ', __LINE__, "------------\r\n";
+            echo 'adding new article... ', __LINE__, " ------------\r\n\r\n";
             $userId = rand(3,10002);
+
+            $syncInfo = $model->fetch_row('key_value', 'varname = "' .$model->quote('segmentfault_sync_time_' . $_categoryInfo['title']).'"');
             if ($syncInfo) {
-                $model->update('key_value', array('value'=>$dateTime, 'note'=> '同步分类下的最后一条数据发布的时间'), 'varname = "' .$model->quote('segmentfault_sync_time_' . $_categoryInfo['title']).'"');
+                $model->update('key_value',
+                               array(
+                                   'value'=>$dateTime,
+                                   'note' =>json_encode( array(
+                                                            'note'=>'同步分类下的最后一条数据发布的时间',
+                                                            'sync_time'=>date('Y-m-d H:i:s', time() ),
+                                                          ),
+                                                          JSON_UNESCAPED_UNICODE,
+                                                        )
+                                   ),
+                                'varname = "' .$model->quote('segmentfault_sync_time_' . $_categoryInfo['title']).'"'
+                            );
             } else {
-                $model->insert('key_value', array('value'=>$dateTime, 'varname' =>  $model->quote('segmentfault_sync_time_' . $_categoryInfo['title']), 'note'=> '同步分类下的最后一条数据发布的时间') );
+                $model->insert('key_value',
+                               array(
+                                   'value'=>$dateTime,
+                                   'varname' =>  $model->quote('segmentfault_sync_time_' . $_categoryInfo['title']),
+                                   'note' =>json_encode( array(
+                                                            'note'=>'同步分类下的最后一条数据发布的时间',
+                                                            'sync_time'=>date('Y-m-d H:i:s', time() ),
+                                                            ),
+                                                            JSON_UNESCAPED_UNICODE,
+                                                        )
+                                )
+                            );
             }
             //var_dump($userId, $_itemInfo['title'], $content, $categoryId, $tags, $attachAccessKey, $moreInfo);exit;
             $articleInfo = doPublishArticle($userId, $_itemInfo['title'], substr($content, 9, -10), $categoryId, $tags, $attachAccessKey, $moreInfo);
