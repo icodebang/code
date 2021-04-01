@@ -438,3 +438,56 @@ label,.icb-content-wrap .mod-title,.icb-article-list b,.icb-question-list b{font
 
 /* HiDPI support */
 @media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {.icheckbox_square-blue,.iradio_square-blue { background-image: url(../img/blue-2x.png);-webkit-background-size: 240px 24px; background-size: 240px 24px;}}
+
+
+/*MP Color*/
+.theme-switch {
+	position: fixed;
+	display: block;
+	z-index: 9999;
+	text-align: center;
+	padding: 10px 5px;
+	width: 120px;
+	top: 65%;
+	right: -120px;
+	background: #fff;
+	box-shadow: -3px 0px 50px -2px #0000001a;
+	margin-top: -150px;
+    border: 1px solid #3695d5;
+    border-radius: 5px 0 0 5px;
+}
+.theme-switch .icon {
+	width: 25px;
+	height: 25px;
+	background: #968A8C;
+	margin-top:-13.5px;
+	border-radius: 0px;
+	top: 50%;
+	line-height: 25px;
+	cursor: pinter;
+	font-size: 16px;
+	position: absolute;
+	bottom: -24px;
+    left: -15px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 26px;
+	border-radius: 6px 0 0 6px;
+	background: #fff;
+	color: #444;
+}
+@keyframes fa-spin{
+    0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+    100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}
+}
+.theme-switch .rotate {
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+    left:0;
+	position: absolute;
+}
+.theme-switch .icon i {
+	color: #3695d5;
+	cursor: pointer;
+}
