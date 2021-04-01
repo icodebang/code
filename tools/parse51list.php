@@ -46,7 +46,6 @@ function syncRefUrlAfterGettingMobilePageData ($numbersToUpdate=1000)
     // 获取上次更新到的位置
     $lastId = Application::model()->fetch_one('key_value','value', '`varname`="jb51_update_url_author_point"');
     $lastId = empty($lastId) ? 0 : $lastId;
-
     $table = 'article'; // 数据表名
     $where = 'id>' . $lastId; // 获取数据的条件
     $order = 'id ASC'; // 排序方式按照id正序
@@ -59,7 +58,8 @@ function syncRefUrlAfterGettingMobilePageData ($numbersToUpdate=1000)
     $i = 0;
     foreach ($articleList as $_info) {
         // 只更新移动页面获取到的数据。
-        if (strpos($_info['copy_from'],'/m.jb51.net/') ) {
+        if (strpos($_info['copy_from'],'jb51.net/') &&  $_info['source_url']=='') {
+            echo __LINE__, "\r\n";
             // 将移动页面url替换成web页面url
             $_url = str_replace('/m.jb51.net/', '/www.jb51.net/', $_info['copy_from']);
             //$_url = $_url . getRandomString();
@@ -77,7 +77,7 @@ function syncRefUrlAfterGettingMobilePageData ($numbersToUpdate=1000)
             // 转换编码， 获取到文章来源，标题相关数据
             $fileContent = mb_convert_encoding($fileContent, 'utf-8', 'gb2312');
             // 匹配文章来源， 在js代码中
-            preg_match_all('/var ourl="(.*)"/iU', str_replace("\r\n", '', $fileContent), $matchContent);
+            preg_match_all('/var ourl\s*=\s*"(.*)"/iU', str_replace("\r\n", '', $fileContent), $matchContent);
             $_sourceUrl = (empty($matchContent[1]) || empty($matchContent[1][0])) ? '' : $matchContent[1][0];
             // 匹配breadcrumb， 获取文章标题，所属分类
             preg_match_all('/<div class="breadcrumb">(.*)?<div class="search">/iUs', $fileContent, $matchList);
@@ -205,12 +205,6 @@ $time404 = 0; // 请求返回404错误的次数
 //     echo $pageId . "\r\n";
 // }
 
-// 获取最后一条文章记录，解析出id， 从这个id增加开始
-// $lastOneInfo = Application::model()->fetch_one('article', 'copy_from', null, 'id DESC');
-// $lastOneInfo = explode('/', $lastOneInfo);
-// $lastOneInfo = array_pop($lastOneInfo);
-// $pageId = intval(substr($lastOneInfo, 0, -4)) + 1;
-//$pageId = 161872;
 
 $syncKeyName = 'jb51_article_id';
 // 获取上次更新到的位置
@@ -286,10 +280,20 @@ for(;$pageId>0; $pageId++) {
         preg_match_all('/<p class="toolbar white">(.*)?<\/p>/i', $fileContent, $matchList);
     } else {
         // 匹配文章来源， 在js代码中
-        preg_match_all('/var ourl="(.*)"/iU', str_replace("\r\n", '', $fileContent), $matchContent);
+        preg_match_all('/var ourl\s*=\s*"(.*)"/iU', str_replace(array("\r","\n"), array('', ''), $fileContent), $matchContent);
         $refUrl = (empty($matchContent[1]) || empty($matchContent[1][0])) ? '' : $matchContent[1][0];
         // 匹配breadcrumb， 获取文章标题，所属分类
         preg_match_all('/<div class="breadcrumb">(.*)?<div class="search">/is', $fileContent, $matchList);
+    }
+
+    // 检查链接是否已经存在
+    if ($refUrl) {
+        $syncInfo = Application::model()->fetch_row('article', 'source_url = "' .Application::model()->quote($refUrl).'"');
+        // 比较时间，是否已经数据已经同步过了
+        if ($syncInfo) {
+            echo ' find the existing link: ', $refUrl, '         ---  ',  __LINE__, "\r\n";
+            continue;
+        }
     }
 
     if (! isset($matchList[1]) || ! is_array($matchList[1]) || count($matchList[1])==0) {
