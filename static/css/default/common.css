@@ -164,6 +164,20 @@ select {
     cursor: default;
 }
 
+.nopadding{padding:0 !important;}
+.nomargin{margin:0 !important;}
+.nobg{background: none !important;}
+.nooverflow{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.margin10{margin:10px !important}
+.margin5{margin:5px !important}
+.margin-5{margin-left:5px !important;margin-right:5px !important;}
+.padding5{padding: 5px !important}
+.padding10{padding: 10px !important}
+.padding-5{padding-left: 5px !important;padding-right:5px !important}
+.padding-10{padding-left: 10px !important;padding-right:10px !important}
+.margin20{margin:20px !important}
+.padding20{padding: 20px !important}
+
 
 /* modal */
 
@@ -2308,6 +2322,13 @@ screen\9 {
     padding: 0;
 }
 /* 教程首页 */
+.homepage-course-table-list{
+    background: #eff7fd;
+}
+.homepage-course-table-list li{
+    border-bottom: 0.5px dotted #9e9fa0;
+    min-height:75px;
+}
 .course-table-list .course-table-name{
 
 }
@@ -2316,7 +2337,8 @@ screen\9 {
     padding: 10px;
     margin: 0;
 }
-.course-table-list li a{
+.course-table-list li a,
+.homepage-course-table-list li a{
     height: 100%;
     background: #eff7fd;
     display: inline-block;
