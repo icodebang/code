@@ -432,6 +432,8 @@ select {
 .ft12,.font-size-12 {
     font-size: 12px;
 }
+.ft13{font-size:13px}
+.ft14{font-size:14px}
 
 .icb-hide-txt {
     overflow: hidden;
