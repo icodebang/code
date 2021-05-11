@@ -3159,6 +3159,7 @@ blockquote {
 }
 .icb-article-content .icb-question-detail .mod-body .content > table th {
     background-color: #f3f3f3;
+    color: #000;
 }
 
 .icb-article-content .icb-question-detail .mod-body>a {
