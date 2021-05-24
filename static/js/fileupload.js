@@ -205,7 +205,7 @@ FileUploader.prototype =
 	                    $fileInfo.find('.img').css(
 	                    {
 	                        'background': 'url("' + info.thumb + '")'
-	                    }).addClass('active').attr('data-img', info.thumb);
+	                    }).addClass('active').attr('data-img', info.url);
 		            } else {
                         $fileInfo.find('.img').addClass('file ' + info.class_name)
                                  .attr('data-url', info.url)
@@ -625,7 +625,7 @@ FileUploader.prototype =
                      .attr('data-url', json.attachment)
                      .append('<i class="icon icon-'+json.class_name+'"></i>');
         } else {
-            $template.find('.img').attr({"data-img":json.thumb, "style":"background-image:url('" + json.thumb + "')"});
+            $template.find('.img').attr({"data-img":json.attachment, "style":"background-image:url('" + json.thumb + "')"});
         }
 		var insertBtn = this.createInsertBtn(json.attach_id),
 		    deleteBtn = this.createDeleteBtn(json.attach_id, json.delete_link),
