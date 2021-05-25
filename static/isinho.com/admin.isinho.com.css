@@ -215,7 +215,7 @@
     display: block;
 }
 .ask-leave-single-item:nth-child(1):hover .icon-delete{
-    display: none;
+/*    display: none; */
 }
 .ask-leave-single-item .nopadding{
     padding-left: 5px !important;
