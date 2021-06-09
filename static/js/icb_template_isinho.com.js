@@ -26,6 +26,7 @@ ICB.template.sinhoAskLeave = // 员工请假设置
                             '  <option value="3">年假</option>'   +
                             '  <option value="4">婚假</option>'   +
                             '  <option value="5">产假</option>'   +
+                            '  <option value="8">产检</option>'   +
                             '  <option value="6">生理假</option>' +
                             '  <option value="99">丧假</option>'  +
                             '</select>'+

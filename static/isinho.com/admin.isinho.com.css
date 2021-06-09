@@ -231,6 +231,8 @@
 .icon-funeral-leave::before{content: "\e616";}
 .icon-private-leave::before{content: "\e669";}
 .icon-leave::before{content: "\e902";}
+.icon-body-check::before{content: "\e643";}
+
 
 .calendar-container .calendar-yearmonth-selection{
     position: relative;
