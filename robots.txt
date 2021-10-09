@@ -32,3 +32,6 @@ Disallow: /
 
 User-agent: SemrushBot-SEOAB
 Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
