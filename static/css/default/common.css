@@ -2291,7 +2291,6 @@ screen\9 {
 .icb-question-detail .meta {
     min-height: 20px;
     line-height: 20px;
-    font-size: 12px;
 }
 
 .icb-question-detail .meta>span,
@@ -3233,7 +3232,7 @@ blockquote {
 }
 
 .icb-article-content .icb-question-detail .meta {
-    line-height: 38px;
+    line-height: 55px;
 }
 
 .icb-article-content .icb-question-detail .mod-footer a img {
