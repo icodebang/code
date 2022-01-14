@@ -295,6 +295,9 @@
     cursor: pointer;
 }
 /* 书稿管理 列表页*/
+.book-list.table th, .book-list.table>tbody td{
+    padding:4px;
+}
 .book-list.table>tbody>tr.success:nth-child(odd)>td{
     background-color: #e0f5d8;
 }
