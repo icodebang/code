@@ -87,7 +87,11 @@ FileUploader.prototype =
 			$(element).prepend(this.form);
 
 		} else {
-			$('body').append(_this.form);
+            if ($('#last-one-flag').length) {
+                $('#last-one-flag').before(_this.form);
+            } else {
+			    $('body').append(_this.form);
+            }
 
 			$(element).click(function () {
 

@@ -20,15 +20,7 @@ ICB.template.sinhoAskLeave = // 员工请假设置
                     '<div class="row form-group icb-content-wrap ask-leave-single-item">' +
                         '<div class="col-sm-2 nopadding">'+
                             '<select id="leave_type" name="leave_type[]" class="form-control js_select_transform nopadding">' +
-                            '  <option value="">请假类型</option>' +
-                            '  <option value="1">事假</option>'   +
-                            '  <option value="2">病假</option>'   +
-                            '  <option value="3">年假</option>'   +
-                            '  <option value="4">婚假</option>'   +
-                            '  <option value="5">产假</option>'   +
-                            '  <option value="8">产检</option>'   +
-                            '  <option value="6">生理假</option>' +
-                            '  <option value="99">丧假</option>'  +
+                            '  <option value="">考勤类型</option>' +
                             '</select>'+
                         '</div>' +
                         '<div class="col-sm-4 nopadding">'+
