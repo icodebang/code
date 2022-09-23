@@ -72,6 +72,25 @@ ICB.template.sinhoBindBookWithEditor = // 绑定书稿和编辑
             '</div>'+
         '</div>'+
     '</div>';
+ICB.template.sinhoSetBookCategory = // 绑定书稿和编辑
+    '<div class="modal fade icb-alert-box icb-form-dialog-box">'+
+        '<div class="modal-dialog">'+
+            '<div class="modal-content">'+
+                '<div class="modal-header">'+
+                    '<a type="button" class="close icon icon-delete" data-dismiss="modal" aria-hidden="true"></a>'+
+                    '<h3 class="modal-title" id="myModalLabel">' + _t('设置学科') + '</h3>'+
+                '</div>'+
+                '<div class="modal-body js-alert-msg">' +
+                    '<span class="col-sm-2 text-right"><label for="sinho_book_category" class="">'+ _t('学科') + '：</label></span>' +
+                    '<span class="col-sm-8"><select id="sinho_book_category" name="sinho_book_category" class="form-control">' +
+                     '<option value="0">'+_t('-- 选择学科 --')+'</option>' +
+                     '{{{category_option_list}}}' +
+                    '</select> </span>' +
+                    '<p><input type="submit" class="btn btn-success" id="js-set-book-category" value="'+_t('确定')+'"/></p>' +
+                '</div>'+
+            '</div>'+
+        '</div>'+
+    '</div>';
 
 ICB.template.sinhoSetBookDate = // 绑定书稿和编辑
     '<div class="modal fade icb-alert-box icb-form-dialog-box">'+

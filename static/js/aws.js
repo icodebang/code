@@ -1919,18 +1919,18 @@ AWS.User =
 
 				if (rating == 0)
 				{
-					
+
 					var selectorhtml = selector.html().replace(_t('我已赞'), _t('赞'));
-					
+
 					selector.html(selectorhtml.replace(agree_num, (agree_num-1))).removeClass('active');
-					
+
 				}
 				else
 				{
 					var selectorhtml = selector.html().replace(_t('赞'), _t('我已赞'));
-					
+
 					selector.html(selectorhtml.replace(agree_num, (agree_num+1))).addClass('active');
-					
+
 				}
 			}
 		}, 'json');
@@ -2753,11 +2753,11 @@ AWS.Init =
 
 function _t(string, replace)
 {
-	if (typeof (aws_lang) != 'undefined')
+	if (typeof (icb_lang_i18n) != 'undefined')
 	{
-		if (typeof (aws_lang[string]) != 'undefined')
+		if (typeof (icb_lang_i18n[string]) != 'undefined')
 		{
-			string = aws_lang[string];
+			string = icb_lang_i18n[string];
 		}
 	}
 

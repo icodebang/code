@@ -960,11 +960,11 @@ AWS.Dropdown =
 
 function _t(string, replace)
 {
-    if (typeof (aws_lang) != 'undefined')
+    if (typeof (icb_lang_i18n) != 'undefined')
     {
-        if (typeof (aws_lang[string]) != 'undefined')
+        if (typeof (icb_lang_i18n[string]) != 'undefined')
         {
-            string = aws_lang[string];
+            string = icb_lang_i18n[string];
         }
     }
 

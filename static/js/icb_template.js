@@ -39,14 +39,14 @@ ICB.template =
 					'<div class="modal-content">'+
 						'<div class="modal-header">'+
 							'<a type="button" class="close icon icon-delete" data-dismiss="modal" aria-hidden="true"></a>'+
-							'<h3 class="modal-title" id="myModalLabel">' + _t('提示信息') + '</h3>'+
+							'<h3 class="modal-title" id="myModalLabel">{{#title}}{{title}}{{/title}}{{^title}}' + _t('提示信息') + '{{/title}}</h3>'+
 						'</div>'+
 						'<div class="modal-body">'+
 							'{{message}}'+
 						'</div>'+
 						'<div class="modal-footer">'+
-							'<a class="btn btn-gray" data-dismiss="modal" aria-hidden="true">取消</a>'+
-							'<a class="btn btn-success yes">确定</a>'+
+							'<a class="btn btn-gray" data-dismiss="modal" aria-hidden="true">' + _t('取消') + '</a>'+
+							'<a class="btn btn-success yes">' + _t('确认') + '</a>'+
 						'</div>'+
 					'</div>'+
 				'</div>'+

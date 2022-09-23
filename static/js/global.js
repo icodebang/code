@@ -201,7 +201,7 @@ ICB.ajax.processer = function (type, response) {
             $('.icb-comment-box-btn .btn-success').removeClass('disabled');
         }
 
-        if (response.rsm && response.rsm.url) {
+        if (response.rsm && typeof(response.rsm.url)==='string') { // 允许放回空字符串的url
             var time = 1;
             if (response.err) {
                 time = 3000;
@@ -214,8 +214,8 @@ ICB.ajax.processer = function (type, response) {
             }
 
             setTimeout(function () {
-                // 判断返回url跟当前url是否相同
-                if (window.location.href == response.rsm.url) {
+                // 判断返回url跟当前url是否相同， 或者url是空字符串时， 重新加载页面
+                if (response.rsm.url==='' || window.location.href == response.rsm.url) {
                     window.location.reload();
                 } else {
                     window.location = decodeURIComponent(response.rsm.url);
@@ -317,9 +317,10 @@ ICB.modal.alert = function (msg, callbackOptions) {
         }
     }
 };
-ICB.modal.confirm = function (message, onYesCallback, onshowCallback) {
+ICB.modal.confirm = function (message, onYesCallback, onshowCallback, confirmBoxTitle) {
     var message = Hogan.compile(ICB.template.confirmBox).render({
-        'message' : message
+        'message' : message,
+        'title'   : confirmBoxTitle
     });
 
     ICB.modal.dialog(message, onshowCallback);
@@ -4410,9 +4411,9 @@ AWS_BACK.Init = {
 }
 
 function _t(string, replace) {
-    if (typeof (aws_lang) != 'undefined') {
-        if (typeof (aws_lang[string]) != 'undefined') {
-            string = aws_lang[string];
+    if (typeof (icb_lang_i18n) != 'undefined') {
+        if (typeof (icb_lang_i18n[string]) != 'undefined') {
+            string = icb_lang_i18n[string];
         }
     }
 
