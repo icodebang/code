@@ -60,7 +60,7 @@
     border-right-color: #f00 !important;
 }
 .workload-list>thead>tr>th{
-    background-color: #f2dede;
+    background-color: #ececec;
 }
 .workload-list.workload-fill-list > tbody > tr:nth-child(odd) > td {
     background-color: rgb(248, 250, 241);
@@ -85,6 +85,10 @@
 .workload-list > tbody > tr.verifying-line > td
 {
     background-color: #fffff4;
+}
+.workload-list > tbody > tr.danger > td
+{
+    background-color: #f2dede !important;
 }
 
 .workload-list > tbody > tr:hover > td,.workload-list > tbody > tr.verified-line:hover > td {

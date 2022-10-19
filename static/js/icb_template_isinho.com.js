@@ -12,11 +12,17 @@ ICB.template.sinhoAskLeave = // 员工请假设置
                     '<h3 class="modal-title" id="myModalLabel">' + _t('请假管理') + '</h3>'+
                 '</div>'+
                 '<div class="modal-body js-alert-msg form-group">' +
-                '<p>'+
-                '<span>请假人：</span> <span class="text-primary">{{user_name}}</span>' +
+                '<form onsubmit="return false;" method="post" action="' + G_BASE_URL + '/admin/ajax/administration/ask_leave/" class="form-horizontal ask-leave-form">'+
+                '<p class="col-sm-12 nopadding">'+
+                '<span class="pull-left nopadding">请假人：</span>' +
+                '<span class="col-sm-6"><select multiple id="sinho_user_ids" name="user_ids[]" class="form-control">' +
+                     '{{{user_option_list}}}' +  // html变量
+                    '</select> </span>' +
+                // '<span class="col-sm-6">' +
+                //     '<select multiple  id="user_ids" name="user_ids[]" class="js_select_transform"></select>' +
+                // '</span>'+
                 '<span class="col-sm-offset-1">请假日期：</span> <span class="text-primary" id="ask-leave-date">{{leave_date_display}}</span>' +
                 '</p>' +
-                '<form onsubmit="return false;" method="post" action="' + G_BASE_URL + '/admin/ajax/administration/ask_leave/" class="form-horizontal ask-leave-form">'+
                     '<div class="row form-group icb-content-wrap ask-leave-single-item">' +
                         '<div class="col-sm-2 nopadding">'+
                             '<select id="leave_type" name="leave_type[]" class="form-control js_select_transform nopadding">' +
@@ -33,7 +39,7 @@ ICB.template.sinhoAskLeave = // 员工请假设置
                             '<i class="icon icon-date"></i>' +
                             '<!--<i class="icon icon-date-delete icon-delete"></i>-->'+
                         '</div>' +
-                        '<div class="col-sm-1 nopadding"><input type="text" name="leave_period[]" class="form-control nopadding text-center"/></div>' +
+                        '<div class="col-sm-1 nopadding"><input type="text" name="leave_period[]" class="form-control nopadding text-center js-change-input-date"/></div>' +
                         '<div class="col-sm-1 nopadding text-left"><label class="control-label">'+ _t('小时') + '</label><a class="icon icon-plus"/><a class="icon icon-delete"/></div>' +
                         // '<div class="col-sm-11 nopadding">'+
                         //     '<input type="text" name="remarks[]" class="form-control" value="" autocomplete="off" placeholder="备注信息">'+
@@ -84,7 +90,7 @@ ICB.template.sinhoSetBookCategory = // 绑定书稿和编辑
                     '<span class="col-sm-2 text-right"><label for="sinho_book_category" class="">'+ _t('学科') + '：</label></span>' +
                     '<span class="col-sm-8"><select id="sinho_book_category" name="sinho_book_category" class="form-control">' +
                      '<option value="0">'+_t('-- 选择学科 --')+'</option>' +
-                     '{{{category_option_list}}}' +
+                     '{{{category_option_list}}}' +  // html变量
                     '</select> </span>' +
                     '<p><input type="submit" class="btn btn-success" id="js-set-book-category" value="'+_t('确定')+'"/></p>' +
                 '</div>'+
