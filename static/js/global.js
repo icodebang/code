@@ -27,10 +27,28 @@ ICB.ajax._onSuccess = function (response) {
         return false;
     }
 
-    if (response.err) {
+    if (response.rsm && typeof(response.rsm.url)==='string') { // 允许放回空字符串的url
+        var time = 1;
+        if (response.err) {
+            time = 3000;
+            if ($('.error_message').length) {
+                $('.error_message').removeClass('collapse').html(response.err);
+            } else {
+
+                ICB.modal.alert(response.err);
+            }
+        }
+
+        setTimeout(function () {
+            // 判断返回url跟当前url是否相同， 或者url是空字符串时， 重新加载页面
+            if (response.rsm.url==='' || window.location.href == response.rsm.url) {
+                window.location.reload();
+            } else {
+                window.location = decodeURIComponent(response.rsm.url);
+            }
+        }, time);
+    } else if (response.err) {
         ICB.modal.alert(response.err);
-    } else if (response.rsm && response.rsm.url) {
-        window.location = decodeURIComponent(response.rsm.url);
     } else if (response.errno == 1) {
         window.location.reload();
     }
