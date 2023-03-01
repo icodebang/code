@@ -303,7 +303,6 @@ FileUploader.prototype =
 
 				return false;
 			}
-
 			var xhr = new XMLHttpRequest();
 
 	        xhr.upload.onprogress = function(event) {
@@ -319,16 +318,20 @@ FileUploader.prototype =
 	        xhr.onreadystatechange = function() {
 	            _this.onStateChange($fileInfo, index, file, xhr);
 	        };
-
+            // 构建上传文件的表单数据， 将文件数据插入到表单中
+            var formData = new FormData();
+            formData.append(_this.options.fileName, file);
 	        var url = this.url + '&'+this.options.fileName+'=' + file.name + '&timestamp=' + new Date().getTime();
 
 	        xhr.open("POST", url);
 
-	        xhr.send(file);
+	        xhr.send(formData);
+            console.info(xhr.response);
 
 		} else { // 通过iframe上传
 
 			var filename = this.form.find('.file-input').val();
+            console.info(filename);
 
 			if(! _this.isFileTypeValid(filename) ) {
 				if (typeof _this.endCallback == 'function') {
