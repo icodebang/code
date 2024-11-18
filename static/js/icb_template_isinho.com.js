@@ -110,12 +110,13 @@ ICB.template.sinhoSetBookDate = // 绑定书稿和编辑
                 '<p><span>系列：</span> <span class="text-primary">{{serial}}</span></p>' +
                 '<p><span>书名：</span> <span class="text-primary">{{book_name}}</span></p>' +
                 '<p><span>校次：</span> <span class="text-primary">{{proofreading_times}}</span></p>' +
-                '<form onsubmit="return false;" method="post" action="' + G_BASE_URL + '/admin/ajax/books/set_date/id-{{book_id}}">'+
-                    '<label for="sinho_delivery_date">'+ _t('发稿日期') + '：</label>' +
-                    '<input class="js-datepicker" type="text" id="sinho_delivery_date" name="delivery_date" value="{{delivery_date}}"> ' +
-                    '<label for="sinho_return_date">'+ _t('回稿日期') + '：</label>' +
-                    '<input class="js-datepicker" type="text" id="sinho_return_date" name="return_date" value="{{return_date}}"> ' +
-                    '<input type="submit" class="btn btn-success btn-sm" id="js-submit-book-date" value="'+_t('保 存')+'"/>' +
+                '<form onsubmit="return false;" method="post" action="' + G_BASE_URL + '/admin/ajax/books/set_date/id-{{book_id}}" style="height:50px;">'+
+                    '<div class="nopadding col-sm-4 col-xs-4 mod-double icon-date-container"><label for="sinho_delivery_date">'+ _t('发稿日期') + '：</label>' +
+                    '<input class="js-datepicker" type="text" id="sinho_delivery_date" name="delivery_date" value="{{delivery_date}}"> </div>' +
+                    '<div class="col-sm-1 col-xs-1"></div><div class="nopadding col-sm-4 col-xs-4 mod-double icon-date-container"><label for="sinho_return_date">'+ _t('回稿日期') + '：</label>' +
+                    '<input class="js-datepicker js-date-input" type="text" id="sinho_return_date" name="return_date" value="{{return_date}}"> ' +
+                    '<i class="icon icon-date-delete icon-delete"></i></div>' +
+                    '<div class="col-sm-2 col-xs-2 pull-right"><input type="submit" class="btn btn-success btn-sm" id="js-submit-book-date" value="'+_t('保 存')+'"/></div>' +
                 '</form>' +
                 '</div>'+
             '</div>'+
