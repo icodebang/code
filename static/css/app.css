@@ -1851,7 +1851,7 @@ fieldset[disabled] .radio-custom label {
     flex-direction: row;
 }
 
-.wechat-dialog-text:after {
+.wechat-dialog-text::after {
     content: "";
     background: #fff;
     width: 24px;
@@ -1863,7 +1863,7 @@ fieldset[disabled] .radio-custom label {
     transform: rotate(45deg)
 }
 
-.wechat-dialog-right .wechat-dialog-text:after {
+.wechat-dialog-right .wechat-dialog-text::after {
     background: #98e970;
     left: auto;
     right: -10px;
