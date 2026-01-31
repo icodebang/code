@@ -14,10 +14,9 @@
 	<!-- <link rel="stylesheet" href="static/css/zui.css?v3"> -->
 	<link rel="stylesheet" href="static/css/app.css?v1">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/zui/3.0.0/zui.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/gif.js/0.2.0/gif.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/gif.js/0.2.0/gif.worker.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/zui/3.0.0/zui.js"></script>
     <!-- <script src="static/js/jquery.2.js"></script> -->
     <!-- <script src="static/js/zui.js?v3"></script> -->
     <!-- <script src="static/js/gif.js"></script> -->
@@ -77,19 +76,10 @@
 									<div class="view-setting view-setting2">
 										<div class="view-set-item">
 											<span>聊天时间：</span>
-											<!-- <select v-model="setting.date_year"
-												class="form-control edit-phone-time-year">
-												<option value="">-</option>
-											</select>
-											<select v-model="setting.date_month"
-												class="form-control edit-phone-time-month" style="width: 60px;">
-												<option value="">-</option>
-											</select>
-											<select v-model="setting.date_day" class="form-control edit-phone-time-day"
-												style="width: 60px;">
-												<option value="">-</option>
-											</select> -->
-                                            <div id="dialogDate"></div>
+                                            <div id="dialogDateDiv" class="date-picker">
+                                                <div id="pick-_pick8" class="pick date-picker input-control has-suffix-icon" tabindex="-1"><input type="text" id="dialogDate" name="dialogDate" autocomplete="off" class="form-control"/><label for="dialogDate" class="input-control-suffix"><i class="i-calendar"></i><button type="button" class="btn size-sm square ghost"><span class="close"></span></button></label>
+                                                </div>
+                                            </div>
 											<select id="dialogWeekday" class="form-control">
 												<option value="">-</option>
 												<option value="1">星期一</option>
@@ -106,15 +96,6 @@
 											</select>
                                             <!-- 根据时间判断 凌晨 00:00-1:00，上午1:00-12:00，中午12:00-13:00，下午13:00-18:00，晚上18:00-00:00 -->
                                             <div id="dialogTime"></div>
-											<!-- <select v-model="setting.date_hour"
-												class="form-control edit-phone-time-hour" style="width: 60px;">
-
-											</select>
-											：
-											<select v-model="setting.date_min" class="form-control edit-phone-time-mini"
-												style="width: 60px;">
-
-											</select> -->
 										</div>
 										<div class="view-set-item number-set">
 											<span>语音时长：</span>
