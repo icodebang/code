@@ -2096,6 +2096,12 @@ fieldset[disabled] .radio-custom label {
     min-width: 210px;
     min-height: 180px;
 }
+.wechat-dialog-image.middle img {
+    max-width: 600px;
+    max-height: 600px;
+    min-width: 350px;
+    min-height: 300px;
+}
 
 .wechat-dialog-image:after {
     display: none
