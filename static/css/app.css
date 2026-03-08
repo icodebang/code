@@ -1667,6 +1667,13 @@ fieldset[disabled] .radio-custom label {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAMCAIAAABQj1zZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQwOTk2N0RBRUZENzExRUFCNjUwQTEzMEE4ODE1MDNGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQwOTk2N0RCRUZENzExRUFCNjUwQTEzMEE4ODE1MDNGIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDA5OTY3RDhFRkQ3MTFFQUI2NTBBMTMwQTg4MTUwM0YiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDA5OTY3RDlFRkQ3MTFFQUI2NTBBMTMwQTg4MTUwM0YiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6BaJ+nAAABiklEQVR42syWXXKCMBDHs0xnpENPUWY8hKdInvCBU+A5yCl411N4CGc8ArwxwlP6T0RLDAGqtnafNll+STb7EagsK0aKKSJSSjFXmqY5Ho9Q4jgOw5D9UHr4Zxi+P4AP7k6MqRv1zXiiR7Y/eqauaynldrtt2xZTi8VCCJFlWRRFc04DPM/z3W53xTnnm83mbnxod+WqVFWV7Q2ZoOkV0zQ9HA43Oy2Xy6IoJo/1dzhZfkGCzh/q2XXQmJS5uyIEkzBN3rHMpQ/H3U/iuZyNO8VCZVVRl3Wdv0TsdGpWq9U54q4gB/b7/UhdoQBeiAemiqgfPwxRkb4VITCdS9Ynr8UDk2bKjp+a1YyI2L8UHSXrcEZFx0R8fQxM+IC5Lf+yzizcLw/iQZdxZHKPOq+QqVwIH4NmOpzKFyc1zr04F3z8fYNVcO7FuRjH0cRLXUumcb+mCz8bD8zNKjd9gAFO1utrDkDBUK/4Mf1WDuNJMsefbzxJ7sDtKOkkNA71gva8H6Lfw63n9kuAAQANEjxwgrvhLgAAAABJRU5ErkJggg==) no-repeat;
     text-indent: -9999px
 }
+.phone-nav-camera {
+    width: 70px;
+    height: 70px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUwLjIgKDU1MDQ3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5pY29uc19vdXRsaW5lZF9jYW1lcmE8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iaWNvbnNfb3V0bGluZWRfY2FtZXJhIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iaWNvbjIwIiBmaWxsPSIjMDAwMDAwIiBmaWxsLXJ1bGU9Im5vbnplcm8iPgogICAgICAgICAgICA8cGF0aCBkPSJNMTQuMzU3Nzc5NSw1LjIgTDkuNjQyMjIwNTEsNS4yIEw3LjY0MjIyMDUxLDguMiBMMy4yLDguMiBMMy4yLDE4LjggTDIwLjgsMTguOCBMMjAuOCw4LjIgTDE2LjM1Nzc3OTUsOC4yIEwxNC4zNTc3Nzk1LDUuMiBaIE0xNC43MzI0MDgxLDQgQzE0Ljg5OTU4NDcsNCAxNS4wNTU3MDA0LDQuMDgzNTUwNTcgMTUuMTQ4NDMzMyw0LjIyMjY0OTkgTDE3LDcgTDIxLDcgQzIxLjU1MjI4NDcsNyAyMiw3LjQ0NzcxNTI1IDIyLDggTDIyLDE5IEMyMiwxOS41NTIyODQ3IDIxLjU1MjI4NDcsMjAgMjEsMjAgTDMsMjAgQzIuNDQ3NzE1MjUsMjAgMiwxOS41NTIyODQ3IDIsMTkgTDIsOCBDMiw3LjQ0NzcxNTI1IDIuNDQ3NzE1MjUsNyAzLDcgTDcsNyBMOC44NTE1NjY3Myw0LjIyMjY0OTkgQzguOTQ0Mjk5NjIsNC4wODM1NTA1NyA5LjEwMDQxNTI5LDQgOS4yNjc1OTE4OCw0IEwxNC43MzI0MDgxLDQgWiBNMTIsMTUuOCBDMTMuNTQ2Mzk3MywxNS44IDE0LjgsMTQuNTQ2Mzk3MyAxNC44LDEzIEMxNC44LDExLjQ1MzYwMjcgMTMuNTQ2Mzk3MywxMC4yIDEyLDEwLjIgQzEwLjQ1MzYwMjcsMTAuMiA5LjIsMTEuNDUzNjAyNyA5LjIsMTMgQzkuMiwxNC41NDYzOTczIDEwLjQ1MzYwMjcsMTUuOCAxMiwxNS44IFogTTEyLDE3IEM5Ljc5MDg2MSwxNyA4LDE1LjIwOTEzOSA4LDEzIEM4LDEwLjc5MDg2MSA5Ljc5MDg2MSw5IDEyLDkgQzE0LjIwOTEzOSw5IDE2LDEwLjc5MDg2MSAxNiwxMyBDMTYsMTUuMjA5MTM5IDE0LjIwOTEzOSwxNyAxMiwxNyBaIiBpZD0iUGF0aC00Ij48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=) no-repeat;
+    text-indent: -9999px;
+    background-size: cover;
+}
 
 .phone-bottom {
     background: #f6f6f6;
@@ -2201,6 +2208,30 @@ background-image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAB8CAYAAAC
     background-size: cover;
     background-position: 50%
 }
+#momentPictureList {
+    max-width: 330px;
+    max-height: 325px;
+    overflow: hidden;
+}
+.momentPictureList .dialog-user-item {
+    margin: 10px 10px 0 0;
+}
+.momentPictureList .dialog-user-face i {
+    width: 98px;
+    height: 98px;
+}
+.momentPictureList .dialog-user-item .dialog-user-delete{
+    display:none;
+    text-align: center;
+    line-height: 18px;
+}
+.momentPictureList .dialog-user-item:hover .dialog-user-delete{
+    display:block;
+}
+.momentPictureList .dialog-user-item:nth-child(1) .dialog-user-delete {
+    width: 20px;
+    height: 20px;
+}
 
 .dialog-user-face .dialog-user-face-a {
     position: relative;
@@ -2386,7 +2417,8 @@ a.a-phone-set-bg,a.a-phone-set-bg:active,a.a-phone-set-bg:focus {
     text-decoration: none;
     font-size: 40px;
     position: relative;
-    cursor: pointer
+    cursor: pointer;
+    overflow: hidden;
 }
 
 a.a-phone-set-bg font {
@@ -2409,10 +2441,11 @@ a.a-phone-set-bg span {
 
 .a-phone-set-bg input {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 200%;
+    height: 200%;
     opacity: 0;
-    cursor: pointer
+    cursor: pointer;
+    margin-top: -50px;
 }
 
 .img-phone-set-bg {
@@ -2766,4 +2799,161 @@ a {
 }
 .date-picker:hover .i-calendar{
     display:none;
+}
+.moment .phone-nav-center font{
+    font-size: 48px;
+    font-weight: normal;
+}
+.moment-body{
+    background-color: #fff;
+    border: 2px solid #eee;
+    bottom: 2px;
+}
+.moment-body .wechat-content {
+    padding: 0;
+}
+.moment-body .momentPictureList,.moment-body .momentTime,.moment-body .momentFavorite {
+    max-width: 10000px;
+    overflow: visible;
+    width: 100%;
+    padding-left: 160px;
+    max-height: 1000000px;
+    flex-wrap: wrap;
+    height: auto;
+    align-items: center;
+    display: flex;
+}
+.moment-body .wechat-dialog {
+    padding: 24px 36px;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 0;
+}
+.moment-body .wechat-dialog:hover .a-wechat-dialog-del {
+    top: 0;
+    left: 0;
+}
+.moment-body .wechat-dialog .wechat-dialog-name{
+    font-size: 45px;
+    color: #21558c;
+}
+.moment-body .wechat-dialog-text {
+    padding: 0;
+    min-height: auto;
+    font-size: 42px;
+}
+.moment-body .wechat-dialog-text img{
+    height: 50px;
+}
+.momentPictureList>img{
+    max-width:800px !important;
+    max-height:800px !important;
+}
+.moment-body .momentPictureList .dialog-user-face i {
+    width: 279px;
+    height:279px;
+}
+.moment-body .momentPictureList.fourImages .dialog-user-face i {
+    width: 284px;
+    height:284px;
+}
+.moment-body .momentPictureList .dialog-user-item {
+    margin: 15px 15px 0 0;
+}
+.momentTimeText{
+    color:#aaa;
+    width: 810px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.moment-body .momentTime{
+    margin: 15px 0;
+}
+.moment-favorite-tool{
+    background-color: #f5f5f5;
+    width: 75px;
+    display: block;
+    height: 42px;
+    font-size: 48px;
+    line-height: 15px;
+    color: #21558c;;
+    border-radius: 9px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.moment-body .momentFavorite{
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding: 0;
+    margin-left: 160px;
+}
+.moment-body .moment-favorite-set{
+    position: relative;
+}
+.moment-body .moment-like,.moment-body  .moment-comment{
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    left: -550px;
+    top: -30px;
+    font-style: normal;
+    background-color: #444;
+    width: 270px;
+    height: 110px;
+    font-size: 39px;
+    line-height: 110px;
+    border-radius: 12px 0 0 12px;
+    text-indent: 140px;
+    color: #fff;
+    background-size: 60px;
+    background-position: 30%;
+    background-repeat: no-repeat;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+MC7lm77moIcvMDEu57q/5oCnL2ljb25zX291dGxpbmVkX2xpa2U8L3RpdGxlPgogICAgPGcgaWQ9IjAu5Zu+5qCHLzAxLue6v+aApy9pY29uc19vdXRsaW5lZF9saWtlIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsLW9wYWNpdHk9IjAuOSI+CiAgICAgICAgPHBhdGggZD0iTTE5LjIxMzYyMzUsMTIuNjQ1MDk1MyBDMjAuNjU3NzQwNSwxMS4xNTY3NTE5IDIwLjY0MDg4MjgsOC43ODE1MzcyIDE5LjE3MjMzOTgsNy4zMTI5OTQyMyBDMTcuNjg4MzQ3NSw1LjgyOTAwMTkyIDE1LjI4MjMyMDYsNS44MjkwMDE5MiAxMy43OTgzMjgzLDcuMzEyOTk0MjMgQzEzLjYwNjA2MzUsNy41MDUyNTkwNiAxMy4zNjIxOTEyLDcuNzQwNDk5NzQgMTMuMDY1NTk4Niw4LjAxOTk0NTIgTDEyLjI0MjY5MzQsOC43OTUyNzUzMyBMMTEuNDE5Nzg4MSw4LjAxOTk0NTIgQzExLjEyMzE5NTYsNy43NDA0OTk3NCAxMC44NzkzMjMzLDcuNTA1MjU5MDYgMTAuNjg3MDU4NSw3LjMxMjk5NDIzIEM5LjIwMzA2NjE2LDUuODI5MDAxOTIgNi43OTcwMzkyNCw1LjgyOTAwMTkyIDUuMzEzMDQ2OTMsNy4zMTI5OTQyMyBDMy44NDQ1MjE5OSw4Ljc4MTUxOTE3IDMuODI3NTY4MDMsMTEuMTU2ODcwNCA1LjI1ODY1ODUxLDEyLjYzMjYxNzMgTDEyLjI0MjY1MDksMTkuNjE2NjgyMyBMMTkuMjEzNjIzNSwxMi42NDUwOTUzIFogTTQuNDY0NTE4NzksNi40NjQ0NjYwOSBDNi40MTcxNDAyNSw0LjUxMTg0NDY0IDkuNTgyOTY1MTUsNC41MTE4NDQ2NCAxMS41MzU1ODY2LDYuNDY0NDY2MDkgQzExLjcxODM5MzMsNi42NDcyNzI4IDExLjk1NDA5NTYsNi44NzQ2MzI2MiAxMi4yNDI2OTM0LDcuMTQ2NTQ1NTUgQzEyLjUzMTI5MTIsNi44NzQ2MzI2MiAxMi43NjY5OTM1LDYuNjQ3MjcyOCAxMi45NDk4MDAyLDYuNDY0NDY2MDkgQzE0LjkwMjQyMTYsNC41MTE4NDQ2NCAxOC4wNjgyNDY1LDQuNTExODQ0NjQgMjAuMDIwODY4LDYuNDY0NDY2MDkgQzIxLjk1NTMyNjIsOC4zOTg5MjQyOSAyMS45NzMzMjA1LDExLjUyNDEyMDUgMjAuMDc0ODUwOSwxMy40ODA3MzEyIEwxMi45NDk4MDAyLDIwLjYwNjYwMTcgQzEyLjU1OTI5NjMsMjAuOTk3MTQ2NCAxMS45MjYxMzEzLDIwLjk5NzE3OTYgMTEuNTM1NTg2NiwyMC42MDY2NzU3IEw0LjQxMDEyNTk3LDEzLjQ4MTE0MTEgQzIuNTEyMDY2MjksMTEuNTI0MTIwNSAyLjUzMDA2MDU5LDguMzk4OTI0MjkgNC40NjQ1MTg3OSw2LjQ2NDQ2NjA5IFoiIGlkPSJDb21iaW5lZC1TaGFwZSIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPgogICAgPC9nPgo8L3N2Zz4=);
+}
+.moment-body  .moment-comment{
+    left: -281px;
+    border-radius: 0 12px 12px 0;
+    background-position: 30%;
+    text-indent: 140px;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+MC7lm77moIcv57q/5Z6LL2ljb25zX291dGxpbmVkX2NvbW1lbnQ8L3RpdGxlPgogICAgPGcgaWQ9IjAu5Zu+5qCHL+e6v+Weiy9pY29uc19vdXRsaW5lZF9jb21tZW50IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsLW9wYWNpdHk9IjAuOSI+CiAgICAgICAgPGcgaWQ9Ikdyb3VwLTIyIiBmaWxsPSIjZmZmZmZmIj4KICAgICAgICAgICAgPHBhdGggZD0iTTEwLjUwMjk0MzcsMTcuOCBMMjAuNSwxNy44IEMyMC42NjU2ODU0LDE3LjggMjAuOCwxNy42NjU2ODU0IDIwLjgsMTcuNSBMMjAuOCw1LjUgQzIwLjgsNS4zMzQzMTQ1OCAyMC42NjU2ODU0LDUuMiAyMC41LDUuMiBMMy41LDUuMiBDMy4zMzQzMTQ1OCw1LjIgMy4yLDUuMzM0MzE0NTggMy4yLDUuNSBMMy4yLDE3LjUgQzMuMiwxNy42NjU2ODU0IDMuMzM0MzE0NTgsMTcuOCAzLjUsMTcuOCBMOC4yLDE3LjggTDguMiwyMC4xMDI5NDM3IEwxMC41MDI5NDM3LDE3LjggWiBNMTEsMTkgTDguNzA3MTA2NzgsMjEuMjkyODkzMiBDOC4zMTY1ODI0OSwyMS42ODM0MTc1IDcuNjgzNDE3NTEsMjEuNjgzNDE3NSA3LjI5Mjg5MzIyLDIxLjI5Mjg5MzIgQzcuMTA1MzU2ODQsMjEuMTA1MzU2OCA3LDIwLjg1MTAwMjkgNywyMC41ODU3ODY0IEw3LDE5IEwzLjUsMTkgQzIuNjcxNTcyODgsMTkgMiwxOC4zMjg0MjcxIDIsMTcuNSBMMiw1LjUgQzIsNC42NzE1NzI4OCAyLjY3MTU3Mjg4LDQgMy41LDQgTDIwLjUsNCBDMjEuMzI4NDI3MSw0IDIyLDQuNjcxNTcyODggMjIsNS41IEwyMiwxNy41IEMyMiwxOC4zMjg0MjcxIDIxLjMyODQyNzEsMTkgMjAuNSwxOSBMMTEsMTkgWiIgaWQ9IkNvbWJpbmVkLVNoYXBlIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
+}
+.moment-body  .moment-like-comment-seperator{
+    display: none;
+    position: absolute;
+    left: -280px;
+    width: 0;
+    z-index: 999;
+    border-left: 1px solid #ccc;
+    height: 60px;
+    top: 0;
+}
+.show-favorite-set .moment-like,.show-favorite-set  .moment-comment,.show-favorite-set  .moment-like-comment-seperator{
+    display:block;
+}
+.moment-body .momentLike, .moment-body .moment-user-name{
+    width: 100%;
+    display: contents;
+    color: #21558c;
+    font-weight: bold;
+}
+.moment-body .momentLike u{
+    text-decoration: none;
+}
+.moment-body .momentLike i{
+    margin: 15px 0 15px 15px;
+    width: 54px;
+    height: 54px;
+    margin-right: 15px;
+    display: inline-block;
+    background-size: cover;
+    background-position: 50%;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+MC7lm77moIcvMDEu57q/5oCnL2ljb25zX291dGxpbmVkX2xpa2U8L3RpdGxlPgogICAgPGcgaWQ9IjAu5Zu+5qCHLzAxLue6v+aApy9pY29uc19vdXRsaW5lZF9saWtlIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsLW9wYWNpdHk9IjAuOSI+CiAgICAgICAgPHBhdGggZD0iTTE5LjIxMzYyMzUsMTIuNjQ1MDk1MyBDMjAuNjU3NzQwNSwxMS4xNTY3NTE5IDIwLjY0MDg4MjgsOC43ODE1MzcyIDE5LjE3MjMzOTgsNy4zMTI5OTQyMyBDMTcuNjg4MzQ3NSw1LjgyOTAwMTkyIDE1LjI4MjMyMDYsNS44MjkwMDE5MiAxMy43OTgzMjgzLDcuMzEyOTk0MjMgQzEzLjYwNjA2MzUsNy41MDUyNTkwNiAxMy4zNjIxOTEyLDcuNzQwNDk5NzQgMTMuMDY1NTk4Niw4LjAxOTk0NTIgTDEyLjI0MjY5MzQsOC43OTUyNzUzMyBMMTEuNDE5Nzg4MSw4LjAxOTk0NTIgQzExLjEyMzE5NTYsNy43NDA0OTk3NCAxMC44NzkzMjMzLDcuNTA1MjU5MDYgMTAuNjg3MDU4NSw3LjMxMjk5NDIzIEM5LjIwMzA2NjE2LDUuODI5MDAxOTIgNi43OTcwMzkyNCw1LjgyOTAwMTkyIDUuMzEzMDQ2OTMsNy4zMTI5OTQyMyBDMy44NDQ1MjE5OSw4Ljc4MTUxOTE3IDMuODI3NTY4MDMsMTEuMTU2ODcwNCA1LjI1ODY1ODUxLDEyLjYzMjYxNzMgTDEyLjI0MjY1MDksMTkuNjE2NjgyMyBMMTkuMjEzNjIzNSwxMi42NDUwOTUzIFogTTQuNDY0NTE4NzksNi40NjQ0NjYwOSBDNi40MTcxNDAyNSw0LjUxMTg0NDY0IDkuNTgyOTY1MTUsNC41MTE4NDQ2NCAxMS41MzU1ODY2LDYuNDY0NDY2MDkgQzExLjcxODM5MzMsNi42NDcyNzI4IDExLjk1NDA5NTYsNi44NzQ2MzI2MiAxMi4yNDI2OTM0LDcuMTQ2NTQ1NTUgQzEyLjUzMTI5MTIsNi44NzQ2MzI2MiAxMi43NjY5OTM1LDYuNjQ3MjcyOCAxMi45NDk4MDAyLDYuNDY0NDY2MDkgQzE0LjkwMjQyMTYsNC41MTE4NDQ2NCAxOC4wNjgyNDY1LDQuNTExODQ0NjQgMjAuMDIwODY4LDYuNDY0NDY2MDkgQzIxLjk1NTMyNjIsOC4zOTg5MjQyOSAyMS45NzMzMjA1LDExLjUyNDEyMDUgMjAuMDc0ODUwOSwxMy40ODA3MzEyIEwxMi45NDk4MDAyLDIwLjYwNjYwMTcgQzEyLjU1OTI5NjMsMjAuOTk3MTQ2NCAxMS45MjYxMzEzLDIwLjk5NzE3OTYgMTEuNTM1NTg2NiwyMC42MDY2NzU3IEw0LjQxMDEyNTk3LDEzLjQ4MTE0MTEgQzIuNTEyMDY2MjksMTEuNTI0MTIwNSAyLjUzMDA2MDU5LDguMzk4OTI0MjkgNC40NjQ1MTg3OSw2LjQ2NDQ2NjA5IFoiIGlkPSJDb21iaW5lZC1TaGFwZSIgZmlsbD0iIzIxNTU4YyI+PC9wYXRoPgogICAgPC9nPgo8L3N2Zz4=)
+}
+
+.moment-body .momentComment{
+    width:100%;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    border-radius: 8px;
 }
