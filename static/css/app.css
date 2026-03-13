@@ -2667,6 +2667,22 @@ a {
         margin-right: 0;
         width: 33.333%
     }
+    .btn {
+    padding-left: .35rem;
+    padding-right: .35rem;
+    }
+    .view-set-item.number-set .input-control input[type=number] {
+        width: 120px;
+    }
+    .view-set-item input[type=number], .view-set-item input[type=text] {
+        width: 200px;
+    }
+    #dialogDate, #dialogTime input[type=text] {
+        width: 120px;
+    }
+    #momentTime1{
+        width: 100px;
+    }
 }
 
 .date-js {
